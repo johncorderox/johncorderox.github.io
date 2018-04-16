@@ -1,15 +1,24 @@
-
 #intro {
-  font-size: 100px;
+  font-size: 130px;
 }
 
 h3 {
   font-size: 85px;
 }
 
+hr {
+  border-bottom: 2px solid black;
+  width: 60%;
+}
+
+hr:hover {
+  border-bottom: 2px solid #1514f4;
+}
+
 .location {
   margin-top: 12px;
 }
+
 .nav {
   float: right;
   margin-top: 2%;
@@ -34,7 +43,7 @@ h3 {
   height: 570px;
 }
 
-.container u, .info u, .nav a {
+.container u, .info u, .nav a, .projects u {
   text-decoration: none;
   border-bottom: 0.5px solid gray;
 }
@@ -45,7 +54,6 @@ h3 {
 
 .intro-content {
   margin-left: 7%;
-
 }
 
 #git {
@@ -60,12 +68,14 @@ h3 {
 .projects img {
   height: 200px;
   width: 350px;
-  border-radius: 5%;
+}
+
+#projects-header {
+  margin-top: 20px;
 }
 
 .projects {
-  background-color: #fafafa;
-
+  background-color: #f5f5f5;
 }
 
 #logistics {
@@ -79,7 +89,6 @@ h3 {
 }
 
 .info {
-
   width: 70%;
 }
 
@@ -90,4 +99,10 @@ h3 {
 
 .wahead {
   text-decoration: underline;
+}
+
+#eternity-display {
+  height: 400px;
+  width: 800px;
+  margin-top: 40px;
 }
