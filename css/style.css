@@ -107,6 +107,9 @@ hr:hover {
   line-height: 1.8;
 }
 
+#auction {
+  width: 800px;
+}
 .wahead {
   text-decoration: underline;
 }
