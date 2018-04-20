@@ -110,6 +110,10 @@ hr:hover {
 #auction {
   width: 800px;
 }
+#chart {
+  width: 470px;
+  height: 300px;
+}
 .wahead {
   text-decoration: underline;
 }
@@ -125,4 +129,10 @@ display: inline-block;
 }
 #right {
   margin-left: 600px;
+}
+
+#contact {
+  width: 100px;
+  height: 100px;
+  margin-left: 20px;
 }
