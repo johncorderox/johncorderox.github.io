@@ -21,6 +21,7 @@
     </div>
   </div>
   <div class="container">
+    <h1>Contact</h1> <br><br>
     <div class="row">
       <div class="col s2">
         <img src="../images/linkedin.png" id="contact" />
@@ -40,26 +41,54 @@
     </div>
     <div class="row">
       <div class="col s2">
-        Linkedin
+        <p class="center-align">
+          <u><a href="https://www.linkedin.com/in/johncorderox/">Linkedin</a></u>
+        </p>
       </div>
       <div class="col s2">
-        Twitter
+      <p class="center-align">
+        <u><a href="https://twttier.com/johncorderox">Twitter</a></u>
+      </p>
       </div>
       <div class="col s2">
-        Gmail
+        <p class="center-align">
+          <u><a href="#" onclick="email()">Email</a></u>
+        </p>
       </div>
       <div class="col s2">
-        Instagram
+        <p class="center-align">
+          <u><a href="https://instagram.com/johncorderox">Instagram</a></u>
+        </p>
       </div>
       <div class="col s2">
-        Snapchat
+        <p class="center-align">
+          <u><a href="#" onclick="snapchat()">Snapchat</a></u>
+        </p>
       </div>
     </div>
+    <div id="text" class="center-align">
+
     </div>
-    <!-- <h4>
-      <u><a href="https://www.linkedin.com/in/johncorderox/">Linkedin</a></u> |
-      <u><a href="https://twttier.com/johncorderox">Twitter</a></u> |
-      <u><a href="https://instagram.com/johncorderox">Instagram</a></u>  |
-      <u><a href="" id="snapchat"></a>Snapchat</u>  |
-  </h4> -->
+    </div>
   </div>
+
+<script type="text/javascript">
+
+function email() {
+
+  const email = "<h4><u>johncorderox@gmail.com</u></h4>";
+  reset();
+  document.getElementById('text').innerHTML = email;
+}
+
+function snapchat() {
+
+  reset();
+  document.getElementById('text').innerHTML = "<img src=\"../images/snapcode.png\" id=\"snapcode\"/>";
+}
+
+function reset() {
+
+  document.getElementById('text').innerHTML = "";
+}
+</script>
