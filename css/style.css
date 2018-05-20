@@ -1,4 +1,4 @@
-.container {
+.container-fluid {
   font-family: 'Roboto', sans-serif;
 }
 
@@ -17,6 +17,23 @@
 
 }
 
+.box {
+height: 320px;
+padding: 0px;
+position: relative;
+background-color: #eeeeee;
+border-radius: 3px;
+
+}
+.box img {
+  position: absolute;
+  width: 85%;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+}
 
 .links a:hover {
 border-bottom: 2px solid #ECCEBD;
@@ -34,17 +51,17 @@ font-size: 15px;
 
 }
 
-.nav a, .container a, .info a {
+.nav a, .container-fluid a, .info a {
   color: black;
 }
 
 
-.container u, .info u, .projects u {
+.container-fluid u, .info u, .projects u {
   text-decoration: none;
   border-bottom: 0.5px solid gray;
 }
 
-.container u:hover, .info u:hover {
+.container-fluid u:hover, .info u:hover {
   border-bottom: 2px solid #ECCEBD;
   cursor: pointer;
 }
