@@ -1,51 +1,54 @@
-
-hr {
-  border-bottom: 2px solid black;
-  width: 60%;
-
+.container {
+  font-family: 'Roboto', sans-serif;
 }
 
-hr:hover {
-  border-bottom: 2px solid #1514f4;
-}
-
-.location {
-  margin-top: 12px;
+/* color of background photo rbg 240 240 240 */
+.intro {
+  font-size: 32px;
+  line-height: 51px;
+  color: #404040;
+  font-weight: 200px;
 }
 
 .nav {
   float: right;
   margin-top: 2%;
   margin-bottom: 5%;
+
+}
+
+
+.links a:hover {
+border-bottom: 2px solid #ECCEBD;
+font-size: 15px;
+
 }
 
 .nav a {
-  font-size: 18px;
+  font-size: 15px;
   margin-right: 30px;
 }
 
 .nav a:hover {
-  border-bottom: 2px solid #1514f4;
+  border-bottom: 2px solid #ECCEBD;
+
 }
 
 .nav a, .container a, .info a {
-  color: #1514f4;
+  color: black;
 }
 
 
-.container u, .info u, .nav a, .projects u {
+.container u, .info u, .projects u {
   text-decoration: none;
   border-bottom: 0.5px solid gray;
 }
 
 .container u:hover, .info u:hover {
-  border-bottom: 2px solid #1514f4;
+  border-bottom: 2px solid #ECCEBD;
+  cursor: pointer;
 }
 
-.intro-content {
-  margin-left: 7%;
-
-}
 
 #git {
   width: 87px;
