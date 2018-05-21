@@ -1,56 +1,68 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
-  <head>
-    <meta charset="utf-8">
-    <title>John Cordero</title>
-    <link rel="stylesheet" type="text/css" href="../css/style.css">
-    <!-- Compiled and minified CSS -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/css/materialize.min.css">
-    <!-- Compiled and minified JavaScript -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/js/materialize.min.js"></script>
-    <link href="https://fonts.googleapis.com/css?family=Playfair+Display" rel="stylesheet">
-    <link rel="shortcut icon" href="../images/favicon.ico" type="image/x-icon">
-    <link rel="icon" href="../images/favicon.ico" type="image/x-icon">
-  </head>
-  <div class="row">
-    <div class="nav">
-      <a href="pages/info.html">Info</a>
-      <a href="https://twitter.com/johncorderox">Twitter</a>
-      <a href="">Github</a>
-      <a href="">Contact</a>
-    </div>
-  </div>
-  <div class="container">
-    <div class="center-align">
-    <h1>Eternity Tracking</h1>
-    <h5>A Modern and Hackable Bug Tracker in PHP / MySQL</h5>
-      <img src="../images/eternity.gif" id="eternity-display"/>
-  </div><br><br>
+<head>
+  <meta charset="utf-8">
+  <title>Eternity Tracking</title>
+  <link rel="stylesheet" type="text/css" href="../css/style.css">
+  <!-- Compiled and minified CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/css/materialize.min.css">
+  <!-- Compiled and minified JavaScript -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/js/materialize.min.js"></script>
+  <script
+  src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+  integrity="sha256-3edrmyuQ0w65f8gfBsqowzjJe2iM6n0nKciPUp8y+7E="
+  crossorigin="anonymous"></script>
+  <link rel="shortcut icon" href="../images/favicon.ico" type="image/x-icon">
+  <link rel="icon" href="../images/favicon.ico" type="image/x-icon">
+<link href="https://fonts.googleapis.com/css?family=Roboto:300" rel="stylesheet">
+<link rel="icon" href="../images/favicon.ico" type="image/x-icon"><link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
 <div class="row">
-  <div class="eternity">
-  <h6>  Eternity Tracking is a bug tracking system written in pure PHP and MySQL. What makes this project so robust is that it is easily customizable by any developer.
-    It can be used by any start up or any organization in need of a free tracker.<br>
-    <hr><br><br>
-    Clone the project into your desired directory: <br> <code> git clone https://github.com/johncorderox/Eternity-Tracking.git</code><br><br>
-    Update the following to your hosts credentials.<br>
-     <code>
-      public $servername = 'localhost'; <br>
-      public $username   = 'root'; <br>
-      public $password   = ''; <br>
-      public $database   = 'tracking'; <br><br>
-    </code>
-    Run the <code>database.sql</code> file and make sure the admin insert query has ran. <br><br>
-    Login with the default admin credentials in the database query and enjoy~. <br><br><br>
-
-    <img src="../images/github.png" id="github"/> <u><a href="">repo</a> </u>
-  </h6>
-</div><br><br>
+  <div class="nav">
+    <a href="/">Home</a>
+    <a href="">About</a>
+    <a href="https://drive.google.com/open?id=1jnht-ROe47gsPD6AQbeMY2bH0YG0p3Je">Resume</a>
+  </div>
+</div><div class="sk-folding-cube">
+<div class="sk-cube1 sk-cube"></div>
+<div class="sk-cube2 sk-cube"></div>
+<div class="sk-cube4 sk-cube"></div>
+<div class="sk-cube3 sk-cube"></div>
 </div>
-<div class="row">
-  <div id="page-nav">
-    <u><h6><a href="/index.html">&larr; Home</a></u></h6>
-    <u><h6 id="right"><a href="/index.html">Katsu &rarr;</a></u></h6>
+<div class="container">
+  <div class="center-align">
+    <h1>Eternity Tracking</h1>
+    <img src="../images/eternity.gif" id="eternity-head">
+    <p>  Eternity Tracking is a bug tracking system written in pure PHP and MySQL. What makes this project so robust is that it is easily customizable by any developer.
+      It can be used by any start up or any organization in need of a free tracker.<br>
+      You can view the repo <a href="https://github.com/johncorderox/Eternity-Tracking">here</a>.
+      <hr><br><br>
   </div>
+  Clone the project into your desired directory: <br> <code> git clone https://github.com/johncorderox/Eternity-Tracking.git</code><br><br>
+  Update the following to your hosts credentials.<br>
+   <code>
+    public $servername = 'localhost'; <br>
+    public $username   = 'root'; <br>
+    public $password   = ''; <br>
+    public $database   = 'tracking'; <br><br>
+  </code>
+  Run the <code>database.sql</code> file and make sure the admin insert query has ran. <br><br>
+  Login with the default admin credentials in the database query and enjoy~. <br><br><br>
+</p>
+</div><br><br>
+<div class="container-fluid">
+  <div class="center-align">
+  <ul class="pagination">
+  <li class="disabled"><a href="#!"><i class="material-icons">chevron_left</i></a></li>
+  <li class="waves-effect"><a href="/">Home</a></li>
+  <li class="waves-effect"><a href="/pages/about.html">About</a></li>
+  <li class="waves-effect"><a href="#!">Bubble</a></li>
+  <li class="waves-effect"><a href="/pages/logistics.html">Logistics</a></li>
+  <li class="active"><a href="/pages/eternity.html">Eternity Tracking</a></li>
+  <li class="waves-effect"><a href="/pages/katsu.html">Katsu</a></li>
+  <li class="waves-effect"><a href="/pages/socialize.html">Socialize</a></li>
+  <li class="waves-effect"><a href="/pages/eternity.html"><i class="material-icons">chevron_right</i></a></li>
+</ul>
 </div>
 </div>
 </html>
