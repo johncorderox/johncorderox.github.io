@@ -1,9 +1,11 @@
 $(document).ready(function(){
 
+  $('.intro p, .links').delay(150).slideDown(800);
+
 $('#bubble').mouseenter(function(){
 
   $('.image-section').hide();
-  $('.portfolio-text').show();
+  $('.portfolio-text').fadeIn();
   $(this).css("background-color", "#ECCEBD");
 
 });
@@ -19,7 +21,7 @@ $('#bubble').mouseleave(function(){
 $('#log').mouseenter(function(){
 
   $('.image-section-log').hide();
-  $('.portfolio-text-log').show();
+  $('.portfolio-text-log').fadeIn();
   $(this).css("background-color", "#ECCEBD");
 
 });
@@ -35,7 +37,7 @@ $('#log').mouseleave(function(){
 $('#et').mouseenter(function(){
 
   $('.image-section-et').hide();
-  $('.portfolio-text-et').show();
+  $('.portfolio-text-et').fadeIn();
   $(this).css("background-color", "#ECCEBD");
 
 });
@@ -51,7 +53,7 @@ $('#et').mouseleave(function(){
 $('#katsu').mouseenter(function(){
 
   $('.image-section-katsu').hide();
-  $('.portfolio-text-katsu').show();
+  $('.portfolio-text-katsu').fadeIn();
   $(this).css("background-color", "#ECCEBD");
 
 });
@@ -68,7 +70,7 @@ $('#katsu').mouseleave(function(){
 $('#socialize').mouseenter(function(){
 
   $('.image-section-socialize').hide();
-  $('.portfolio-text-socialize').show();
+  $('.portfolio-text-socialize').fadeIn();
   $(this).css("background-color", "#ECCEBD");
 
 });
@@ -80,6 +82,5 @@ $('#socialize').mouseleave(function(){
   $('.portfolio-text-socialize').hide();
 
 });
-
 
 });
