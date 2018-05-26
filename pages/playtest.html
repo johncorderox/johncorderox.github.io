@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="utf-8">
+  <title>Playtest</title>
+  <link rel="stylesheet" type="text/css" href="../css/style.css">
+  <!-- Compiled and minified CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/css/materialize.min.css">
+  <!-- Compiled and minified JavaScript -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/js/materialize.min.js"></script>
+  <script
+  src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+  integrity="sha256-3edrmyuQ0w65f8gfBsqowzjJe2iM6n0nKciPUp8y+7E="
+  crossorigin="anonymous"></script>
+  <link rel="shortcut icon" href="../images/favicon.ico" type="image/x-icon">
+  <link rel="icon" href="../images/favicon.ico" type="image/x-icon">
+<link href="https://fonts.googleapis.com/css?family=Roboto:300" rel="stylesheet">
+<link rel="icon" href="../images/favicon.ico" type="image/x-icon"><link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+<div class="row">
+  <div class="nav">
+    <a href="/">Home</a>
+    <a href="">About</a>
+    <a href="https://drive.google.com/open?id=1jnht-ROe47gsPD6AQbeMY2bH0YG0p3Je">Resume</a>
+  </div>
+</div><div class="sk-folding-cube">
+<div class="sk-cube1 sk-cube"></div>
+<div class="sk-cube2 sk-cube"></div>
+<div class="sk-cube4 sk-cube"></div>
+<div class="sk-cube3 sk-cube"></div>
+</div>
+<div class="container">
+  <div class="center-align">
+    <h1>Playtest v1</h1>
+    <img src="../images/playtest.png" id="eternity-head">
+    <p>  Playtest is a Ruby web application that incorporates Amazon S3 data dumps for secure and versioning of admin
+      notes, playtesters, and playtest accounts. I had the privilge of playtesting for <a href="http://squanchgames.com/">Squanch Games</a>, sister company of Rick & Morty &copy; and recreated
+        the process of application, to testing and to discharge all in one app. Key features include an application system, playtest collaborating, and data dumps to AWS S3 via Admin Panel.<br>
+      You can view the repo <a href="https://github.com/johncorderox/playtest">here</a>.
+      <hr><br><br>
+  </div>
+  Clone the project into your desired directory: <br> <code> git clone https://github.com/johncorderox/Eternity-Tracking.git</code><br><br>
+  Update the following to your hosts credentials.<br>
+   <code>
+    public $servername = 'localhost'; <br>
+    public $username   = 'root'; <br>
+    public $password   = ''; <br>
+    public $database   = 'tracking'; <br><br>
+  </code>
+  Run the <code>database.sql</code> file and make sure the admin insert query has ran. <br><br>
+  Login with the default admin credentials in the database query and enjoy~. <br><br><br>
+</p>
+</div><br><br>
+<div class="container-fluid">
+  <div class="center-align">
+  <ul class="pagination">
+  <li class="disabled"><a href="/pages/logistics.html"><i class="material-icons">chevron_left</i></a></li>
+  <li class="waves-effect"><a href="/">Home</a></li>
+  <li class="waves-effect"><a href="/pages/about.html">About</a></li>
+  <li class="waves-effect"><a href="#!">Bubble</a></li>
+  <li class="waves-effect"><a href="/pages/logistics.html">Logistics</a></li>
+  <li class="active"><a href="/pages/eternity.html">Eternity Tracking</a></li>
+  <li class="waves-effect"><a href="/pages/katsu.html">Katsu</a></li>
+  <li class="waves-effect"><a href="/pages/socialize.html">Socialize</a></li>
+  <li class="waves-effect"><a href="/pages/katsu.html"><i class="material-icons">chevron_right</i></a></li>
+</ul>
+</div>
+</div>
+</html>

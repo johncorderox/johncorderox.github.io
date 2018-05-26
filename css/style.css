@@ -35,7 +35,8 @@
 .portfolio-text-log,
 .portfolio-text-et,
 .portfolio-text-katsu,
-.portfolio-text-socialize {
+.portfolio-text-socialize,
+.portfolio-text-playtest {
   font-size: 40px;
   display: none;
 }
@@ -212,4 +213,12 @@ width: 99%;
 
 .container-fluid .pagination .active {
   background-color: #ECCEBD;
+}
+
+#view-bubble,
+#view-log,
+#view-et,
+#view-katsu,
+#view-socialize {
+  display: none;
 }
