@@ -38,18 +38,19 @@
         the process of application, to testing and to discharge all in one app. Key features include an application system, playtest collaborating, and data dumps to AWS S3 via Admin Panel.<br>
       You can view the repo <a href="https://github.com/johncorderox/playtest">here</a>.
       <hr><br><br>
+      <div class="row">
+        <div class="col s8">
+                <img src="../images/logs.png" id="eternity-head">
+        </div>
+        <div class="sol 4">
+          The Admin panel was one of the most important aspects for this playtest suite. Everything needs to be tracked in order
+          to protect using secure access. The devise gem is used for password encryption and user model design so the default values were used.
+          <br><br><br>
+          Almost all actions are tracked and dumped using sqlite and Amazon S3 using standard HTTP codes 2xx 3xx and 5xx for reference.
+        </div>
+      </div>
   </div>
-  Clone the project into your desired directory: <br> <code> git clone https://github.com/johncorderox/Eternity-Tracking.git</code><br><br>
-  Update the following to your hosts credentials.<br>
-   <code>
-    public $servername = 'localhost'; <br>
-    public $username   = 'root'; <br>
-    public $password   = ''; <br>
-    public $database   = 'tracking'; <br><br>
-  </code>
-  Run the <code>database.sql</code> file and make sure the admin insert query has ran. <br><br>
-  Login with the default admin credentials in the database query and enjoy~. <br><br><br>
-</p>
+
 </div><br><br>
 <div class="container-fluid">
   <div class="center-align">
@@ -59,7 +60,8 @@
   <li class="waves-effect"><a href="/pages/about.html">About</a></li>
   <li class="waves-effect"><a href="#!">Bubble</a></li>
   <li class="waves-effect"><a href="/pages/logistics.html">Logistics</a></li>
-  <li class="active"><a href="/pages/eternity.html">Eternity Tracking</a></li>
+  <li  class="waves-effect"><a href="/pages/eternity.html">Eternity Tracking</a></li>
+  <li  class="active"><a href="/pages/playtest.html">Playtest v1</a></li>
   <li class="waves-effect"><a href="/pages/katsu.html">Katsu</a></li>
   <li class="waves-effect"><a href="/pages/socialize.html">Socialize</a></li>
   <li class="waves-effect"><a href="/pages/katsu.html"><i class="material-icons">chevron_right</i></a></li>
