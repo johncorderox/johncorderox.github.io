@@ -6,6 +6,7 @@ $(document).ready(function(){
 
   $('.intro p, .links').delay(150).slideDown(800);
 
+
 $('#bubble').mouseenter(function(){
 
   $('.image-section').hide();
@@ -111,6 +112,12 @@ $('#playtest').mouseleave(function(){
   $(this).css("background-color", "#eeeeee");
   $('.portfolio-text-playtest').hide();
     $('#view-playtest').hide();
+});
+
+$("#projects").click(function() {
+    $('html,body').animate({
+        scrollTop: $("#project-squares").offset().top},
+        1000);
 });
 
 });
