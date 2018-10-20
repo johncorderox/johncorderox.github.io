@@ -31,27 +31,17 @@
     letter-spacing: 0.3px;
 }
 
-.portfolio-text,
-.portfolio-text-log,
-.portfolio-text-et,
-.portfolio-text-katsu,
-.portfolio-text-socialize,
-.portfolio-text-playtest {
-  font-size: 40px;
-  display: none;
-}
 .box {
 height: 320px;
 padding: 0px;
 position: relative;
-background-color: #eeeeee;
 border-radius: 3px;
 cusor: pointer;
 
 }
 .box img, .portfolio-text{
   position: absolute;
-  width: 85%;
+  width: 75%;
   top: 0;
   bottom: 0;
   left: 0;
@@ -228,4 +218,7 @@ width: 99%;
   width: 120px;
   border-radius: 50%;
   margin-left: 8px;
+}
+#logs {
+  height: 60%;
 }
