@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>John Cordero - What does map(&:name) mean in Ruby?</title>
+  <link rel="shortcut icon" href="/assets/images/heart.ico">
+  <link rel="stylesheet" href="/assets/css/style.css">
+  <link rel="alternate" type="application/rss+xml" title="My Blog" href="/feed.xml">
+  <link rel="stylesheet" href="/assets/css/highlight.css">
+</head>
+<body>
+
+  <nav class="main-nav">
+    
+        <a href="/"> <span class="arrow">←</span> Home </a>
+    
+
+    
+        <a href="/about">About </a>
+    
+    <a class="cta" href="/feed.xmlfeed.xml">Subscribe</a>
+</nav>
+
+
+  
+
+  <section id="wrapper" class="">
+    <article class="post">
+    <header>
+        <h1>What does map(&:name) mean in Ruby?</h1>
+        <h2 class="headline">May 13, 2019</h2>
+    </header>
+    <section id="post-body">
+        <h1 id="mapname">map(&amp;:name)</h1>
+
+<p>What does it mean?</p>
+
+<p>This is a short hand notation for the regular map function. What map initially does is to <strong>transform</strong> Arrays and Hashes into new values.</p>
+
+<p>Here is a basic implementation of Map:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>['a' , 'b', 'c'].map { |x| x.upcase }
+
+=&gt;
+['A', 'B', 'C']
+</code></pre></div></div>
+
+<p>Now let’s see an implementation with shorthand:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>[1,2,3].map(&amp;:upcase)
+
+</code></pre></div></div>
+
+<p>This returns the same result as before, but it for more experienced programmers with knowdlege of PROC and how it works.</p>
+
+<p>The beginning of &amp; calls <code class="highlighter-rouge">to_proc</code> and passes in the block to be evaluated.</p>
+
+    </section>
+</article>
+<footer id="post-meta" class="clearfix">
+    <a href="http://twitter.com/johncorderox">
+        <img class="avatar" src="/assets/images/avatar.png">
+        <div>
+            <span class="dark">John</span>
+            <span>Software Developer</span>
+        </div>
+    </a>
+
+    <section id="sharing">
+        <a class="twitter" href="https://twitter.com/intent/tweet?text=http://yourblog-domain.com/2019/what-does-map-name-mean-in-ruby/ - What does map(&:name) mean in Ruby? by @johncorderox"><span class="icon-twitter"> Tweet</span></a>
+
+<a class="facebook" href="#" onclick="
+    window.open(
+      'https://www.facebook.com/sharer/sharer.php?u='+encodeURIComponent(location.href),
+      'facebook-share-dialog',
+      'width=626,height=436');
+    return false;"><span class="icon-facebook-rect"> Share</span>
+</a>
+    </section>
+</footer>
+
+<!-- Disqus comments -->
+
+
+<!-- Archive post list -->
+
+
+  </section>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+  <script src="/assets/js/main.js"></script>
+  <script src="/assets/js/highlight.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script>
+
+  <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-79158260-1', 'auto');
+    ga('send', 'pageview');
+  </script>
+</body>
+</html>

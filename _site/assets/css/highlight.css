@@ -1,0 +1,143 @@
+/*
+  IR_Black style (c) Vasily Mikhailitchenko <vaskas@programica.ru>
+*/
+
+.hljs {
+  display: block;
+  overflow-x: auto;
+  /*padding: 0.5em;*/
+  background: #272b2d;
+  color: #d0d0d0;
+  -webkit-text-size-adjust: none;
+}
+
+.hljs-shebang,
+.hljs-comment {
+  color: #777279;
+}
+
+.hljs-keyword,
+.hljs-tag,
+.tex .hljs-command,
+.hljs-request,
+.hljs-status,
+.clojure .hljs-attribute {
+  color: #ebde68;
+}
+
+.hljs-sub .hljs-keyword,
+.method,
+.hljs-list .hljs-title,
+.nginx .hljs-title {
+  color: #ffffb6;
+}
+
+.hljs-string,
+.hljs-tag .hljs-value,
+.hljs-cdata,
+.hljs-filter .hljs-argument,
+.hljs-attr_selector,
+.apache .hljs-cbracket,
+.hljs-date,
+.coffeescript .hljs-attribute {
+  color: #c1ef65;
+}
+
+.hljs-subst {
+  color: #daefa3;
+}
+
+.hljs-regexp {
+  color: #e9c062;
+}
+
+.hljs-title,
+.hljs-sub .hljs-identifier,
+.hljs-pi,
+.hljs-decorator,
+.tex .hljs-special,
+.hljs-type,
+.hljs-constant,
+.smalltalk .hljs-class,
+.hljs-doctag,
+.nginx .hljs-built_in {
+  color: #c1ef65;
+}
+
+.hljs-symbol,
+.ruby .hljs-symbol .hljs-string,
+.hljs-number,
+.hljs-variable,
+.vbscript,
+.hljs-literal,
+.hljs-name {
+  color: #77bcd7;
+}
+
+.css .hljs-tag {
+  color: #96cbfe;
+}
+
+.css .hljs-rule .hljs-property,
+.css .hljs-id {
+  color: #ffffb6;
+}
+
+.css .hljs-class {
+  color: #fff;
+}
+
+.hljs-hexcolor {
+  color: #c6c5fe;
+}
+
+.hljs-number {
+  color:#77bcd7;
+}
+
+.coffeescript .javascript,
+.javascript .xml,
+.tex .hljs-formula,
+.xml .javascript,
+.xml .vbscript,
+.xml .css,
+.xml .hljs-cdata {
+  opacity: 0.7;
+}
+
+.photos:before, .photos:after,
+.caption:before,
+.caption:after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+.photos {
+  position: relative;
+  margin-bottom: 15px;
+  margin-top: 45px;
+}
+
+.photo {
+  display: inline-block;
+  margin-right: 15px;
+  margin-bottom: 15px;
+  float: left;
+}
+.photo img {
+  width: 65px;
+  height: 65px;
+  border-radius: 10px;
+}
+.photo.p0:hover ~ .c0, .photo.p1:hover ~ .c1, .photo.p2:hover ~ .c2, .photo.p3:hover ~ .c3, .photo.p4:hover ~ .c4 {
+  display: block;
+}
+
+.caption {
+  display: none;
+  top: 100%;
+  line-height: 1.1;
+  font-size: 0.8em;
+  position: absolute;
+}
