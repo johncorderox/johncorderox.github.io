@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Evolution
+exclude: true
 ---
 
 <p align="center"><strong>Admin Portal</strong></p>
