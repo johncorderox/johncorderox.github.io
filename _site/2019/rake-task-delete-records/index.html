@@ -5,7 +5,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <title>John Cordero - Named Scopes</title>
+  <title>John Cordero - Rake Task - Delete Records</title>
   <link rel="shortcut icon" href="/assets/images/heart.ico">
   <link rel="stylesheet" href="/assets/css/style.css">
   <link rel="alternate" type="application/rss+xml" title="My Blog" href="/feed.xml">
@@ -30,37 +30,26 @@
   <section id="wrapper" class="">
     <article class="post">
     <header>
-        <h1>Named Scopes</h1>
-        <h2 class="headline">May 8, 2019</h2>
+        <h1>Rake Task - Delete Records</h1>
+        <h2 class="headline">May 2, 2019</h2>
     </header>
     <section id="post-body">
-        <h2 id="named-scopes">Named Scopes</h2>
-<p>What are they? Simply put, Named scopes are class methods inside your model that always returns an active record association.</p>
+        <p>Have sensitive data? Need to purge or remove some tables from all sensitive data? Try a custom rake task!</p>
 
-<p>Let’s see a classic class method definition first:</p>
+<p>If you don’t know much about rake you can read a nice basic guide <a href="http://www.virtuouscode.com/2014/04/21/rake-part-1-basics/">here</a></p>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>#app/models/user.rb
+<p>We at <a href="http://www.myevolutiontravel.com/">@Evolution </a> utitlize a lot of different forms that save information like personal data, money, credit card forms, client information, etc. So instead of manuall writing queries to production or hacking the postgres db, try removing them safely like we do.</p>
 
-def self.paid
-  where{where("paid LIKE ?", paid)
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>#/lib/delete_records.rb
+
+namespace :cc
+desc "Delete creditcardforms after 6 months"
+	task :remove_old =&gt; enviorment do
+	CreditCardAuthorizations.delete_all ["created_at &lt; ?", 6.months.ago]
+	 puts " ...done"
+  end
 end
 </code></pre></div></div>
-
-<p>so lets see how we can use this in a named scope:</p>
-
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>#app/models/user.rb
-
-scope: paid, -&gt;{where("paid LIKE ?", paid)
-end
-</code></pre></div></div>
-
-<p>so calling the scope is as simple as</p>
-
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>#app/controllers/shirts_controller.rb
-@q = User.paid
-</code></pre></div></div>
-
-<p>So what is the beauty of this idea? Well, just think of the fact that they will always return an active record association. Never <code class="highlighter-rouge">nil</code>.  You can safely string and chain as many scopes as you like without worrying about the query failing. The end case of <code class="highlighter-rouge">nil</code> is always taken care of.</p>
 
     </section>
 </article>
@@ -74,7 +63,7 @@ end
     </a>
 
     <section id="sharing">
-        <a class="twitter" href="https://twitter.com/intent/tweet?text=http://johncorderox.com/2019/named-scopes/ - Named Scopes by @johncorderox"><span class="icon-twitter"> Tweet</span></a>
+        <a class="twitter" href="https://twitter.com/intent/tweet?text=http://johncorderox.com/2019/rake-task-delete-records/ - Rake Task - Delete Records by @johncorderox"><span class="icon-twitter"> Tweet</span></a>
 
 <a class="facebook" href="#" onclick="
     window.open(

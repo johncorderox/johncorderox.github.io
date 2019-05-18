@@ -1,8 +1,6 @@
 ---
-title:  "Evolution"
-date:   2013-11-10 10:18:00
-description: Project
-published: false
+layout: post
+title: Evolution
 ---
 
 <p align="center"><strong>Admin Portal</strong></p>
@@ -11,6 +9,8 @@ Evolution Travel Agent is a rails application that allows travel agents to creat
 ***
 
 <p align="center"><img src="{{ '/assets/images/evo-header.png' | relative_url }}" alt="Evolution Travel Agent"></p>
+<p align="center"><img src="{{ '/assets/images/evo-content1.png' | relative_url }}" alt="Evolution Travel Agent"></p>
+<p align="center"><img src="{{ '/assets/images/evo-content2.png' | relative_url }}" alt="Evolution Travel Agent"></p>
 
 
 ## Software Features
