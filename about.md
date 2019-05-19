@@ -8,7 +8,7 @@ profile: true
 Software Engineer [@Evolution](http://www.myevolutiontravel.com/) <br>
 Previously Full Stack [@Sunnybyte](https://sunnybyte.com/) & Intern [@ControlExpert](https://www.controlexpert.com/uk-en/) <br>
 Education [@CodingDojo](https://www.codingdojo.com/)<br>
-Creator [@BeachHouse-API](http://)<br>
+
 
 Currently building as a Mid-level Engineer with:<br>
 * Ruby on Rails
@@ -16,7 +16,7 @@ Currently building as a Mid-level Engineer with:<br>
 * ActiveRecord
 * HTML / Bootstrap /
 * React JS
-* Amazon Web Services ( EC2/ S3 / Route 53/ Cloudwatch)
+* AWS ( EC2/ S3 / Route 53/ Cloudwatch/ Elastic Beanstalk)
 * RSpec / Factory Bot
 * Capybara
 
