@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>John Cordero - Draper Gem 101</title>
+  <link rel="shortcut icon" href="/assets/images/heart.ico">
+  <link rel="stylesheet" href="/assets/css/style.css">
+  <link rel="alternate" type="application/rss+xml" title="My Blog" href="/feed.xml">
+  <link rel="stylesheet" href="/assets/css/highlight.css">
+</head>
+<body>
+
+  <nav class="main-nav">
+    
+        <a href="/"> <span class="arrow">←</span> Home </a>
+    
+
+    
+        <a href="/about">About </a>
+    
+    <a class="cta" href="/feed.xml">Subscribe</a>
+</nav>
+
+
+  
+
+  <section id="wrapper" class="">
+    <article class="post">
+    <header>
+        <h1>Draper Gem 101</h1>
+        <h2 class="headline">May 20, 2019</h2>
+    </header>
+    <section id="post-body">
+        <p><a href="https://github.com/drapergem/draper">Draper</a> is a really cool gem that utilizes the decorator rails pattern. You can extract logic from views and view helpers and convert them into objects.</p>
+
+<p>For a simple explanation, lets view this codeblock for a todo list in rails.</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;h4&gt;Todo &lt;%= @todo.content %&gt; Created on &lt;%= @todo.created_at %&gt; &lt;/h4&gt;
+</code></pre></div></div>
+
+<p>Generated:
+TODO - Make cool stuff in ruby. Created on ‘2019-07-02 15:22:41’</p>
+
+<p>This is boring, unappealing and will make your rails app UNDRY!</p>
+
+<p>So how can a decorator help your application? Let’s start by install and running the same rails commands like always:</p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>#Gemfile
+ gem 'draper'
+</code></pre></div></div>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>#terminal 
+bundle install
+</code></pre></div></div>
+
+<p>Now we are going to generate a decorator to wrap our <code class="highlighter-rouge">Todo</code> model. This will create the directory <code class="highlighter-rouge">app/decorators</code> in your application.</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>rails g decorator Todo
+</code></pre></div></div>
+
+<p>Now locate your Todo controller show method and add the following:</p>
+
+<pre><code class="language-#app/controllers/todo_controller.rb">def show
+	tem = Todo.find(params[:id])
+@todo = TodoDecorator.new(item)
+end
+</code></pre>
+
+<p>We have our setup going, but what are we trying to dry? In toy apps I’ve made before I’ve done things like formatting time, but across the app I’ve copied and pasted so many lines of code that it becomes a chore and a hassel to format them all. Our fancy decorator allows us to turn this logic into an object like so:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>```
+def formatted_created_at
+todo.created_at.strftime("%m/%d/%Y - %H:%M")
+end 
+```
+</code></pre></div></div>
+
+<p>and in our view we can compare the final decorated view line to the undecorated</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>	#index.html.erb
+	
+	#Decorated
+	&lt;h4&gt;Published &lt;%= @article.strftime("%m/%d/%Y - %H:%M" %&gt;&lt;/h4&gt;
+
+	#Undecorated
+&lt;h4&gt;Todo &lt;%= @todo.content %&gt; Created on &lt;%= @todo.created_at %&gt; &lt;/h4&gt;
+</code></pre></div></div>
+
+    </section>
+</article>
+<footer id="post-meta" class="clearfix">
+    <a href="http://twitter.com/johncorderox">
+        <img class="avatar" src="/assets/images/avatar.png">
+        <div>
+            <span class="dark">John</span>
+            <span>Software Developer</span>
+        </div>
+    </a>
+
+    <section id="sharing">
+        <a class="twitter" href="https://twitter.com/intent/tweet?text=http://johncorderox.com/2019/draper-gem-101/ - Draper Gem 101 by @johncorderox"><span class="icon-twitter"> Tweet</span></a>
+
+<a class="facebook" href="#" onclick="
+    window.open(
+      'https://www.facebook.com/sharer/sharer.php?u='+encodeURIComponent(location.href),
+      'facebook-share-dialog',
+      'width=626,height=436');
+    return false;"><span class="icon-facebook-rect"> Share</span>
+</a>
+    </section>
+</footer>
+
+<!-- Disqus comments -->
+
+
+<!-- Archive post list -->
+
+
+  </section>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+  <script src="/assets/js/main.js"></script>
+  <script src="/assets/js/highlight.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script>
+
+  <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-79158260-1', 'auto');
+    ga('send', 'pageview');
+  </script>
+</body>
+</html>
