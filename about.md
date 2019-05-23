@@ -7,7 +7,7 @@ profile: true
 
 Software Engineer [@Evolution](http://www.myevolutiontravel.com/) <br>
 Previously Full Stack [@Sunnybyte](https://sunnybyte.com/) & Intern [@ControlExpert](https://www.controlexpert.com/uk-en/) <br>
-Education [@CodingDojo](https://www.codingdojo.com/)<br>
+Education [@WGU](https://www.wgu.edu) - B.S. Data Analytics & [@CodingDojo](https://www.codingdojo.com/)<br>
 
 
 Currently building as a Mid-level Engineer with:<br>

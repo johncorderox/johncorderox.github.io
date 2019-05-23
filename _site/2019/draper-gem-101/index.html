@@ -70,21 +70,18 @@ end
 
 <p>We have our setup going, but what are we trying to dry? In toy apps I’ve made before I’ve done things like formatting time, but across the app I’ve copied and pasted so many lines of code that it becomes a chore and a hassel to format them all. Our fancy decorator allows us to turn this logic into an object like so:</p>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>```
-def formatted_created_at
-todo.created_at.strftime("%m/%d/%Y - %H:%M")
-end 
-```
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>	def formatted_created_at
+	todo.created_at.strftime("%m/%d/%Y - %H:%M")
+	end
 </code></pre></div></div>
 
 <p>and in our view we can compare the final decorated view line to the undecorated</p>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>	#index.html.erb
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>#index.html.erb
 	
-	#Decorated
-	&lt;h4&gt;Published &lt;%= @article.strftime("%m/%d/%Y - %H:%M" %&gt;&lt;/h4&gt;
-
-	#Undecorated
+#Decorated
+&lt;h4&gt;Published &lt;%= @article.strftime("%m/%d/%Y - %H:%M" %&gt;&lt;/h4&gt;
+#Undecorated
 &lt;h4&gt;Todo &lt;%= @todo.content %&gt; Created on &lt;%= @todo.created_at %&gt; &lt;/h4&gt;
 </code></pre></div></div>
 
