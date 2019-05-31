@@ -22,7 +22,7 @@ so lets see how we can use this in a named scope:
 ```
 #app/models/user.rb
 
-scope: paid, ->{where("paid LIKE ?", paid)
+scope :paid, ->{where("paid LIKE ?", paid)
 end
 ```
 
