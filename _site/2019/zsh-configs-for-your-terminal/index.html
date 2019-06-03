@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>John Cordero - Zsh configs for your terminal</title>
+  <link rel="shortcut icon" href="/assets/images/heart.ico">
+  <link rel="stylesheet" href="/assets/css/style.css">
+  <link rel="alternate" type="application/rss+xml" title="My Blog" href="/feed.xml">
+  <link rel="stylesheet" href="/assets/css/highlight.css">
+</head>
+<body>
+
+  <nav class="main-nav">
+    
+        <a href="/"> <span class="arrow">←</span> Home </a>
+    
+
+    
+        <a href="/about">About </a>
+    
+    <a class="cta" href="/feed.xml">Subscribe</a>
+</nav>
+
+
+  
+
+  <section id="wrapper" class="">
+    <article class="post">
+    <header>
+        <h1>Zsh configs for your terminal</h1>
+        <h2 class="headline">June 3, 2019</h2>
+    </header>
+    <section id="post-body">
+        <p>Edit your zshrc file and reload with source!</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code># Load Nerd Fonts with Powerlevel9k theme for Zsh
+ POWERLEVEL9K_MODE='nerdfont-complete'
+ source ~/powerlevel9k/powerlevel9k.zsh-theme
+
+ # Font mode for powerlevel9k
+ P9K_MODE="nerdfont-complete"
+
+ POWERLEVEL9K_CUSTOM_WIFI_SIGNAL="zsh_wifi_signal"
+ POWERLEVEL9K_CUSTOM_WIFI_SIGNAL_BACKGROUND="white"
+ POWERLEVEL9K_CUSTOM_WIFI_SIGNAL_FOREGROUND="black"
+
+ P9K_VCS_GIT_ICON=$'\uf1d2 '
+ P9K_VCS_GIT_GITHUB_ICON=$'\uf113 '
+ P9K_VCS_GIT_GITLAB_ICON=$'\uf296 '
+ P9K_VCS_BRANCH_ICON=$''
+ P9K_VCS_STAGED_ICON=$'\uf055'
+ P9K_VCS_UNSTAGED_ICON=$'\uf421'
+ P9K_VCS_UNTRACKED_ICON=$'\uf00d'
+ P9K_VCS_INCOMING_CHANGES_ICON=$'\uf0ab '
+ P9K_VCS_OUTGOING_CHANGES_ICON=$'\uf0aa'
+
+ # VCS colours
+ P9K_VCS_MODIFIED_BACKGROUND='blue'
+ P9K_VCS_MODIFIED_FOREGROUND='black'
+ P9K_VCS_UNTRACKED_BACKGROUND='green'
+ P9K_VCS_UNTRACKED_FOREGROUND='black'
+ P9K_VCS_CLEAN_BACKGROUND='green'
+ P9K_VCS_CLEAN_FOREGROUND='black'
+
+ # VCS CONFIG
+ P9K_VCS_SHOW_CHANGESET=false
+ POWERLEVEL9K_CONTEXT_TEMPLATE='%n'
+ POWERLEVEL9K_CONTEXT_DEFAULT_FOREGROUND='white'
+ POWERLEVEL9K_BATTERY_CHARGING='yellow'
+ POWERLEVEL9K_BATTERY_CHARGED='green'
+ POWERLEVEL9K_BATTERY_DISCONNECTED='$DEFAULT_COLOR'
+ POWERLEVEL9K_BATTERY_LOW_THRESHOLD='10'
+ POWERLEVEL9K_BATTERY_LOW_COLOR='red'
+ POWERLEVEL9K_MULTILINE_FIRST_PROMPT_PREFIX=''
+ POWERLEVEL9K_BATTERY_ICON='\uf1e6 '
+ POWERLEVEL9K_PROMPT_ON_NEWLINE=true
+ POWERLEVEL9K_VCS_MODIFIED_BACKGROUND='yellow'
+ POWERLEVEL9K_VCS_UNTRACKED_BACKGROUND='yellow'
+ POWERLEVEL9K_VCS_UNTRACKED_ICON='?'
+
+ POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(os_icon context battery dir vcs)
+ POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(status time dir_writable ip )
+
+ POWERLEVEL9K_SHORTEN_DIR_LENGTH=1
+
+ POWERLEVEL9K_TIME_FORMAT="%D{\uf017 %H:%M \uf073 %m/%d/%y}"
+ POWERLEVEL9K_TIME_BACKGROUND='white'
+ POWERLEVEL9K_RAM_BACKGROUND='yellow'
+ POWERLEVEL9K_LOAD_CRITICAL_BACKGROUND="white"
+ POWERLEVEL9K_LOAD_WARNING_BACKGROUND="white"
+ POWERLEVEL9K_LOAD_NORMAL_BACKGROUND="white"
+ POWERLEVEL9K_LOAD_CRITICAL_FOREGROUND="red"
+ POWERLEVEL9K_LOAD_WARNING_FOREGROUND="yellow"
+ POWERLEVEL9K_LOAD_NORMAL_FOREGROUND="black"
+ POWERLEVEL9K_LOAD_CRITICAL_VISUAL_IDENTIFIER_COLOR="red"
+ POWERLEVEL9K_LOAD_WARNING_VISUAL_IDENTIFIER_COLOR="yellow"
+ POWERLEVEL9K_LOAD_NORMAL_VISUAL_IDENTIFIER_COLOR="green"
+ POWERLEVEL9K_HOME_ICON=''
+ POWERLEVEL9K_HOME_SUB_ICON=''
+ POWERLEVEL9K_FOLDER_ICON=''
+ POWERLEVEL9K_STATUS_VERBOSE=true
+ POWERLEVEL9K_STATUS_CROSS=true
+
+ POWERLEVEL9K_MULTILINE_FIRST_PROMPT_PREFIX="%F{blue}\u256D\u2500%f"
+ POWERLEVEL9K_MULTILINE_LAST_PROMPT_PREFIX="%F{blue}\u2570\uf460%f "
+ POWERLEVEL9K_SHOW_CHANGESET=true
+ POWERLEVEL9K_CHANGESET_HASH_LENGTH=6
+
+ plugins=(git gitfast )
+
+ export DEFAULT_USER="$USER"
+</code></pre></div></div>
+
+    </section>
+</article>
+<footer id="post-meta" class="clearfix">
+    <a href="http://twitter.com/johncorderox">
+        <img class="avatar" src="/assets/images/avatar.png">
+        <div>
+            <span class="dark">John</span>
+            <span>Software Developer</span>
+        </div>
+    </a>
+
+    <section id="sharing">
+        <a class="twitter" href="https://twitter.com/intent/tweet?text=http://johncorderox.com/2019/zsh-configs-for-your-terminal/ - Zsh configs for your terminal by @johncorderox"><span class="icon-twitter"> Tweet</span></a>
+
+<a class="facebook" href="#" onclick="
+    window.open(
+      'https://www.facebook.com/sharer/sharer.php?u='+encodeURIComponent(location.href),
+      'facebook-share-dialog',
+      'width=626,height=436');
+    return false;"><span class="icon-facebook-rect"> Share</span>
+</a>
+    </section>
+</footer>
+
+<!-- Disqus comments -->
+
+
+<!-- Archive post list -->
+
+
+  </section>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+  <script src="/assets/js/main.js"></script>
+  <script src="/assets/js/highlight.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script>
+
+  <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-79158260-1', 'auto');
+    ga('send', 'pageview');
+  </script>
+</body>
+</html>

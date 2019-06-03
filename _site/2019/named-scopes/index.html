@@ -50,7 +50,7 @@ end
 
 <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>#app/models/user.rb
 
-scope: paid, -&gt;{where("paid LIKE ?", paid)
+scope :paid, -&gt;{where("paid LIKE ?", paid)
 end
 </code></pre></div></div>
 

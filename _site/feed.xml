@@ -7,6 +7,19 @@
     <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml" />
     
       <item>
+        <title>Zsh configs for your terminal</title>
+        
+        
+          <description>&lt;p&gt;Edit your zshrc file and reload with source!&lt;/p&gt;
+
+</description>
+        
+        <pubDate>Mon, 03 Jun 2019 00:00:00 -0700</pubDate>
+        <link>http://localhost:4000/2019/zsh-configs-for-your-terminal/</link>
+        <guid isPermaLink="true">http://localhost:4000/2019/zsh-configs-for-your-terminal/</guid>
+      </item>
+    
+      <item>
         <title>Draper Gem 101</title>
         
         
