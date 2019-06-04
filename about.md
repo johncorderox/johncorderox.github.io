@@ -28,5 +28,5 @@ In my spare time I love playing video games, trying out new foods, working out, 
 johncorderox@gmail.com
 ```
 
-[Github](https://github.com/johncorderox) | [Linkedin](https://www.linkedin.com/in/johncorderox/) | [Instagram](https://www.instagram.com/johncorderox/) | [Resume](http://)<br>
+[Github](https://github.com/johncorderox) | [Linkedin](https://www.linkedin.com/in/johncorderox/) | [Instagram](https://www.instagram.com/johncorderox/) | [Resume](https://drive.google.com/file/d/1Yb8Y9qCfLiMjd79z_b_nWII83lj3KIRS/view?usp=sharing)<br>
 {% include footer.html %}
