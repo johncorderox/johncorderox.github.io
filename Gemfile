@@ -3,3 +3,4 @@ gem 'github-pages', group: :jekyll_plugins
 gem 'jekyll-admin', group: :jekyll_plugins
 gem 'jekyll-watch'
 gem 'jemoji'
+gem 'jekyll-seo-tag'

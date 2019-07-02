@@ -10,7 +10,7 @@ aboutPage: true
 markdown: kramdown
 highlighter: rouge
 
-plugins: [jekyll-paginate, jemoji]
+plugins: [jekyll-paginate, jemoji, jekyll-seo-tag]
 paginate: 10
 domain_name: 'http://johncorderox.com'
 google_analytics: 'UA-79158260-1'
