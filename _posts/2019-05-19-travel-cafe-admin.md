@@ -11,7 +11,7 @@ The Travel Cafe is an admin interface to control all 3 Ruby on Rails application
 
 <p align="center"><img src="{{ '/assets/images/travel-header.png' | relative_url }}" alt="Evolution Travel Agent"></p>
 <p align="center"><img src="{{ '/assets/images/travel1.png' | relative_url }}" alt="Evolution Travel Agent"></p>
-<p align="center"><img src="{{ '/assets/images/travel2.png' | relative_url }}" alt="Evolution Travel Agent"></p>
+
 
 
 ## Software Features

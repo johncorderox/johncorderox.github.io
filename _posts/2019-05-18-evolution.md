@@ -9,12 +9,12 @@ Evolution Travel Agent is a rails application that allows travel agents to creat
 
 ***
 
+<p align="center"><img src="{{ '/assets/images/evo-login.gif' | relative_url }}" alt="Evolution Travel Agent"></p>
+
 <p align="center"><img src="{{ '/assets/images/evo-header.png' | relative_url }}" alt="Evolution Travel Agent"></p>
 
-We are also currently developing a brand new Australian site for our AUS user base. 
+We are also currently developing a brand new Australian site for our AUS user base. Our App is built with an EC2 instance (t2.large) and private S3 buckets. We are planning for a 2020 launch and expected to gain over 8,000 unique agents across AU and NZ. We plan to expand over to EUR and possibly PR in the near future. 
 <p align="center"><img src="{{ '/assets/images/evo-aus-ban.png' | relative_url }}" alt="Evolution Travel Agent"></p>
-
-
 <p align="center"><img src="{{ '/assets/images/evo-content1.png' | relative_url }}" alt="Evolution Travel Agent"></p>
 <p align="center"><img src="{{ '/assets/images/evo-content2.png' | relative_url }}" alt="Evolution Travel Agent"></p>
 

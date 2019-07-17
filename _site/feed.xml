@@ -7,6 +7,32 @@
     <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml" />
     
       <item>
+        <title>What does map(&amp;:name) mean in Ruby?</title>
+        
+        
+          <description>&lt;h1 id=&quot;mapname&quot;&gt;map(&amp;amp;:name)&lt;/h1&gt;
+
+</description>
+        
+        <pubDate>Thu, 11 Jul 2019 00:00:00 -0700</pubDate>
+        <link>http://localhost:4000/2019/what-does-map-name-mean-in-ruby/</link>
+        <guid isPermaLink="true">http://localhost:4000/2019/what-does-map-name-mean-in-ruby/</guid>
+      </item>
+    
+      <item>
+        <title>How to Eliminate N+1 Queries</title>
+        
+        
+          <description>&lt;h1 id=&quot;eliminate-n1&quot;&gt;Eliminate N+1&lt;/h1&gt;
+
+</description>
+        
+        <pubDate>Wed, 03 Jul 2019 00:00:00 -0700</pubDate>
+        <link>http://localhost:4000/2019/eliminate-n1/</link>
+        <guid isPermaLink="true">http://localhost:4000/2019/eliminate-n1/</guid>
+      </item>
+    
+      <item>
         <title>Zsh configs for your terminal</title>
         
         
@@ -61,19 +87,6 @@
       </item>
     
       <item>
-        <title>What does map(&amp;:name) mean in Ruby?</title>
-        
-        
-          <description>&lt;h1 id=&quot;mapname&quot;&gt;map(&amp;amp;:name)&lt;/h1&gt;
-
-</description>
-        
-        <pubDate>Mon, 13 May 2019 00:00:00 -0700</pubDate>
-        <link>http://localhost:4000/2019/what-does-map-name-mean-in-ruby/</link>
-        <guid isPermaLink="true">http://localhost:4000/2019/what-does-map-name-mean-in-ruby/</guid>
-      </item>
-    
-      <item>
         <title>Add a Rails Env to your Vagrant Server</title>
         
         
@@ -111,19 +124,6 @@
         <pubDate>Tue, 07 May 2019 00:00:00 -0700</pubDate>
         <link>http://localhost:4000/2019/scaffold-a-new-rails-5-api/</link>
         <guid isPermaLink="true">http://localhost:4000/2019/scaffold-a-new-rails-5-api/</guid>
-      </item>
-    
-      <item>
-        <title>How to Eliminate N+1 Queries</title>
-        
-        
-          <description>&lt;h1 id=&quot;eliminate-n1&quot;&gt;Eliminate N+1&lt;/h1&gt;
-
-</description>
-        
-        <pubDate>Tue, 07 May 2019 00:00:00 -0700</pubDate>
-        <link>http://localhost:4000/2019/eliminate-n1/</link>
-        <guid isPermaLink="true">http://localhost:4000/2019/eliminate-n1/</guid>
       </item>
     
       <item>
