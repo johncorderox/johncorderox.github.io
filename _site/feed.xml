@@ -3,8 +3,8 @@
   <channel>
     <title>John Cordero</title>
     <description>Hi. I'm John - A Software Engineer based in Los Angeles, CA. I'm currently building at &lt;a href=&quot;http://www.myevolutiontravel.com/&quot;&gt;Evolution&lt;/a&gt;, a travel service company focusing on Ruby on Rails and AWS.</description>
-    <link>http://johncorderox.com</link>
-    <atom:link href="http://johncorderox.com/feed.xml" rel="self" type="application/rss+xml" />
+    <link>http://localhost:4000</link>
+    <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml" />
     
       <item>
         <title>Metaprogramming - define_method</title>
@@ -15,8 +15,8 @@
 </description>
         
         <pubDate>Wed, 07 Aug 2019 00:00:00 -0700</pubDate>
-        <link>http://johncorderox.com/2019/metaprogramming-define-method/</link>
-        <guid isPermaLink="true">http://johncorderox.com/2019/metaprogramming-define-method/</guid>
+        <link>http://localhost:4000/2019/metaprogramming-define-method/</link>
+        <guid isPermaLink="true">http://localhost:4000/2019/metaprogramming-define-method/</guid>
       </item>
     
       <item>
@@ -28,8 +28,8 @@
 </description>
         
         <pubDate>Thu, 11 Jul 2019 00:00:00 -0700</pubDate>
-        <link>http://johncorderox.com/2019/what-does-map-name-mean-in-ruby/</link>
-        <guid isPermaLink="true">http://johncorderox.com/2019/what-does-map-name-mean-in-ruby/</guid>
+        <link>http://localhost:4000/2019/what-does-map-name-mean-in-ruby/</link>
+        <guid isPermaLink="true">http://localhost:4000/2019/what-does-map-name-mean-in-ruby/</guid>
       </item>
     
       <item>
@@ -41,8 +41,8 @@
 </description>
         
         <pubDate>Wed, 03 Jul 2019 00:00:00 -0700</pubDate>
-        <link>http://johncorderox.com/2019/eliminate-n1/</link>
-        <guid isPermaLink="true">http://johncorderox.com/2019/eliminate-n1/</guid>
+        <link>http://localhost:4000/2019/eliminate-n1/</link>
+        <guid isPermaLink="true">http://localhost:4000/2019/eliminate-n1/</guid>
       </item>
     
       <item>
@@ -54,8 +54,8 @@
 </description>
         
         <pubDate>Mon, 03 Jun 2019 00:00:00 -0700</pubDate>
-        <link>http://johncorderox.com/2019/zsh-configs-for-your-terminal/</link>
-        <guid isPermaLink="true">http://johncorderox.com/2019/zsh-configs-for-your-terminal/</guid>
+        <link>http://localhost:4000/2019/zsh-configs-for-your-terminal/</link>
+        <guid isPermaLink="true">http://localhost:4000/2019/zsh-configs-for-your-terminal/</guid>
       </item>
     
       <item>
@@ -67,8 +67,8 @@
 </description>
         
         <pubDate>Mon, 20 May 2019 00:00:00 -0700</pubDate>
-        <link>http://johncorderox.com/2019/draper-gem-101/</link>
-        <guid isPermaLink="true">http://johncorderox.com/2019/draper-gem-101/</guid>
+        <link>http://localhost:4000/2019/draper-gem-101/</link>
+        <guid isPermaLink="true">http://localhost:4000/2019/draper-gem-101/</guid>
       </item>
     
       <item>
@@ -81,8 +81,8 @@
 </description>
         
         <pubDate>Sun, 19 May 2019 00:00:00 -0700</pubDate>
-        <link>http://johncorderox.com/2019/travel-cafe-admin/</link>
-        <guid isPermaLink="true">http://johncorderox.com/2019/travel-cafe-admin/</guid>
+        <link>http://localhost:4000/2019/travel-cafe-admin/</link>
+        <guid isPermaLink="true">http://localhost:4000/2019/travel-cafe-admin/</guid>
       </item>
     
       <item>
@@ -95,8 +95,8 @@
 </description>
         
         <pubDate>Sat, 18 May 2019 00:00:00 -0700</pubDate>
-        <link>http://johncorderox.com/2019/evolution/</link>
-        <guid isPermaLink="true">http://johncorderox.com/2019/evolution/</guid>
+        <link>http://localhost:4000/2019/evolution/</link>
+        <guid isPermaLink="true">http://localhost:4000/2019/evolution/</guid>
       </item>
     
       <item>
@@ -108,8 +108,8 @@
 </description>
         
         <pubDate>Sat, 11 May 2019 00:00:00 -0700</pubDate>
-        <link>http://johncorderox.com/2019/add-a-rails-env-to-your-vagrant-server/</link>
-        <guid isPermaLink="true">http://johncorderox.com/2019/add-a-rails-env-to-your-vagrant-server/</guid>
+        <link>http://localhost:4000/2019/add-a-rails-env-to-your-vagrant-server/</link>
+        <guid isPermaLink="true">http://localhost:4000/2019/add-a-rails-env-to-your-vagrant-server/</guid>
       </item>
     
       <item>
@@ -122,8 +122,8 @@
 </description>
         
         <pubDate>Wed, 08 May 2019 00:00:00 -0700</pubDate>
-        <link>http://johncorderox.com/2019/named-scopes/</link>
-        <guid isPermaLink="true">http://johncorderox.com/2019/named-scopes/</guid>
+        <link>http://localhost:4000/2019/named-scopes/</link>
+        <guid isPermaLink="true">http://localhost:4000/2019/named-scopes/</guid>
       </item>
     
       <item>
@@ -135,8 +135,8 @@
 </description>
         
         <pubDate>Tue, 07 May 2019 00:00:00 -0700</pubDate>
-        <link>http://johncorderox.com/2019/scaffold-a-new-rails-5-api/</link>
-        <guid isPermaLink="true">http://johncorderox.com/2019/scaffold-a-new-rails-5-api/</guid>
+        <link>http://localhost:4000/2019/scaffold-a-new-rails-5-api/</link>
+        <guid isPermaLink="true">http://localhost:4000/2019/scaffold-a-new-rails-5-api/</guid>
       </item>
     
   </channel>
