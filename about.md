@@ -5,9 +5,9 @@ permalink: about/
 profile: true
 ---
 
-Software Engineer [@Evolution](http://www.myevolutiontravel.com/) <br>
-Previously Full Stack [@Sunnybyte](https://sunnybyte.com/) & Intern [@ControlExpert](https://www.controlexpert.com/uk-en/) <br>
-Education [@WGU](https://www.wgu.edu) - B.S. Data Analytics & [@CodingDojo](https://www.codingdojo.com/)<br>
+Software Engineer [@Infowerks](https://infowerks.com/) <br>
+Previously [@Evolution](http://www.myevolutiontravel.com/),  [@Sunnybyte](https://sunnybyte.com/) & Intern [@ControlExpert](https://www.controlexpert.com/uk-en/) <br>
+Education [@SNHU](https://www.snhu.edu/) - A.A. Liberal Arts & [@CodingDojo](https://www.codingdojo.com/)<br>
 
 
 Currently building as a Mid-level Engineer with:<br>
@@ -16,9 +16,10 @@ Currently building as a Mid-level Engineer with:<br>
 * ActiveRecord
 * HTML / Bootstrap / CSS3
 * React JS / Redux
-* AWS ( EC2/ S3 / Route 53/ Cloudwatch/ Elastic Beanstalk)
-* RSpec / Factory Bot
+* AWS ( EC2/ S3 / Route 53/ Elastic Beanstalk)
 * Capybara
+* RSpec / Factory Bot / Database Cleaner / Faker
+
 
 <br>
 
