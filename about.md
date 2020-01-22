@@ -15,10 +15,10 @@ Currently building as a Mid-level Engineer with:<br>
 * PostgreSQL
 * ActiveRecord
 * HTML / Bootstrap / CSS3
-* React JS / Redux
+* React JS / JQuery
 * AWS ( EC2/ S3 / Route 53/ Elastic Beanstalk)
-* Capybara
-* RSpec / Factory Bot / Database Cleaner / Faker
+* RSpec / Capybara
+* Factory Bot / Database Cleaner / Simple Coverage
 
 
 <br>
