@@ -50,7 +50,7 @@ mkdir mkdir app/controllers/api && mkdir app/controllers/api/v1
 ```
 
 If everything looks right you should see your directory identical as below. <br><br>
-<a href="http://tinypic.com?ref=3589c11" target="_blank"><img src="http://i67.tinypic.com/3589c11.png" height="250" width="280" border="0" alt="Image and video hosting by TinyPic"></a>
+
 
  Now that our versioning is complete, let's test out a model and controller to work with our new url of `localhost:3000/api/v1`.
 
