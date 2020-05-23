@@ -138,6 +138,4 @@ Seed the DB using `rails db:seed && rails db:migrate`
 Start your Rails server `rails s` and navigate to `localhost:3000/api/v1/movies` and if it is successful you should see the following JSON output: <br><br>
 
 (Optional) I'm using a pretty JSON viewer for chrome which you can download [here.](https://chrome.google.com/webstore/detail/jsonview/chklaanhfefbnpoihckbnefhakgolnmc)
-<a href="http://tinypic.com?ref=2m60ahx" target="_blank"><img src="http://i63.tinypic.com/2m60ahx.png" width="350" height="410" border="0" alt="Image and video hosting by TinyPic"></a>
-
 Congrats! You have successfully created a Rails API and completed your first GET request!
