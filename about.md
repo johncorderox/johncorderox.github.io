@@ -11,14 +11,14 @@ Education [@SNHU](https://www.snhu.edu/) - A.A. Liberal Arts & [@CodingDojo](htt
 
 
 Currently building as a Mid-level Engineer with:<br>
-* Ruby on Rails
-* PostgreSQL
-* ActiveRecord
-* HTML / Bootstrap / CSS3
-* React JS / JQuery
-* AWS ( EC2/ S3 / Route 53/ Elastic Beanstalk)
-* RSpec / Capybara
-* Factory Bot / Database Cleaner / Simple Coverage
+* Ruby on Rails / Rails API <br>
+* PostgreSQL / ActiveRecord <br>
+* Ubuntu / Linux <br>
+* HTML / Bootstrap / HAML / CSS3<br>
+* React JS / JQuery<br>
+* AWS ( EC2/ S3 / Route 53/ Elastic Beanstalk)<br>
+* RSpec / Capybara<br>
+* Factory Bot / Database Cleaner / Simple Coverage<br>
 
 
 <br>
