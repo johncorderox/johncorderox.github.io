@@ -5,11 +5,11 @@ exclude: true
 ---
 
 <p align="center"><strong>Admin Portal</strong></p>
-The Travel Cafe is an admin interface to control all 3 Ruby on Rails applications that involve all user data, credit card forms, commission forms and Accounting payments distrubted across 19,000 unique users. The Accounting and Customer Service team utilize this app daily for processes like account information and commission tracking for companies like Carnival Cruise and Enterprise.
+The Travel Cafe is an admin interface to control all 3 Ruby on Rails applications that involve all user data, credit card forms, commission forms and accounting payments distributed across 19,000 unique users. The Accounting and Customer Service team utilize this app daily for processes like account information and commission tracking for companies like Carnival Cruise and Enterprise.
 
 ***
 
-<p align="center"><img src="{{ '/assets/images/travel-header.png' | relative_url }}" alt="Evolution Travel Agent"></p>
+<p align="center"><img src="{{ '/assets/images/travel2.png' | relative_url }}" alt="Evolution Travel Agent"></p>
 <p align="center"><img src="{{ '/assets/images/travel1.png' | relative_url }}" alt="Evolution Travel Agent"></p>
 
 
