@@ -7,7 +7,7 @@ profile: true
 
 Software Engineer [@Infowerks](https://infowerks.com/) <br>
 Previously [@Evolution](http://www.myevolutiontravel.com/),  [@Sunnybyte](https://sunnybyte.com/) & Intern [@ControlExpert](https://www.controlexpert.com/uk-en/) <br>
-Education [@SNHU](https://www.snhu.edu/) - A.A. Liberal Arts & [@CodingDojo](https://www.codingdojo.com/)<br>
+Education [@SNHU](https://www.snhu.edu/) - B.A. General Studies
 
 
 Currently building as a Mid-level Engineer with:<br>
