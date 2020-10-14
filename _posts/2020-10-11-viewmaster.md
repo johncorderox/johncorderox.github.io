@@ -10,7 +10,7 @@ ViewMaster is an archival data system built with Ruby on Rails 5 for pharmacists
 ***
 
 <p align="center"><img src="{{ '/assets/images/vm.png' | relative_url }}" alt="viewmaster"></p>
-
+<p align="center"><img src="{{ '/assets/images/erd.png' | relative_url }}" alt="db"></p>
 
 ***
 
