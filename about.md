@@ -19,6 +19,7 @@ Currently building as a Mid-level Engineer with:<br>
 * AWS ( EC2/ S3 / Route 53/ Elastic Beanstalk)<br>
 * RSpec / Capybara<br>
 * Factory Bot / Database Cleaner / Simple Coverage<br>
+* Sidekiq / Redis 
 
 
 <br>
