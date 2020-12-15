@@ -4,7 +4,13 @@
     {% endif %}
 
     {% if page.url != "/about/" %}
-        <a href="{{ "/" | relative_url  }}about">About </a>
+        <a href="{{ "/" | relative_url  }}about">Rails Development</a>
+        <a href="{{ "/" | relative_url  }}about">Blog</a>
+        <a href="{{ "/" | relative_url  }}about">Github</a>
+        <a href="{{ "/" | relative_url  }}about">LinkedIn</a>
+        <a href="{{ "/" | relative_url  }}about">Spill the Beans</a>
+        <a class="cta" href="{{ "/" | relative_url  }}about">Resume</a>
+        
     {% endif %}
-    <a class="cta" href="{{ "/" | relative_url  }}feed.xml">Subscribe</a>
+   <!--  <a class="cta" href="{{ "/" | relative_url  }}feed.xml">Subscribe</a> -->
 </nav>
