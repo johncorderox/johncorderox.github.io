@@ -2,9 +2,10 @@
     {% if page.url != "/" %}
         <a href="{{ "/" | relative_url  }}"> <span class="arrow">←</span> Home </a>
     {% endif %}
-
-    {% if page.url != "/about/" %}
-        <a href="{{ "/" | relative_url  }}about">About </a>
-    {% endif %}
-    <a class="cta" href="{{ "/" | relative_url  }}feed.xml">Subscribe</a>
+        <a href="{{ "https://github.com/johncorderox" | relative_url  }}">Github</a>
+        <a href="{{ "https://www.linkedin.com/in/johncorderox/" | relative_url  }}">LinkedIn</a>
+        <a href="{{ "https://www.spillthebean.org/dev-overview/john-cordero" | relative_url  }}">Spill the Beans</a>
+        <a class="cta" href="{{ "/" | relative_url  }}">Resume</a>
+        
+   <!--  <a class="cta" href="{{ "/" | relative_url  }}feed.xml">Subscribe</a> -->
 </nav>
