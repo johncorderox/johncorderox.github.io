@@ -130,7 +130,7 @@ h2 {
 
 .profile #wrapper {
   padding: 100px 40px 0px;
-  max-width: 600px;
+  max-width: 620px;
   margin: 0 auto;
 }
 
@@ -144,8 +144,8 @@ h2 {
 
 .profile #avatar {
   display: inline-block;
-  width: 105px;
-  height: 105px;
+  width: 95px;
+  height: 95px;
   border-radius: 50%;
   margin-bottom: 20px;
 }
@@ -164,30 +164,21 @@ h2 {
   color: #111;
 }
 
-nav.main-nav {
-  padding: 20px 20px 0;
-  /*max-width: 600px;*/
-  /*width:100%;*/
+.main-nav {
   background: #fff;
   background: rgba(255, 255, 255, .90);
-  margin: 0 auto;
-  text-align: right;
-  /*position: fixed;*/
-  z-index: 100;
 }
 
-nav.main-nav a {
-  top: 8px;
-  right: 6px;
-  padding: 8px 12px;
-  color: #5badf0;
-  font-size: 13px;
-  /*font-weight: bold;*/
+.main-nav a {
+  color: #5694f1;
+  font-size: 14px;
   line-height: 1.35;
   border-radius: 3px;
+  text-align: center;
+  padding: 4px;
 }
 
-nav.main-nav a.cta {
+.main-nav a.cta {
   background: #00AAFF;
   color: #fff;
   margin-left: 12px;
