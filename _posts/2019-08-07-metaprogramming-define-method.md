@@ -9,24 +9,23 @@ define_method is a wonderful metaprogramming technique used to create methods on
 
 Heres an example of a basic ruby class with some basic methods:
 
-```
+```ruby
 class House
 
-def house_lights
-	puts "lights are on!"
+	def house_lights
+		puts "lights are on!"
+	end
+
+	def house_water
+		puts "water is on!"
+	end
+
+	def power
+		puts "power is on!"
+	end
 end
 
-def house_water
-	puts "water is on!"
-end
-
-def power
-	puts "power is on!"
-end
-
-end
 apartment = House.new
-
 apartment.house_lights
 # => lights are on!
 
@@ -35,7 +34,7 @@ apartment.house_water
 ```
 This code is far from dry and you can see it can get repetitive if we added more methods very similar. Adding ```define_method``` can create methods for you easily and check this out:
 
-```
+```ruby
 class House
 
   ["lights", "water", "garbage"].each do |method|
@@ -43,11 +42,9 @@ class House
       puts method.to_s + " is on!"
     end
   end
-
 end
 
 apartment = House.new
-
 apartment.house_lights
 # => lights are on!
 

@@ -1,141 +1,660 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/elements/1.1/">
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>John Cordero</title>
-    <description>Hi. I'm John. &lt;br&gt;</description>
-    <link>http://localhost:4000</link>
-    <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml" />
-    
-      <item>
-        <title>Gallery</title>
-        
-        
-          <description>&lt;p&gt;test&lt;/p&gt;
-</description>
-        
-        <pubDate>Mon, 21 Dec 2020 00:00:00 -0800</pubDate>
-        <link>http://localhost:4000/2020/gallery/</link>
-        <guid isPermaLink="true">http://localhost:4000/2020/gallery/</guid>
-      </item>
+    <title>Hi. Im John Cordero.</title>
+    <description>Software Engineer @&lt;u&gt;Infowerks&lt;/u&gt;.</description>
+    <link>http://localhost:4000//</link>
+    <atom:link href="http://localhost:4000//feed.xml" rel="self" type="application/rss+xml"/>
+    <pubDate>Wed, 23 Dec 2020 22:59:23 -0800</pubDate>
+    <lastBuildDate>Wed, 23 Dec 2020 22:59:23 -0800</lastBuildDate>
+    <generator>Jekyll v3.6.3</generator>
     
       <item>
         <title>ViewMaster</title>
-        
-        
-          <description>&lt;p align=&quot;center&quot;&gt;&lt;strong&gt;ViewMaster&lt;/strong&gt;&lt;/p&gt;
+        <description>&lt;p align=&quot;center&quot;&gt;&lt;strong&gt;ViewMaster&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;ViewMaster is an archival data system built with Ruby on Rails 5 for pharmacists in the U.S. This record retention software meets HIPAA and HITRUST regulations with encrypted and secure data. With ViewMaster, you can satisfy all the requirements for record retention and reporting from entities such as the Board of Pharmacy, CMS, DEA, and more. It’s a true turnkey solution to the challenges of meeting requirements while also maintaining security and privacy.&lt;/p&gt;
 
+&lt;hr /&gt;
+
+&lt;p align=&quot;center&quot;&gt;&lt;img src=&quot;/assets/images/vm.png&quot; alt=&quot;viewmaster&quot; /&gt;&lt;/p&gt;
+&lt;p align=&quot;center&quot;&gt;&lt;img src=&quot;/assets/images/erd.png&quot; alt=&quot;db&quot; /&gt;&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;h2 id=&quot;core-gems&quot;&gt;Core Gems&lt;/h2&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-ruby&quot; data-lang=&quot;ruby&quot;&gt;&lt;span class=&quot;n&quot;&gt;gem&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;haml&quot;&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;gem&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;sendgrid-ruby&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;~&amp;gt; 6.1.0&quot;&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;gem&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;prawn&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;2.2.2&quot;&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;gem&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;azure&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;0.7.10&quot;&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;gem&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;redis&quot;&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;gem&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;mini_magick&quot;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
 </description>
-        
         <pubDate>Sun, 11 Oct 2020 00:00:00 -0700</pubDate>
-        <link>http://localhost:4000/2020/viewmaster/</link>
-        <guid isPermaLink="true">http://localhost:4000/2020/viewmaster/</guid>
+        <link>http://localhost:4000//2020/10/viewmaster.html</link>
+        <guid isPermaLink="true">http://localhost:4000//2020/10/viewmaster.html</guid>
+        
+        
       </item>
     
       <item>
         <title>Metaprogramming - define_method</title>
-        
-        
-          <description>&lt;p&gt;define_method is a wonderful metaprogramming technique used to create methods on the fly and ultimately dry up your code.&lt;/p&gt;
+        <description>&lt;p&gt;define_method is a wonderful metaprogramming technique used to create methods on the fly and ultimately dry up your code.&lt;/p&gt;
 
+&lt;p&gt;Heres an example of a basic ruby class with some basic methods:&lt;/p&gt;
+
+&lt;div class=&quot;language-ruby highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;House&lt;/span&gt;
+
+	&lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;house_lights&lt;/span&gt;
+		&lt;span class=&quot;nb&quot;&gt;puts&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;lights are on!&quot;&lt;/span&gt;
+	&lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
+
+	&lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;house_water&lt;/span&gt;
+		&lt;span class=&quot;nb&quot;&gt;puts&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;water is on!&quot;&lt;/span&gt;
+	&lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
+
+	&lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;power&lt;/span&gt;
+		&lt;span class=&quot;nb&quot;&gt;puts&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;power is on!&quot;&lt;/span&gt;
+	&lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
+
+&lt;span class=&quot;n&quot;&gt;apartment&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;House&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;new&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;apartment&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;house_lights&lt;/span&gt;
+&lt;span class=&quot;c1&quot;&gt;# =&amp;gt; lights are on!&lt;/span&gt;
+
+&lt;span class=&quot;n&quot;&gt;apartment&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;house_water&lt;/span&gt;
+&lt;span class=&quot;c1&quot;&gt;# =&amp;gt; water is on!&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;This code is far from dry and you can see it can get repetitive if we added more methods very similar. Adding &lt;code class=&quot;highlighter-rouge&quot;&gt;define_method&lt;/code&gt; can create methods for you easily and check this out:&lt;/p&gt;
+
+&lt;div class=&quot;language-ruby highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;House&lt;/span&gt;
+
+  &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;lights&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;water&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;garbage&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;].&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;each&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;do&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;|&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;method&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;|&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;define_method&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;house_&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;#{&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;method&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;do&lt;/span&gt;
+      &lt;span class=&quot;nb&quot;&gt;puts&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;method&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;to_s&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot; is on!&quot;&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
+  &lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
+
+&lt;span class=&quot;n&quot;&gt;apartment&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;House&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;new&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;apartment&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;house_lights&lt;/span&gt;
+&lt;span class=&quot;c1&quot;&gt;# =&amp;gt; lights are on!&lt;/span&gt;
+
+&lt;span class=&quot;n&quot;&gt;apartment&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;house_water&lt;/span&gt;
+&lt;span class=&quot;c1&quot;&gt;# =&amp;gt; water is on!&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 </description>
-        
         <pubDate>Wed, 07 Aug 2019 00:00:00 -0700</pubDate>
-        <link>http://localhost:4000/2019/metaprogramming-define-method/</link>
-        <guid isPermaLink="true">http://localhost:4000/2019/metaprogramming-define-method/</guid>
+        <link>http://localhost:4000//2019/08/metaprogramming-define-method.html</link>
+        <guid isPermaLink="true">http://localhost:4000//2019/08/metaprogramming-define-method.html</guid>
+        
+        
       </item>
     
       <item>
         <title>What does map(&amp;:name) mean in Ruby?</title>
-        
-        
-          <description>&lt;h1 id=&quot;mapname&quot;&gt;map(&amp;amp;:name)&lt;/h1&gt;
+        <description>&lt;h1 id=&quot;mapname&quot;&gt;map(&amp;amp;:name)&lt;/h1&gt;
 
+&lt;p&gt;What does it mean?&lt;/p&gt;
+
+&lt;p&gt;This is a short hand notation for the regular map function. What map initially does is to &lt;strong&gt;transform&lt;/strong&gt; Arrays and Hashes into new values.&lt;/p&gt;
+
+&lt;p&gt;Here is a basic implementation of Map:&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;['a' , 'b', 'c'].map { |x| x.upcase }
+
+=&amp;gt;
+['A', 'B', 'C']
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Now let’s see an implementation with shorthand:&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;[1,2,3].map(&amp;amp;:upcase)
+
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;This returns the same result as before, but it for more experienced programmers with knowdlege of PROC and how it works.&lt;/p&gt;
+
+&lt;p&gt;The beginning of &amp;amp; calls &lt;code class=&quot;highlighter-rouge&quot;&gt;to_proc&lt;/code&gt; and passes in the block to be evaluated.&lt;/p&gt;
 </description>
-        
         <pubDate>Thu, 11 Jul 2019 00:00:00 -0700</pubDate>
-        <link>http://localhost:4000/2019/what-does-map-name-mean-in-ruby/</link>
-        <guid isPermaLink="true">http://localhost:4000/2019/what-does-map-name-mean-in-ruby/</guid>
+        <link>http://localhost:4000//2019/07/what-does-map-name-mean-in-ruby.html</link>
+        <guid isPermaLink="true">http://localhost:4000//2019/07/what-does-map-name-mean-in-ruby.html</guid>
+        
+        
       </item>
     
       <item>
         <title>How to Eliminate N+1 Queries</title>
-        
-        
-          <description>&lt;h1 id=&quot;eliminate-n1&quot;&gt;Eliminate N+1&lt;/h1&gt;
+        <description>&lt;h1 id=&quot;eliminate-n1&quot;&gt;Eliminate N+1&lt;/h1&gt;
 
+&lt;p&gt;One thing you want to avoid as a Ruby on Rails developer is the N+1 problem. To give an example, let’s say we have 2 tables in our database.&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;
+#Users model
+class User &amp;lt; ActiveRecord::Base
+	has_many :gifs
+end
+
+
+#Gifs model
+
+class Gif &amp;lt; ActiveRecord::Base
+	belongs_to :user
+end
+
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;What we want to do is list 10 gifs we have created with the users name and which gif they made.&lt;/p&gt;
+
+&lt;p&gt;We could do this by adding a query to our controller&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;@gifs = Gif.limit(10)
+
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;and loop the following into our view&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&amp;lt;% @gifs.each do |gif| %&amp;gt;
+	&amp;lt;p&amp;gt; gif &amp;lt;%= gif.url %&amp;gt; &amp;lt;/p&amp;gt;
+	&amp;lt;p&amp;gt; made by - &amp;lt;%= gif.user.name %&amp;gt;&amp;lt;/p&amp;gt;
+&amp;lt;% end %&amp;gt;
+
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;But what does this do?  The code in our view will ask rails to send 10 (9+1) queries: 1 query would be used to get 10 gifs and 9 of them to get the associated users.&lt;/p&gt;
+
+&lt;p&gt;Seeing how this isn’t too much of a problem since this is a toy application, what would happen if we were on production and we wanted let’s say…. 10,000 gifs? Think of the load the rails application would have to take with that kind of request being used by hundreds of users.&lt;/p&gt;
+
+&lt;p&gt;So what should we do to ease work on the database? Let’s try a method called &lt;a href=&quot;https://guides.rubyonrails.org/active_record_querying.html#eager-loading-associations&quot;&gt; Eager Loading&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;Eager Loading is a practice used to grab and load the associated records returned to use fewer queries as possible.&lt;/p&gt;
+
+&lt;p&gt;Rails has a method called &lt;code class=&quot;highlighter-rouge&quot;&gt;includes&lt;/code&gt; which will make sure the associated data (users to gifs) are loaded once the query runs. After refactoring our controller, this should be the final result:&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;#Without Eager Loading
+@gifs = Gif.limit(10)
+
+#With Eager Loading
+@gifs = Gif.includes(:users).limit(10)
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h1 id=&quot;console-output&quot;&gt;Console Output&lt;/h1&gt;
+
+&lt;p&gt;Here are 2 console outputs on the final results of a view loaded  without eager queries and with:&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;# Bad
+
+Gif Load (0.9ms) SELECT 'gifs'.* FROM 'gifs'
+Gif Load (0.4ms) SELECT 'gifs'.* FROM 'gifs' WHERE 'users'.'id' = ?  ASC LIMIT 1 [[&quot;id&quot;, 1]]
+Gif Load (0.3ms) SELECT 'gifs'.* FROM 'gifs' WHERE 'users'.'id' = ?  ASC LIMIT 1 [[&quot;id&quot;, 2]]
+Gif Load (0.4ms) SELECT 'gifs'.* FROM 'gifs' WHERE 'users'.'id' = ? ASC LIMIT 1 [[&quot;id&quot;, 3]]
+Gif Load (0.3ms) SELECT 'gifs'.* FROM 'gifs' WHERE 'users'.'id' = ?  ASC LIMIT 1 [[&quot;id&quot;, 4]]    
+Gif Load (0.4ms) SELECT 'gifs'.* FROM 'gifs' WHERE 'users'.'id' = ?  ASC LIMIT 1 [[&quot;id&quot;, 5]]
+Gif Load (0.4ms) SELECT 'gifs'.* FROM 'gifs' WHERE 'users'.'id' = ?  ASC LIMIT 1 [[&quot;id&quot;, 6]]
+Gif Load (0.3ms) SELECT 'gifs'.* FROM 'gifs' WHERE 'users'.'id' = ?  ASC LIMIT 1 [[&quot;id&quot;, 7]]
+Gif Load (0.4ms) SELECT 'gifs'.* FROM 'gifs' WHERE 'users'.'id' = ? ASC LIMIT 1 [[&quot;id&quot;, 8]
+Gif Load (0.3ms) SELECT 'gifs'.* FROM 'gifs' WHERE 'users'.'id' = ?  ASC LIMIT 1 [[&quot;id&quot;, 9]]    
+Gif Load (0.4ms) SELECT 'gifs'.* FROM 'gifs' WHERE 'users'.'id' = ?  ASC LIMIT 1 [[&quot;id&quot;, 10]]
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;#Good
+
+Gif Load (0.4ms) SELECT 'gifs'.* FROM 'gifs'
+Gif Load (0.4ms) SELECT 'users'.* FROM 'users' WHERE 'users'.'id' IN (1,2,3,4,5,6,7,8,9,10)
+
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Just check out that eager loading!!!!!! Such a breath of relief. &lt;br /&gt;
+&lt;img src=&quot;https://media.giphy.com/media/1ofR3QioNy264/giphy.gif&quot; alt=&quot;gif&quot; /&gt;&lt;/p&gt;
 </description>
-        
         <pubDate>Wed, 03 Jul 2019 00:00:00 -0700</pubDate>
-        <link>http://localhost:4000/2019/eliminate-n1/</link>
-        <guid isPermaLink="true">http://localhost:4000/2019/eliminate-n1/</guid>
+        <link>http://localhost:4000//2019/07/eliminate-n1.html</link>
+        <guid isPermaLink="true">http://localhost:4000//2019/07/eliminate-n1.html</guid>
+        
+        
       </item>
     
       <item>
         <title>Zsh configs for your terminal</title>
-        
-        
-          <description>&lt;p&gt;Edit your zshrc file and reload with source!&lt;/p&gt;
+        <description>&lt;p&gt;Edit your zshrc file and reload with source!&lt;/p&gt;
 
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;# Load Nerd Fonts with Powerlevel9k theme for Zsh
+ POWERLEVEL9K_MODE='nerdfont-complete'
+ source ~/powerlevel9k/powerlevel9k.zsh-theme
+
+ # Font mode for powerlevel9k
+ P9K_MODE=&quot;nerdfont-complete&quot;
+
+ POWERLEVEL9K_CUSTOM_WIFI_SIGNAL=&quot;zsh_wifi_signal&quot;
+ POWERLEVEL9K_CUSTOM_WIFI_SIGNAL_BACKGROUND=&quot;white&quot;
+ POWERLEVEL9K_CUSTOM_WIFI_SIGNAL_FOREGROUND=&quot;black&quot;
+
+ P9K_VCS_GIT_ICON=$'\uf1d2 '
+ P9K_VCS_GIT_GITHUB_ICON=$'\uf113 '
+ P9K_VCS_GIT_GITLAB_ICON=$'\uf296 '
+ P9K_VCS_BRANCH_ICON=$''
+ P9K_VCS_STAGED_ICON=$'\uf055'
+ P9K_VCS_UNSTAGED_ICON=$'\uf421'
+ P9K_VCS_UNTRACKED_ICON=$'\uf00d'
+ P9K_VCS_INCOMING_CHANGES_ICON=$'\uf0ab '
+ P9K_VCS_OUTGOING_CHANGES_ICON=$'\uf0aa'
+
+ # VCS colours
+ P9K_VCS_MODIFIED_BACKGROUND='blue'
+ P9K_VCS_MODIFIED_FOREGROUND='black'
+ P9K_VCS_UNTRACKED_BACKGROUND='green'
+ P9K_VCS_UNTRACKED_FOREGROUND='black'
+ P9K_VCS_CLEAN_BACKGROUND='green'
+ P9K_VCS_CLEAN_FOREGROUND='black'
+
+ # VCS CONFIG
+ P9K_VCS_SHOW_CHANGESET=false
+ POWERLEVEL9K_CONTEXT_TEMPLATE='%n'
+ POWERLEVEL9K_CONTEXT_DEFAULT_FOREGROUND='white'
+ POWERLEVEL9K_BATTERY_CHARGING='yellow'
+ POWERLEVEL9K_BATTERY_CHARGED='green'
+ POWERLEVEL9K_BATTERY_DISCONNECTED='$DEFAULT_COLOR'
+ POWERLEVEL9K_BATTERY_LOW_THRESHOLD='10'
+ POWERLEVEL9K_BATTERY_LOW_COLOR='red'
+ POWERLEVEL9K_MULTILINE_FIRST_PROMPT_PREFIX=''
+ POWERLEVEL9K_BATTERY_ICON='\uf1e6 '
+ POWERLEVEL9K_PROMPT_ON_NEWLINE=true
+ POWERLEVEL9K_VCS_MODIFIED_BACKGROUND='yellow'
+ POWERLEVEL9K_VCS_UNTRACKED_BACKGROUND='yellow'
+ POWERLEVEL9K_VCS_UNTRACKED_ICON='?'
+
+ POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(os_icon context battery dir vcs)
+ POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(status time dir_writable ip )
+
+ POWERLEVEL9K_SHORTEN_DIR_LENGTH=1
+
+ POWERLEVEL9K_TIME_FORMAT=&quot;%D{\uf017 %H:%M \uf073 %m/%d/%y}&quot;
+ POWERLEVEL9K_TIME_BACKGROUND='white'
+ POWERLEVEL9K_RAM_BACKGROUND='yellow'
+ POWERLEVEL9K_LOAD_CRITICAL_BACKGROUND=&quot;white&quot;
+ POWERLEVEL9K_LOAD_WARNING_BACKGROUND=&quot;white&quot;
+ POWERLEVEL9K_LOAD_NORMAL_BACKGROUND=&quot;white&quot;
+ POWERLEVEL9K_LOAD_CRITICAL_FOREGROUND=&quot;red&quot;
+ POWERLEVEL9K_LOAD_WARNING_FOREGROUND=&quot;yellow&quot;
+ POWERLEVEL9K_LOAD_NORMAL_FOREGROUND=&quot;black&quot;
+ POWERLEVEL9K_LOAD_CRITICAL_VISUAL_IDENTIFIER_COLOR=&quot;red&quot;
+ POWERLEVEL9K_LOAD_WARNING_VISUAL_IDENTIFIER_COLOR=&quot;yellow&quot;
+ POWERLEVEL9K_LOAD_NORMAL_VISUAL_IDENTIFIER_COLOR=&quot;green&quot;
+ POWERLEVEL9K_HOME_ICON=''
+ POWERLEVEL9K_HOME_SUB_ICON=''
+ POWERLEVEL9K_FOLDER_ICON=''
+ POWERLEVEL9K_STATUS_VERBOSE=true
+ POWERLEVEL9K_STATUS_CROSS=true
+
+ POWERLEVEL9K_MULTILINE_FIRST_PROMPT_PREFIX=&quot;%F{blue}\u256D\u2500%f&quot;
+ POWERLEVEL9K_MULTILINE_LAST_PROMPT_PREFIX=&quot;%F{blue}\u2570\uf460%f &quot;
+ POWERLEVEL9K_SHOW_CHANGESET=true
+ POWERLEVEL9K_CHANGESET_HASH_LENGTH=6
+
+ plugins=(git gitfast )
+
+ export DEFAULT_USER=&quot;$USER&quot;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 </description>
-        
         <pubDate>Mon, 03 Jun 2019 00:00:00 -0700</pubDate>
-        <link>http://localhost:4000/2019/zsh-configs-for-your-terminal/</link>
-        <guid isPermaLink="true">http://localhost:4000/2019/zsh-configs-for-your-terminal/</guid>
+        <link>http://localhost:4000//2019/06/zsh-configs-for-your-terminal.html</link>
+        <guid isPermaLink="true">http://localhost:4000//2019/06/zsh-configs-for-your-terminal.html</guid>
+        
+        
       </item>
     
       <item>
         <title>Draper Gem 101</title>
-        
-        
-          <description>&lt;p&gt;&lt;a href=&quot;https://github.com/drapergem/draper&quot;&gt;Draper&lt;/a&gt; is a really cool gem that utilizes the decorator rails pattern. You can extract logic from views and view helpers and convert them into objects.&lt;/p&gt;
+        <description>&lt;p&gt;&lt;a href=&quot;https://github.com/drapergem/draper&quot;&gt;Draper&lt;/a&gt; is a really cool gem that utilizes the decorator rails pattern. You can extract logic from views and view helpers and convert them into objects.&lt;/p&gt;
 
+&lt;p&gt;For a simple explanation, lets view this codeblock for a todo list in rails.&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&amp;lt;h4&amp;gt;Todo &amp;lt;%= @todo.content %&amp;gt; Created on &amp;lt;%= @todo.created_at %&amp;gt; &amp;lt;/h4&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Generated:
+TODO - Make cool stuff in ruby. Created on ‘2019-07-02 15:22:41’&lt;/p&gt;
+
+&lt;p&gt;This is boring, unappealing and will make your rails app UNDRY!&lt;/p&gt;
+
+&lt;p&gt;So how can a decorator help your application? Let’s start by install and running the same rails commands like always:&lt;/p&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;#Gemfile
+ gem 'draper'
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;#terminal 
+bundle install
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Now we are going to generate a decorator to wrap our &lt;code class=&quot;highlighter-rouge&quot;&gt;Todo&lt;/code&gt; model. This will create the directory &lt;code class=&quot;highlighter-rouge&quot;&gt;app/decorators&lt;/code&gt; in your application.&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;rails g decorator Todo
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Now locate your Todo controller show method and add the following:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&quot;language-#app/controllers/todo_controller.rb&quot;&gt;def show
+	tem = Todo.find(params[:id])
+@todo = TodoDecorator.new(item)
+end
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;We have our setup going, but what are we trying to dry? In toy apps I’ve made before I’ve done things like formatting time, but across the app I’ve copied and pasted so many lines of code that it becomes a chore and a hassel to format them all. Our fancy decorator allows us to turn this logic into an object like so:&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;	def formatted_created_at
+	todo.created_at.strftime(&quot;%m/%d/%Y - %H:%M&quot;)
+	end
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;and in our view we can compare the final decorated view line to the undecorated&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;#index.html.erb
+	
+#Decorated
+&amp;lt;h4&amp;gt;Published &amp;lt;%= @article.strftime(&quot;%m/%d/%Y - %H:%M&quot; %&amp;gt;&amp;lt;/h4&amp;gt;
+#Undecorated
+&amp;lt;h4&amp;gt;Todo &amp;lt;%= @todo.content %&amp;gt; Created on &amp;lt;%= @todo.created_at %&amp;gt; &amp;lt;/h4&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 </description>
-        
         <pubDate>Mon, 20 May 2019 00:00:00 -0700</pubDate>
-        <link>http://localhost:4000/2019/draper-gem-101/</link>
-        <guid isPermaLink="true">http://localhost:4000/2019/draper-gem-101/</guid>
-      </item>
-    
-      <item>
-        <title>Travel Cafe - Admin</title>
+        <link>http://localhost:4000//2019/05/draper-gem-101.html</link>
+        <guid isPermaLink="true">http://localhost:4000//2019/05/draper-gem-101.html</guid>
         
         
-          <description>&lt;p align=&quot;center&quot;&gt;&lt;strong&gt;Admin Portal&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;The Travel Cafe is an admin interface to control all 3 Ruby on Rails applications that involve all user data, credit card forms, commission forms and accounting payments distributed across 19,000 unique users. The Accounting and Customer Service team utilize this app daily for processes like account information and commission tracking for companies like Carnival Cruise and Enterprise.&lt;/p&gt;
-
-</description>
-        
-        <pubDate>Sun, 19 May 2019 00:00:00 -0700</pubDate>
-        <link>http://localhost:4000/2019/travel-cafe-admin/</link>
-        <guid isPermaLink="true">http://localhost:4000/2019/travel-cafe-admin/</guid>
       </item>
     
       <item>
         <title>Evolution</title>
-        
-        
-          <description>&lt;p align=&quot;center&quot;&gt;&lt;strong&gt;Admin Portal&lt;/strong&gt;&lt;/p&gt;
+        <description>&lt;p align=&quot;center&quot;&gt;&lt;strong&gt;Admin Portal&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;Evolution Travel Agent is a Ruby on Rails application that allows travel agents to create, customize and edit their own personal website. Each agent can customize each module to their own liking, and even have clients book and schedule trips with built-in air/cruise/and hotel APIs.&lt;/p&gt;
 
+&lt;hr /&gt;
+
+&lt;p align=&quot;center&quot;&gt;&lt;img src=&quot;/assets/images/evo-header.png&quot; alt=&quot;Evolution Travel Agent&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;We are also currently developing a brand new Australian site for our AUS user base. Our App is built with an EC2 instance (t2.large) and private S3 buckets. We are planning for a 2020 launch and expected to gain over 8,000 unique agents across AU and NZ. We plan to expand over to EUR and possibly PR in the near future.&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;h2 id=&quot;software-features&quot;&gt;Software Features&lt;/h2&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;User Guide&lt;/li&gt;
+  &lt;li&gt;FareGrabbr&lt;/li&gt;
+  &lt;li&gt;Commissions&lt;/li&gt;
+  &lt;li&gt;Credit Card Forms&lt;/li&gt;
+  &lt;li&gt;Booking Portal&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;hr /&gt;
+
+&lt;h2 id=&quot;core-gems&quot;&gt;Core Gems&lt;/h2&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-ruby&quot; data-lang=&quot;ruby&quot;&gt;&lt;span class=&quot;n&quot;&gt;gem&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'bcrypt'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'~&amp;gt; 3.1.7'&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;gem&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'paperclip'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'~&amp;gt; 5.2.0'&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;gem&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'aws-sdk'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'~&amp;gt; 2'&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;gem&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'to_xls-rails'&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;gem&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'will_paginate'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'~&amp;gt; 3.1.0'&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;gem&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'typhoeus'&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;gem&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'chartkick'&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;gem&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;attr_encrypted&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;~&amp;gt; 3.1.0&quot;&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;gem&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'pg'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;~&amp;gt;&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
 </description>
-        
         <pubDate>Sat, 18 May 2019 00:00:00 -0700</pubDate>
-        <link>http://localhost:4000/2019/evolution/</link>
-        <guid isPermaLink="true">http://localhost:4000/2019/evolution/</guid>
+        <link>http://localhost:4000//2019/05/evolution.html</link>
+        <guid isPermaLink="true">http://localhost:4000//2019/05/evolution.html</guid>
+        
+        
       </item>
     
       <item>
         <title>Add a Rails Env to your Vagrant Server</title>
-        
-        
-          <description>&lt;h2 id=&quot;vagrant&quot;&gt;Vagrant&lt;/h2&gt;
+        <description>&lt;h2 id=&quot;vagrant&quot;&gt;Vagrant&lt;/h2&gt;
 
+&lt;p&gt;A great server to contain all of your ruby+rails projects for better workflow development:&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c&quot;&gt;#!/usr/bin/env bash&lt;/span&gt;
+&lt;span class=&quot;c&quot;&gt;# upgrade and update the system&lt;/span&gt;
+&lt;span class=&quot;nb&quot;&gt;echo &lt;/span&gt;upgrading and updating the system
+&lt;span class=&quot;nb&quot;&gt;sudo &lt;/span&gt;apt-get update
+&lt;span class=&quot;nb&quot;&gt;sudo &lt;/span&gt;apt-get &lt;span class=&quot;nt&quot;&gt;-y&lt;/span&gt; upgrade
+&lt;span class=&quot;c&quot;&gt;# install node.js for js runtime when using Rails&lt;/span&gt;
+&lt;span class=&quot;nb&quot;&gt;echo &lt;/span&gt;installing nodejs &lt;span class=&quot;k&quot;&gt;for &lt;/span&gt;ExecJS runtime and git
+&lt;span class=&quot;nb&quot;&gt;sudo &lt;/span&gt;apt-get install &lt;span class=&quot;nt&quot;&gt;-y&lt;/span&gt; nodejs
+&lt;span class=&quot;nb&quot;&gt;sudo &lt;/span&gt;apt-get install &lt;span class=&quot;nt&quot;&gt;-y&lt;/span&gt; git
+&lt;span class=&quot;c&quot;&gt;# install RVM&lt;/span&gt;
+&lt;span class=&quot;nb&quot;&gt;echo &lt;/span&gt;installing RVM
+gpg &lt;span class=&quot;nt&quot;&gt;--keyserver&lt;/span&gt; hkp://keys.gnupg.net &lt;span class=&quot;nt&quot;&gt;--recv-keys&lt;/span&gt; 409B6B1796C275462A1703113804BB82D39DC0E3 7D2BAF1CF37B13E2069D6956105BD0E739499BDB
+&lt;span class=&quot;se&quot;&gt;\c&lt;/span&gt;url &lt;span class=&quot;nt&quot;&gt;-sSL&lt;/span&gt; https://get.rvm.io | bash &lt;span class=&quot;nt&quot;&gt;-s&lt;/span&gt; stable
+&lt;span class=&quot;nb&quot;&gt;source&lt;/span&gt; /home/vagrant/.rvm/scripts/rvm
+rvm requirements
+&lt;span class=&quot;c&quot;&gt;# install Ruby and make 2.3.1 the default&lt;/span&gt;
+&lt;span class=&quot;nb&quot;&gt;echo &lt;/span&gt;installing ruby
+rvm install 2.3.1
+rvm use 2.3.1 &lt;span class=&quot;nt&quot;&gt;--default&lt;/span&gt;
+&lt;span class=&quot;c&quot;&gt;# install Bundler and Rails&lt;/span&gt;
+&lt;span class=&quot;nb&quot;&gt;echo &lt;/span&gt;installing bundler and rails
+gem install bundler &lt;span class=&quot;nt&quot;&gt;--no-ri&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;--no-rdoc&lt;/span&gt;
+gem install rails &lt;span class=&quot;nt&quot;&gt;-v&lt;/span&gt; 4.2.7 &lt;span class=&quot;nt&quot;&gt;--no-ri&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;--no-rdoc&lt;/span&gt;
+&lt;span class=&quot;c&quot;&gt;# install postgres and its dependencies&lt;/span&gt;
+&lt;span class=&quot;nb&quot;&gt;echo &lt;/span&gt;installing psql and its dependencies
+&lt;span class=&quot;nb&quot;&gt;sudo &lt;/span&gt;apt-get install &lt;span class=&quot;nt&quot;&gt;-y&lt;/span&gt; postgresql postgresql-contrib libpq-dev
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Make sure your Vagrantfile has some of this options so we can port forward (open traffic in specific ports)&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;Vagrant.configure(&quot;2&quot;) do |config|
+  config.vm.box = &quot;ubuntu/trusty64&quot;
+  config.vm.network &quot;forwarded_port&quot;, guest: 3000, host: 3000, host_ip: &quot;127.0.0.1&quot;
+  config.vm.provision :shell, path: &quot;bootstrap.sh&quot;, privileged: false
+  config.vm.provider &quot;virtualbox&quot; do |vb|
+    vb.customize [&quot;modifyvm&quot;, :id, &quot;--memory&quot;, &quot;2048&quot;]  
+    vb.customize [&quot;modifyvm&quot;, :id, &quot;--cpus&quot;, &quot;2&quot;]  
+  end
+end
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Finally, run these commands so your vagrant server can run the script and configure your development server:&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$ vagrant halt
+==&amp;gt; default: Attempting graceful shutdown of VM...
+$ vagrant up --provision
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 </description>
-        
         <pubDate>Sat, 11 May 2019 00:00:00 -0700</pubDate>
-        <link>http://localhost:4000/2019/add-a-rails-env-to-your-vagrant-server/</link>
-        <guid isPermaLink="true">http://localhost:4000/2019/add-a-rails-env-to-your-vagrant-server/</guid>
+        <link>http://localhost:4000//2019/05/add-a-rails-env-to-your-vagrant-server.html</link>
+        <guid isPermaLink="true">http://localhost:4000//2019/05/add-a-rails-env-to-your-vagrant-server.html</guid>
+        
+        
+      </item>
+    
+      <item>
+        <title>Named Scopes</title>
+        <description>&lt;h2 id=&quot;named-scopes&quot;&gt;Named Scopes&lt;/h2&gt;
+&lt;p&gt;What are they? Simply put, Named scopes are class methods inside your model that always returns an active record association.&lt;/p&gt;
+
+&lt;p&gt;Let’s see a classic class method definition first:&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;#app/models/user.rb
+
+def self.paid
+  where{where(&quot;paid LIKE ?&quot;, paid)
+end
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;so lets see how we can use this in a named scope:&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;#app/models/user.rb
+
+scope :paid, -&amp;gt;{where(&quot;paid LIKE ?&quot;, paid)
+end
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;so calling the scope is as simple as&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;#app/controllers/shirts_controller.rb
+@q = User.paid
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;So what is the beauty of this idea? Well, just think of the fact that they will always return an active record association. Never &lt;code class=&quot;highlighter-rouge&quot;&gt;nil&lt;/code&gt;.  You can safely string and chain as many scopes as you like without worrying about the query failing. The end case of &lt;code class=&quot;highlighter-rouge&quot;&gt;nil&lt;/code&gt; is always taken care of.&lt;/p&gt;
+</description>
+        <pubDate>Wed, 08 May 2019 00:00:00 -0700</pubDate>
+        <link>http://localhost:4000//2019/05/named-scopes.html</link>
+        <guid isPermaLink="true">http://localhost:4000//2019/05/named-scopes.html</guid>
+        
+        
+      </item>
+    
+      <item>
+        <title>Scaffold a New Rails 5 API.</title>
+        <description>&lt;h2 id=&quot;rails-api-&quot;&gt;Rails API 💎&lt;/h2&gt;
+
+&lt;p&gt;The new rails api command scaffolds everything we need to get up and running.&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;Run the following: &lt;code class=&quot;highlighter-rouge&quot;&gt;rails new my-first-api --api -T&lt;/code&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;What’s going on here? The &lt;code class=&quot;highlighter-rouge&quot;&gt;--api&lt;/code&gt; command tells rails that we want an API structure application instead of a standard rails structure. The &lt;code class=&quot;highlighter-rouge&quot;&gt;-T&lt;/code&gt; command also tells rails that we don’t want Minitest as our testing suite. You’ll most likely be used to Rspec so we’ll talk about that later in the guide.&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;Enable Cross-Origin Resource Sharing (CORS) in your gem and config directory. Locate your gemfile and uncomment the following&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;div class=&quot;language-ruby highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c1&quot;&gt;# Use Rack CORS for handling Cross-Origin Resource Sharing (CORS), making cross-origin AJAX possible&lt;/span&gt;
+ &lt;span class=&quot;n&quot;&gt;gem&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'rack-cors'&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Do not forget to &lt;code class=&quot;highlighter-rouge&quot;&gt;bundle install&lt;/code&gt; !&lt;/p&gt;
+
+&lt;p&gt;Now in your config/initializers directory, you should now see a &lt;code class=&quot;highlighter-rouge&quot;&gt;cors.rb&lt;/code&gt; file. Add the following to&lt;/p&gt;
+
+&lt;div class=&quot;language-ruby highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c1&quot;&gt;# config/initializers/cors.rb&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;Application&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;Rails&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;::&lt;/span&gt;&lt;span class=&quot;no&quot;&gt;Application&lt;/span&gt;
+
+   &lt;span class=&quot;n&quot;&gt;config&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;middleware&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;insert_before&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;Rack::Cors&quot;&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;do&lt;/span&gt;
+     &lt;span class=&quot;n&quot;&gt;allow&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;do&lt;/span&gt;
+       &lt;span class=&quot;n&quot;&gt;origins&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'*'&lt;/span&gt;
+       &lt;span class=&quot;n&quot;&gt;resource&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'*'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;ss&quot;&gt;:headers&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&quot;ss&quot;&gt;:any&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;ss&quot;&gt;:methods&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;ss&quot;&gt;:get&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;ss&quot;&gt;:post&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;ss&quot;&gt;:patch&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;ss&quot;&gt;:options&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;
+     &lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
+   &lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
+
+ &lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Since this tutorial is mainly for testing and toy projects, we are allowing ALL methods from another domain. You should tailor the header and methods to your liking.&lt;/p&gt;
+
+&lt;h2 id=&quot;rails-api-versioning&quot;&gt;Rails API Versioning&lt;/h2&gt;
+
+&lt;p&gt;Versioning is the process of seperating and creating new features/data/endpoints for your API. Since this is our first API, let’s make our &lt;code class=&quot;highlighter-rouge&quot;&gt;test-api&lt;/code&gt; v1.&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;Run the following in your terminal&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;div class=&quot;language-shell highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;mkdir mkdir app/controllers/api &lt;span class=&quot;o&quot;&gt;&amp;amp;&amp;amp;&lt;/span&gt; mkdir app/controllers/api/v1
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;If everything looks right you should see your directory identical as below. &lt;br /&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;Now that our versioning is complete, let’s test out a model and controller to work with our new url of &lt;code class=&quot;highlighter-rouge&quot;&gt;localhost:3000/api/v1&lt;/code&gt;.&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;Let’s scaffold a test model/controller and call it &lt;code class=&quot;highlighter-rouge&quot;&gt;movies&lt;/code&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;div class=&quot;language-ruby highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;rails&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;g&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;scaffold&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;Movies&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;ss&quot;&gt;:string&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;rating&lt;/span&gt;&lt;span class=&quot;ss&quot;&gt;:integer&lt;/span&gt;
+
+&lt;span class=&quot;n&quot;&gt;rails&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;db&lt;/span&gt;&lt;span class=&quot;ss&quot;&gt;:migrate&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;The Rails engine creates your controller in the default &lt;code class=&quot;highlighter-rouge&quot;&gt;/controllers&lt;/code&gt; directory but we need to move our new controller into the &lt;code class=&quot;highlighter-rouge&quot;&gt;api/v1&lt;/code&gt; directory.&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;You can either move it manually or the following:&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;div class=&quot;language-shell highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;mv app/controllers/movies_controller.rb app/controllers/api/v1
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;Update the Movies Controller&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;Our newly generated controller does not properly inherit from the namespace api/v1 (We will update the routes later in the tutorial) so let’s change our controller class from&lt;/p&gt;
+
+&lt;div class=&quot;language-ruby highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;MoviesController&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;ApplicationController&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;TO&lt;/p&gt;
+
+&lt;div class=&quot;language-ruby highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;Api&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;::&lt;/span&gt;&lt;span class=&quot;no&quot;&gt;V1&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;::&lt;/span&gt;&lt;span class=&quot;no&quot;&gt;MoviesController&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;ApplicationController&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;Update the Routes
+Locate to your config folder and open your &lt;code class=&quot;highlighter-rouge&quot;&gt;routes.rb&lt;/code&gt; file.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;div class=&quot;language-ruby highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;no&quot;&gt;Rails&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;application&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;routes&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;draw&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;do&lt;/span&gt;
+  &lt;span class=&quot;n&quot;&gt;resources&lt;/span&gt; &lt;span class=&quot;ss&quot;&gt;:movies&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;If we go to &lt;code class=&quot;highlighter-rouge&quot;&gt;localhost:3000/movies&lt;/code&gt; we will not call the controller. We must update our Routes to:&lt;/p&gt;
+
+&lt;div class=&quot;language-ruby highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;no&quot;&gt;Rails&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;application&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;routes&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;draw&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;do&lt;/span&gt;
+ &lt;span class=&quot;n&quot;&gt;namespace&lt;/span&gt; &lt;span class=&quot;ss&quot;&gt;:api&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;do&lt;/span&gt;
+  &lt;span class=&quot;n&quot;&gt;namespace&lt;/span&gt; &lt;span class=&quot;ss&quot;&gt;:v1&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;do&lt;/span&gt;
+   &lt;span class=&quot;n&quot;&gt;resources&lt;/span&gt; &lt;span class=&quot;ss&quot;&gt;:movies&lt;/span&gt;
+  &lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
+ &lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;which allows us to call the json data from &lt;code class=&quot;highlighter-rouge&quot;&gt;localhost:3000/api/v1/movies&lt;/code&gt;&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;Let’s seed our sqlite database with some classic movies so we can practice getting data with GET requests to the API.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;Copy and paste the following data to your &lt;code class=&quot;highlighter-rouge&quot;&gt;db/seeds.rb&lt;/code&gt; file.&lt;/p&gt;
+
+&lt;div class=&quot;language-ruby highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;no&quot;&gt;Movie&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;create&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;ss&quot;&gt;name: &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;The Nightmare Before Christmas&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;ss&quot;&gt;rating: &lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;5&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;no&quot;&gt;Movie&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;create&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;ss&quot;&gt;name: &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;Titanic&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;ss&quot;&gt;rating: &lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;5&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;no&quot;&gt;Movie&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;create&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;ss&quot;&gt;name: &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;Venom&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;ss&quot;&gt;rating: &lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;4&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;no&quot;&gt;Movie&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;create&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;ss&quot;&gt;name: &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;A Quiet Place&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;ss&quot;&gt;rating: &lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;5&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;no&quot;&gt;Movie&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;create&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;ss&quot;&gt;name: &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;Nobody's Fool&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;ss&quot;&gt;rating: &lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;no&quot;&gt;Movie&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;create&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;ss&quot;&gt;name: &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;Suspiria&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;ss&quot;&gt;rating: &lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;4&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;no&quot;&gt;Movie&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;create&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;ss&quot;&gt;name: &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;Hereditary&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;ss&quot;&gt;rating: &lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;4&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;no&quot;&gt;Movie&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;create&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;ss&quot;&gt;name: &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;Office Space&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;ss&quot;&gt;rating: &lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;5&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;no&quot;&gt;Movie&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;create&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;ss&quot;&gt;name: &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;Elf&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;ss&quot;&gt;rating: &lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;4&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;no&quot;&gt;Movie&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;create&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;ss&quot;&gt;name: &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;Dawn of the Planet of the Apes&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;ss&quot;&gt;rating: &lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;no&quot;&gt;Movie&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;create&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;ss&quot;&gt;name: &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;Secret life of Pets&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;ss&quot;&gt;rating: &lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;4&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;no&quot;&gt;Movie&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;create&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;ss&quot;&gt;name: &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;Overlord&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;ss&quot;&gt;rating: &lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;no&quot;&gt;Movie&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;create&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;ss&quot;&gt;name: &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;Wonder Woman&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;ss&quot;&gt;rating: &lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;5&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;no&quot;&gt;Movie&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;create&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;ss&quot;&gt;name: &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;Bohemian Rhapsody&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;ss&quot;&gt;rating: &lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;4&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;no&quot;&gt;Movie&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;create&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;ss&quot;&gt;name: &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;Ocean's 8&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;ss&quot;&gt;rating: &lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;5&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Seed the DB using &lt;code class=&quot;highlighter-rouge&quot;&gt;rails db:seed &amp;amp;&amp;amp; rails db:migrate&lt;/code&gt;&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;Test the API using a GET request.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;Start your Rails server &lt;code class=&quot;highlighter-rouge&quot;&gt;rails s&lt;/code&gt; and navigate to &lt;code class=&quot;highlighter-rouge&quot;&gt;localhost:3000/api/v1/movies&lt;/code&gt; and if it is successful you should see the following JSON output: &lt;br /&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;(Optional) I’m using a pretty JSON viewer for chrome which you can download &lt;a href=&quot;https://chrome.google.com/webstore/detail/jsonview/chklaanhfefbnpoihckbnefhakgolnmc&quot;&gt;here.&lt;/a&gt;
+Congrats! You have successfully created a Rails API and completed your first GET request!&lt;/p&gt;
+</description>
+        <pubDate>Tue, 07 May 2019 00:00:00 -0700</pubDate>
+        <link>http://localhost:4000//2019/05/scaffold-a-new-rails-5-api.html</link>
+        <guid isPermaLink="true">http://localhost:4000//2019/05/scaffold-a-new-rails-5-api.html</guid>
+        
+        
       </item>
     
   </channel>

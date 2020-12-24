@@ -1,45 +1,25 @@
-name: John Cordero
-description: Hi. I'm John. <br> 
-meta_description: "John Cordero | Software Engineer at Infowerks and Evolution. Ruby on Rails"
-blog_written: John
-blog_description: Software Engineer
+# Site settings
+title: "Hi. Im John Cordero."
+description: Software Engineer @<u>Infowerks</u>.
+author: John Cordero
+email: johncorderox@gmail.com
+linkedin: johncorderox
+github_username: johncorderox
 
+baseurl: "/"
+ # the subpath of your site, e.g. /blog
+url: "https://johncorderox.com" # the base hostname & protocol for your site
 
-aboutPage: true
+google_analytics_id: UA-1111111111-1
+disqus_id:
 
+# Build settings
+include: [_pages]
 markdown: kramdown
-highlighter: rouge
+permalink: /:year/:month/:title.html
 
-plugins: [jekyll-paginate, jemoji, jekyll-seo-tag]
-paginate: 15
-domain_name: 'http://johncorderox.com'
-google_analytics: 'UA-79158260-1'
-disqus: false
-disqus_shortname: 'your-disqus-shortname'
+sass:
+    style: compressed
 
-# Details for the RSS feed generator
-url:            'http://johncorderox.com'
-author:         'John Cordero'
-authorTwitter:  'johncorderox'
+exclude: [vendor]
 
-permalink:       /:year/:title/
-
-defaults:
-    -
-        scope:
-            path: "" # empty string for all files
-            type: pages
-        values:
-            layout: default
-    -
-        scope:
-            path: "" # empty string for all files
-            type: posts
-        values:
-            layout: post
-    -
-        scope:
-            path: ""
-            type: drafts
-        values:
-            layout: post

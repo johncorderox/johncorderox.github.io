@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>John 😛 Cordero</title>
+  <meta name="description" content="Vagrant">
+  <link href='https://fonts.googleapis.com/css?family=Roboto+Mono|Roboto:300,400,900,400italic' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" href="/css/main.css">
+  <link rel="canonical" href="/2019/05/add-a-rails-env-to-your-vagrant-server.html">
+<script src="http://127.0.0.1:35729/livereload.js"></script></head>
+
+  <body>
+    <main class="u-container">
+      <div class="c-page">
+  <header class="c-page__header">
+	<img id="avatar" class="3x" src="/assets/avatar.png"/>
+  <h1><code>Hi. Im John Cordero.</code></h1>
+  
+  <p>
+    <a href="/">Home</a><span
+          class="u-separate"></span> <a href="/projects/">Projects</a><span class="u-separate"></span>
+          <a href="https://www.spillthebean.org/dev-overview/john-cordero">About</a>
+</header>
+  <div class="c-page__main">
+    <article class="c-article">
+  <header class="c-article__header">
+    <h1 class="c-article__title">Add a Rails Env to your Vagrant Server</h1>
+    <p class="c-article__time"><time datetime="2019-05-11T00:00:00-07:00" itemprop="datePublished">May 11</time></p>
+  </header>
+  <!-- Post Tags -->
+  <ul class="c-tags">
+    
+  </ul>
+  <div class="c-article__main">
+    <h2 id="vagrant">Vagrant</h2>
+
+<p>A great server to contain all of your ruby+rails projects for better workflow development:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c">#!/usr/bin/env bash</span>
+<span class="c"># upgrade and update the system</span>
+<span class="nb">echo </span>upgrading and updating the system
+<span class="nb">sudo </span>apt-get update
+<span class="nb">sudo </span>apt-get <span class="nt">-y</span> upgrade
+<span class="c"># install node.js for js runtime when using Rails</span>
+<span class="nb">echo </span>installing nodejs <span class="k">for </span>ExecJS runtime and git
+<span class="nb">sudo </span>apt-get install <span class="nt">-y</span> nodejs
+<span class="nb">sudo </span>apt-get install <span class="nt">-y</span> git
+<span class="c"># install RVM</span>
+<span class="nb">echo </span>installing RVM
+gpg <span class="nt">--keyserver</span> hkp://keys.gnupg.net <span class="nt">--recv-keys</span> 409B6B1796C275462A1703113804BB82D39DC0E3 7D2BAF1CF37B13E2069D6956105BD0E739499BDB
+<span class="se">\c</span>url <span class="nt">-sSL</span> https://get.rvm.io | bash <span class="nt">-s</span> stable
+<span class="nb">source</span> /home/vagrant/.rvm/scripts/rvm
+rvm requirements
+<span class="c"># install Ruby and make 2.3.1 the default</span>
+<span class="nb">echo </span>installing ruby
+rvm install 2.3.1
+rvm use 2.3.1 <span class="nt">--default</span>
+<span class="c"># install Bundler and Rails</span>
+<span class="nb">echo </span>installing bundler and rails
+gem install bundler <span class="nt">--no-ri</span> <span class="nt">--no-rdoc</span>
+gem install rails <span class="nt">-v</span> 4.2.7 <span class="nt">--no-ri</span> <span class="nt">--no-rdoc</span>
+<span class="c"># install postgres and its dependencies</span>
+<span class="nb">echo </span>installing psql and its dependencies
+<span class="nb">sudo </span>apt-get install <span class="nt">-y</span> postgresql postgresql-contrib libpq-dev
+</code></pre></div></div>
+
+<p>Make sure your Vagrantfile has some of this options so we can port forward (open traffic in specific ports)</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Vagrant.configure("2") do |config|
+  config.vm.box = "ubuntu/trusty64"
+  config.vm.network "forwarded_port", guest: 3000, host: 3000, host_ip: "127.0.0.1"
+  config.vm.provision :shell, path: "bootstrap.sh", privileged: false
+  config.vm.provider "virtualbox" do |vb|
+    vb.customize ["modifyvm", :id, "--memory", "2048"]  
+    vb.customize ["modifyvm", :id, "--cpus", "2"]  
+  end
+end
+</code></pre></div></div>
+
+<p>Finally, run these commands so your vagrant server can run the script and configure your development server:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ vagrant halt
+==&gt; default: Attempting graceful shutdown of VM...
+$ vagrant up --provision
+</code></pre></div></div>
+
+  </div>
+  <!-- Previous / Next Buttons -->
+<!--   <div class="pagenav">
+    
+    <div class="wrapper" id="left">
+      <small><b>Previous</b> May 8</small>
+      <br>
+      <a class="no-hov" href="//2019/05/named-scopes.html">&laquo; Named Scopes</a>
+    </div>
+    
+    
+    <div class="wrapper" id="right">
+      <small>May 18 <b>Next</b></small>
+      <br>
+      <a class="no-hov" href="//2019/05/evolution.html">Evolution &raquo;</a>
+    </div>
+    
+  </div> -->
+  <!-- Disqus comments view -->
+  
+</article>
+
+  </div>
+  <footer class="c-page__footer">
+  <p>&copy; John Cordero 2020</p>
+  <p><a href="https://linkedin.com/in/">Linkedin</a><span class="u-separate"></span><a href="https://github.com/johncorderox">Github</a></p>
+</footer>
+
+</div>
+
+    </main>
+    
+  </body>
+</html>
+<style>
+#avatar {
+  display: inline-block;
+  width: 95px;
+  height: 95px;
+  border-radius: 50%;
+  margin-bottom: 20px;
+}
+
+</style>

@@ -1,0 +1,11 @@
+<header class="c-page__header">
+	<img id="avatar" class="3x" src="{{ "/" | relative_url  }}assets/avatar.png"/>
+  <h1><code>{{ site.title}}</code></h1>
+  {% if page.title == 'Home' %}
+  <h1>{{ site.description }}</h1>
+  {% endif %}
+  <p>
+    <a href="{{ "/" }}">Home</a><span
+          class="u-separate"></span> <a href="{{ "/projects/" }}">Projects</a><span class="u-separate"></span>
+          <a href="{{ "https://www.spillthebean.org/dev-overview/john-cordero"  }}">About</a>
+</header>

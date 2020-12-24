@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/elements/1.1/">
+  <channel>
+    <title>John Cordero</title>
+    <description>Hi. I'm John. &lt;br&gt;</description>
+    <link>http://localhost:4000</link>
+    <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml" />
+    
+      <item>
+        <title>Gallery</title>
+        
+        
+          <description>&lt;p&gt;test&lt;/p&gt;
+</description>
+        
+        <pubDate>Mon, 21 Dec 2020 00:00:00 -0800</pubDate>
+        <link>http://localhost:4000/2020/gallery/</link>
+        <guid isPermaLink="true">http://localhost:4000/2020/gallery/</guid>
+      </item>
+    
+      <item>
+        <title>ViewMaster</title>
+        
+        
+          <description>&lt;p align=&quot;center&quot;&gt;&lt;strong&gt;ViewMaster&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;ViewMaster is an archival data system built with Ruby on Rails 5 for pharmacists in the U.S. This record retention software meets HIPAA and HITRUST regulations with encrypted and secure data. With ViewMaster, you can satisfy all the requirements for record retention and reporting from entities such as the Board of Pharmacy, CMS, DEA, and more. It’s a true turnkey solution to the challenges of meeting requirements while also maintaining security and privacy.&lt;/p&gt;
+
+</description>
+        
+        <pubDate>Sun, 11 Oct 2020 00:00:00 -0700</pubDate>
+        <link>http://localhost:4000/2020/viewmaster/</link>
+        <guid isPermaLink="true">http://localhost:4000/2020/viewmaster/</guid>
+      </item>
+    
+      <item>
+        <title>Metaprogramming - define_method</title>
+        
+        
+          <description>&lt;p&gt;define_method is a wonderful metaprogramming technique used to create methods on the fly and ultimately dry up your code.&lt;/p&gt;
+
+</description>
+        
+        <pubDate>Wed, 07 Aug 2019 00:00:00 -0700</pubDate>
+        <link>http://localhost:4000/2019/metaprogramming-define-method/</link>
+        <guid isPermaLink="true">http://localhost:4000/2019/metaprogramming-define-method/</guid>
+      </item>
+    
+      <item>
+        <title>What does map(&amp;:name) mean in Ruby?</title>
+        
+        
+          <description>&lt;h1 id=&quot;mapname&quot;&gt;map(&amp;amp;:name)&lt;/h1&gt;
+
+</description>
+        
+        <pubDate>Thu, 11 Jul 2019 00:00:00 -0700</pubDate>
+        <link>http://localhost:4000/2019/what-does-map-name-mean-in-ruby/</link>
+        <guid isPermaLink="true">http://localhost:4000/2019/what-does-map-name-mean-in-ruby/</guid>
+      </item>
+    
+      <item>
+        <title>How to Eliminate N+1 Queries</title>
+        
+        
+          <description>&lt;h1 id=&quot;eliminate-n1&quot;&gt;Eliminate N+1&lt;/h1&gt;
+
+</description>
+        
+        <pubDate>Wed, 03 Jul 2019 00:00:00 -0700</pubDate>
+        <link>http://localhost:4000/2019/eliminate-n1/</link>
+        <guid isPermaLink="true">http://localhost:4000/2019/eliminate-n1/</guid>
+      </item>
+    
+      <item>
+        <title>Zsh configs for your terminal</title>
+        
+        
+          <description>&lt;p&gt;Edit your zshrc file and reload with source!&lt;/p&gt;
+
+</description>
+        
+        <pubDate>Mon, 03 Jun 2019 00:00:00 -0700</pubDate>
+        <link>http://localhost:4000/2019/zsh-configs-for-your-terminal/</link>
+        <guid isPermaLink="true">http://localhost:4000/2019/zsh-configs-for-your-terminal/</guid>
+      </item>
+    
+      <item>
+        <title>Draper Gem 101</title>
+        
+        
+          <description>&lt;p&gt;&lt;a href=&quot;https://github.com/drapergem/draper&quot;&gt;Draper&lt;/a&gt; is a really cool gem that utilizes the decorator rails pattern. You can extract logic from views and view helpers and convert them into objects.&lt;/p&gt;
+
+</description>
+        
+        <pubDate>Mon, 20 May 2019 00:00:00 -0700</pubDate>
+        <link>http://localhost:4000/2019/draper-gem-101/</link>
+        <guid isPermaLink="true">http://localhost:4000/2019/draper-gem-101/</guid>
+      </item>
+    
+      <item>
+        <title>Travel Cafe - Admin</title>
+        
+        
+          <description>&lt;p align=&quot;center&quot;&gt;&lt;strong&gt;Admin Portal&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;The Travel Cafe is an admin interface to control all 3 Ruby on Rails applications that involve all user data, credit card forms, commission forms and accounting payments distributed across 19,000 unique users. The Accounting and Customer Service team utilize this app daily for processes like account information and commission tracking for companies like Carnival Cruise and Enterprise.&lt;/p&gt;
+
+</description>
+        
+        <pubDate>Sun, 19 May 2019 00:00:00 -0700</pubDate>
+        <link>http://localhost:4000/2019/travel-cafe-admin/</link>
+        <guid isPermaLink="true">http://localhost:4000/2019/travel-cafe-admin/</guid>
+      </item>
+    
+      <item>
+        <title>Evolution</title>
+        
+        
+          <description>&lt;p align=&quot;center&quot;&gt;&lt;strong&gt;Admin Portal&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Evolution Travel Agent is a Ruby on Rails application that allows travel agents to create, customize and edit their own personal website. Each agent can customize each module to their own liking, and even have clients book and schedule trips with built-in air/cruise/and hotel APIs.&lt;/p&gt;
+
+</description>
+        
+        <pubDate>Sat, 18 May 2019 00:00:00 -0700</pubDate>
+        <link>http://localhost:4000/2019/evolution/</link>
+        <guid isPermaLink="true">http://localhost:4000/2019/evolution/</guid>
+      </item>
+    
+      <item>
+        <title>Add a Rails Env to your Vagrant Server</title>
+        
+        
+          <description>&lt;h2 id=&quot;vagrant&quot;&gt;Vagrant&lt;/h2&gt;
+
+</description>
+        
+        <pubDate>Sat, 11 May 2019 00:00:00 -0700</pubDate>
+        <link>http://localhost:4000/2019/add-a-rails-env-to-your-vagrant-server/</link>
+        <guid isPermaLink="true">http://localhost:4000/2019/add-a-rails-env-to-your-vagrant-server/</guid>
+      </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>John 😛 Cordero</title>
+  <meta name="description" content="Rails API 💎">
+  <link href='https://fonts.googleapis.com/css?family=Roboto+Mono|Roboto:300,400,900,400italic' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" href="/css/main.css">
+  <link rel="canonical" href="/2019/05/scaffold-a-new-rails-5-api.html">
+<script src="http://127.0.0.1:35729/livereload.js"></script></head>
+
+  <body>
+    <main class="u-container">
+      <div class="c-page">
+  <header class="c-page__header">
+	<img id="avatar" class="3x" src="/assets/avatar.png"/>
+  <h1><code>Hi. Im John Cordero.</code></h1>
+  
+  <p>
+    <a href="/">Home</a><span
+          class="u-separate"></span> <a href="/projects/">Projects</a><span class="u-separate"></span>
+          <a href="https://www.spillthebean.org/dev-overview/john-cordero">About</a>
+</header>
+  <div class="c-page__main">
+    <article class="c-article">
+  <header class="c-article__header">
+    <h1 class="c-article__title">Scaffold a New Rails 5 API.</h1>
+    <p class="c-article__time"><time datetime="2019-05-07T00:00:00-07:00" itemprop="datePublished">May 7</time></p>
+  </header>
+  <!-- Post Tags -->
+  <ul class="c-tags">
+    
+  </ul>
+  <div class="c-article__main">
+    <h2 id="rails-api-">Rails API 💎</h2>
+
+<p>The new rails api command scaffolds everything we need to get up and running.</p>
+
+<ol>
+  <li>Run the following: <code class="highlighter-rouge">rails new my-first-api --api -T</code></li>
+</ol>
+
+<p>What’s going on here? The <code class="highlighter-rouge">--api</code> command tells rails that we want an API structure application instead of a standard rails structure. The <code class="highlighter-rouge">-T</code> command also tells rails that we don’t want Minitest as our testing suite. You’ll most likely be used to Rspec so we’ll talk about that later in the guide.</p>
+
+<ol>
+  <li>Enable Cross-Origin Resource Sharing (CORS) in your gem and config directory. Locate your gemfile and uncomment the following</li>
+</ol>
+
+<div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># Use Rack CORS for handling Cross-Origin Resource Sharing (CORS), making cross-origin AJAX possible</span>
+ <span class="n">gem</span> <span class="s1">'rack-cors'</span>
+</code></pre></div></div>
+
+<p>Do not forget to <code class="highlighter-rouge">bundle install</code> !</p>
+
+<p>Now in your config/initializers directory, you should now see a <code class="highlighter-rouge">cors.rb</code> file. Add the following to</p>
+
+<div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># config/initializers/cors.rb</span>
+<span class="k">class</span> <span class="nc">Application</span> <span class="o">&lt;</span> <span class="no">Rails</span><span class="o">::</span><span class="no">Application</span>
+
+   <span class="n">config</span><span class="p">.</span><span class="nf">middleware</span><span class="p">.</span><span class="nf">insert_before</span> <span class="mi">0</span><span class="p">,</span> <span class="s2">"Rack::Cors"</span> <span class="k">do</span>
+     <span class="n">allow</span> <span class="k">do</span>
+       <span class="n">origins</span> <span class="s1">'*'</span>
+       <span class="n">resource</span> <span class="s1">'*'</span><span class="p">,</span> <span class="ss">:headers</span> <span class="o">=&gt;</span> <span class="ss">:any</span><span class="p">,</span> <span class="ss">:methods</span> <span class="o">=&gt;</span> <span class="p">[</span><span class="ss">:get</span><span class="p">,</span> <span class="ss">:post</span><span class="p">,</span> <span class="ss">:patch</span><span class="p">,</span> <span class="ss">:options</span><span class="p">]</span>
+     <span class="k">end</span>
+   <span class="k">end</span>
+
+ <span class="k">end</span>
+</code></pre></div></div>
+
+<p>Since this tutorial is mainly for testing and toy projects, we are allowing ALL methods from another domain. You should tailor the header and methods to your liking.</p>
+
+<h2 id="rails-api-versioning">Rails API Versioning</h2>
+
+<p>Versioning is the process of seperating and creating new features/data/endpoints for your API. Since this is our first API, let’s make our <code class="highlighter-rouge">test-api</code> v1.</p>
+
+<ol>
+  <li>Run the following in your terminal</li>
+</ol>
+
+<div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code>mkdir mkdir app/controllers/api <span class="o">&amp;&amp;</span> mkdir app/controllers/api/v1
+</code></pre></div></div>
+
+<p>If everything looks right you should see your directory identical as below. <br /><br /></p>
+
+<p>Now that our versioning is complete, let’s test out a model and controller to work with our new url of <code class="highlighter-rouge">localhost:3000/api/v1</code>.</p>
+
+<ol>
+  <li>Let’s scaffold a test model/controller and call it <code class="highlighter-rouge">movies</code></li>
+</ol>
+
+<div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">rails</span> <span class="n">g</span> <span class="n">scaffold</span> <span class="no">Movies</span> <span class="nb">name</span><span class="ss">:string</span> <span class="n">rating</span><span class="ss">:integer</span>
+
+<span class="n">rails</span> <span class="n">db</span><span class="ss">:migrate</span>
+</code></pre></div></div>
+
+<p>The Rails engine creates your controller in the default <code class="highlighter-rouge">/controllers</code> directory but we need to move our new controller into the <code class="highlighter-rouge">api/v1</code> directory.</p>
+
+<ol>
+  <li>You can either move it manually or the following:</li>
+</ol>
+
+<div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code>mv app/controllers/movies_controller.rb app/controllers/api/v1
+</code></pre></div></div>
+
+<ol>
+  <li>Update the Movies Controller</li>
+</ol>
+
+<p>Our newly generated controller does not properly inherit from the namespace api/v1 (We will update the routes later in the tutorial) so let’s change our controller class from</p>
+
+<div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">class</span> <span class="nc">MoviesController</span> <span class="o">&lt;</span> <span class="no">ApplicationController</span>
+</code></pre></div></div>
+
+<p>TO</p>
+
+<div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">class</span> <span class="nc">Api</span><span class="o">::</span><span class="no">V1</span><span class="o">::</span><span class="no">MoviesController</span> <span class="o">&lt;</span> <span class="no">ApplicationController</span>
+</code></pre></div></div>
+
+<ol>
+  <li>Update the Routes
+Locate to your config folder and open your <code class="highlighter-rouge">routes.rb</code> file.</li>
+</ol>
+
+<div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="no">Rails</span><span class="p">.</span><span class="nf">application</span><span class="p">.</span><span class="nf">routes</span><span class="p">.</span><span class="nf">draw</span> <span class="k">do</span>
+  <span class="n">resources</span> <span class="ss">:movies</span>
+<span class="k">end</span>
+</code></pre></div></div>
+
+<p>If we go to <code class="highlighter-rouge">localhost:3000/movies</code> we will not call the controller. We must update our Routes to:</p>
+
+<div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="no">Rails</span><span class="p">.</span><span class="nf">application</span><span class="p">.</span><span class="nf">routes</span><span class="p">.</span><span class="nf">draw</span> <span class="k">do</span>
+ <span class="n">namespace</span> <span class="ss">:api</span> <span class="k">do</span>
+  <span class="n">namespace</span> <span class="ss">:v1</span> <span class="k">do</span>
+   <span class="n">resources</span> <span class="ss">:movies</span>
+  <span class="k">end</span>
+ <span class="k">end</span>
+<span class="k">end</span>
+</code></pre></div></div>
+
+<p>which allows us to call the json data from <code class="highlighter-rouge">localhost:3000/api/v1/movies</code></p>
+
+<ol>
+  <li>Let’s seed our sqlite database with some classic movies so we can practice getting data with GET requests to the API.</li>
+</ol>
+
+<p>Copy and paste the following data to your <code class="highlighter-rouge">db/seeds.rb</code> file.</p>
+
+<div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="no">Movie</span><span class="p">.</span><span class="nf">create</span><span class="p">(</span><span class="ss">name: </span><span class="s2">"The Nightmare Before Christmas"</span><span class="p">,</span> <span class="ss">rating: </span><span class="mi">5</span><span class="p">)</span>
+<span class="no">Movie</span><span class="p">.</span><span class="nf">create</span><span class="p">(</span><span class="ss">name: </span><span class="s2">"Titanic"</span><span class="p">,</span> <span class="ss">rating: </span><span class="mi">5</span><span class="p">)</span>
+<span class="no">Movie</span><span class="p">.</span><span class="nf">create</span><span class="p">(</span><span class="ss">name: </span><span class="s2">"Venom"</span><span class="p">,</span> <span class="ss">rating: </span><span class="mi">4</span><span class="p">)</span>
+<span class="no">Movie</span><span class="p">.</span><span class="nf">create</span><span class="p">(</span><span class="ss">name: </span><span class="s2">"A Quiet Place"</span><span class="p">,</span> <span class="ss">rating: </span><span class="mi">5</span><span class="p">)</span>
+<span class="no">Movie</span><span class="p">.</span><span class="nf">create</span><span class="p">(</span><span class="ss">name: </span><span class="s2">"Nobody's Fool"</span><span class="p">,</span> <span class="ss">rating: </span><span class="mi">2</span><span class="p">)</span>
+<span class="no">Movie</span><span class="p">.</span><span class="nf">create</span><span class="p">(</span><span class="ss">name: </span><span class="s2">"Suspiria"</span><span class="p">,</span> <span class="ss">rating: </span><span class="mi">4</span><span class="p">)</span>
+<span class="no">Movie</span><span class="p">.</span><span class="nf">create</span><span class="p">(</span><span class="ss">name: </span><span class="s2">"Hereditary"</span><span class="p">,</span> <span class="ss">rating: </span><span class="mi">4</span><span class="p">)</span>
+<span class="no">Movie</span><span class="p">.</span><span class="nf">create</span><span class="p">(</span><span class="ss">name: </span><span class="s2">"Office Space"</span><span class="p">,</span> <span class="ss">rating: </span><span class="mi">5</span><span class="p">)</span>
+<span class="no">Movie</span><span class="p">.</span><span class="nf">create</span><span class="p">(</span><span class="ss">name: </span><span class="s2">"Elf"</span><span class="p">,</span> <span class="ss">rating: </span><span class="mi">4</span><span class="p">)</span>
+<span class="no">Movie</span><span class="p">.</span><span class="nf">create</span><span class="p">(</span><span class="ss">name: </span><span class="s2">"Dawn of the Planet of the Apes"</span><span class="p">,</span> <span class="ss">rating: </span><span class="mi">3</span><span class="p">)</span>
+<span class="no">Movie</span><span class="p">.</span><span class="nf">create</span><span class="p">(</span><span class="ss">name: </span><span class="s2">"Secret life of Pets"</span><span class="p">,</span> <span class="ss">rating: </span><span class="mi">4</span><span class="p">)</span>
+<span class="no">Movie</span><span class="p">.</span><span class="nf">create</span><span class="p">(</span><span class="ss">name: </span><span class="s2">"Overlord"</span><span class="p">,</span> <span class="ss">rating: </span><span class="mi">3</span><span class="p">)</span>
+<span class="no">Movie</span><span class="p">.</span><span class="nf">create</span><span class="p">(</span><span class="ss">name: </span><span class="s2">"Wonder Woman"</span><span class="p">,</span> <span class="ss">rating: </span><span class="mi">5</span><span class="p">)</span>
+<span class="no">Movie</span><span class="p">.</span><span class="nf">create</span><span class="p">(</span><span class="ss">name: </span><span class="s2">"Bohemian Rhapsody"</span><span class="p">,</span> <span class="ss">rating: </span><span class="mi">4</span><span class="p">)</span>
+<span class="no">Movie</span><span class="p">.</span><span class="nf">create</span><span class="p">(</span><span class="ss">name: </span><span class="s2">"Ocean's 8"</span><span class="p">,</span> <span class="ss">rating: </span><span class="mi">5</span><span class="p">)</span>
+</code></pre></div></div>
+
+<p>Seed the DB using <code class="highlighter-rouge">rails db:seed &amp;&amp; rails db:migrate</code></p>
+
+<ol>
+  <li>Test the API using a GET request.</li>
+</ol>
+
+<p>Start your Rails server <code class="highlighter-rouge">rails s</code> and navigate to <code class="highlighter-rouge">localhost:3000/api/v1/movies</code> and if it is successful you should see the following JSON output: <br /><br /></p>
+
+<p>(Optional) I’m using a pretty JSON viewer for chrome which you can download <a href="https://chrome.google.com/webstore/detail/jsonview/chklaanhfefbnpoihckbnefhakgolnmc">here.</a>
+Congrats! You have successfully created a Rails API and completed your first GET request!</p>
+
+  </div>
+  <!-- Previous / Next Buttons -->
+<!--   <div class="pagenav">
+    
+    <div class="wrapper" id="left">
+      <small><b>Previous</b> May 2</small>
+      <br>
+      <a class="no-hov" href="//2019/05/rake-task-delete-records.html">&laquo; Rake Task - Delete Records</a>
+    </div>
+    
+    
+    <div class="wrapper" id="right">
+      <small>May 8 <b>Next</b></small>
+      <br>
+      <a class="no-hov" href="//2019/05/named-scopes.html">Named Scopes &raquo;</a>
+    </div>
+    
+  </div> -->
+  <!-- Disqus comments view -->
+  
+</article>
+
+  </div>
+  <footer class="c-page__footer">
+  <p>&copy; John Cordero 2020</p>
+  <p><a href="https://linkedin.com/in/">Linkedin</a><span class="u-separate"></span><a href="https://github.com/johncorderox">Github</a></p>
+</footer>
+
+</div>
+
+    </main>
+    
+  </body>
+</html>
+<style>
+#avatar {
+  display: inline-block;
+  width: 95px;
+  height: 95px;
+  border-radius: 50%;
+  margin-bottom: 20px;
+}
+
+</style>

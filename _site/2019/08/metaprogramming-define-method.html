@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>John 😛 Cordero</title>
+  <meta name="description" content="define_method is a wonderful metaprogramming technique used to create methods on the fly and ultimately dry up your code.">
+  <link href='https://fonts.googleapis.com/css?family=Roboto+Mono|Roboto:300,400,900,400italic' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" href="/css/main.css">
+  <link rel="canonical" href="/2019/08/metaprogramming-define-method.html">
+<script src="http://127.0.0.1:35729/livereload.js"></script></head>
+
+  <body>
+    <main class="u-container">
+      <div class="c-page">
+  <header class="c-page__header">
+	<img id="avatar" class="3x" src="/assets/avatar.png"/>
+  <h1><code>Hi. Im John Cordero.</code></h1>
+  
+  <p>
+    <a href="/">Home</a><span
+          class="u-separate"></span> <a href="/projects/">Projects</a><span class="u-separate"></span>
+          <a href="https://www.spillthebean.org/dev-overview/john-cordero">About</a>
+</header>
+  <div class="c-page__main">
+    <article class="c-article">
+  <header class="c-article__header">
+    <h1 class="c-article__title">Metaprogramming - define_method</h1>
+    <p class="c-article__time"><time datetime="2019-08-07T00:00:00-07:00" itemprop="datePublished">Aug 7</time></p>
+  </header>
+  <!-- Post Tags -->
+  <ul class="c-tags">
+    
+  </ul>
+  <div class="c-article__main">
+    <p>define_method is a wonderful metaprogramming technique used to create methods on the fly and ultimately dry up your code.</p>
+
+<p>Heres an example of a basic ruby class with some basic methods:</p>
+
+<div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">class</span> <span class="nc">House</span>
+
+	<span class="k">def</span> <span class="nf">house_lights</span>
+		<span class="nb">puts</span> <span class="s2">"lights are on!"</span>
+	<span class="k">end</span>
+
+	<span class="k">def</span> <span class="nf">house_water</span>
+		<span class="nb">puts</span> <span class="s2">"water is on!"</span>
+	<span class="k">end</span>
+
+	<span class="k">def</span> <span class="nf">power</span>
+		<span class="nb">puts</span> <span class="s2">"power is on!"</span>
+	<span class="k">end</span>
+<span class="k">end</span>
+
+<span class="n">apartment</span> <span class="o">=</span> <span class="no">House</span><span class="p">.</span><span class="nf">new</span>
+<span class="n">apartment</span><span class="p">.</span><span class="nf">house_lights</span>
+<span class="c1"># =&gt; lights are on!</span>
+
+<span class="n">apartment</span><span class="p">.</span><span class="nf">house_water</span>
+<span class="c1"># =&gt; water is on!</span>
+</code></pre></div></div>
+<p>This code is far from dry and you can see it can get repetitive if we added more methods very similar. Adding <code class="highlighter-rouge">define_method</code> can create methods for you easily and check this out:</p>
+
+<div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">class</span> <span class="nc">House</span>
+
+  <span class="p">[</span><span class="s2">"lights"</span><span class="p">,</span> <span class="s2">"water"</span><span class="p">,</span> <span class="s2">"garbage"</span><span class="p">].</span><span class="nf">each</span> <span class="k">do</span> <span class="o">|</span><span class="nb">method</span><span class="o">|</span>
+    <span class="n">define_method</span> <span class="s2">"house_</span><span class="si">#{</span><span class="nb">method</span><span class="si">}</span><span class="s2">"</span> <span class="k">do</span>
+      <span class="nb">puts</span> <span class="nb">method</span><span class="p">.</span><span class="nf">to_s</span> <span class="o">+</span> <span class="s2">" is on!"</span>
+    <span class="k">end</span>
+  <span class="k">end</span>
+<span class="k">end</span>
+
+<span class="n">apartment</span> <span class="o">=</span> <span class="no">House</span><span class="p">.</span><span class="nf">new</span>
+<span class="n">apartment</span><span class="p">.</span><span class="nf">house_lights</span>
+<span class="c1"># =&gt; lights are on!</span>
+
+<span class="n">apartment</span><span class="p">.</span><span class="nf">house_water</span>
+<span class="c1"># =&gt; water is on!</span>
+</code></pre></div></div>
+
+  </div>
+  <!-- Previous / Next Buttons -->
+<!--   <div class="pagenav">
+    
+    <div class="wrapper" id="left">
+      <small><b>Previous</b> Jul 11</small>
+      <br>
+      <a class="no-hov" href="//2019/07/what-does-map-name-mean-in-ruby.html">&laquo; What does map(&:name) mean in Ruby?</a>
+    </div>
+    
+    
+    <div class="wrapper" id="right">
+      <small>Oct 11 <b>Next</b></small>
+      <br>
+      <a class="no-hov" href="//2020/10/viewmaster.html">ViewMaster &raquo;</a>
+    </div>
+    
+  </div> -->
+  <!-- Disqus comments view -->
+  
+</article>
+
+  </div>
+  <footer class="c-page__footer">
+  <p>&copy; John Cordero 2020</p>
+  <p><a href="https://linkedin.com/in/">Linkedin</a><span class="u-separate"></span><a href="https://github.com/johncorderox">Github</a></p>
+</footer>
+
+</div>
+
+    </main>
+    
+  </body>
+</html>
+<style>
+#avatar {
+  display: inline-block;
+  width: 95px;
+  height: 95px;
+  border-radius: 50%;
+  margin-bottom: 20px;
+}
+
+</style>

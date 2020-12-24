@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>John 😛 Cordero</title>
+  <meta name="description" content="Named ScopesWhat are they? Simply put, Named scopes are class methods inside your model that always returns an active record association.">
+  <link href='https://fonts.googleapis.com/css?family=Roboto+Mono|Roboto:300,400,900,400italic' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" href="/css/main.css">
+  <link rel="canonical" href="/2019/05/named-scopes.html">
+<script src="http://127.0.0.1:35729/livereload.js"></script></head>
+
+  <body>
+    <main class="u-container">
+      <div class="c-page">
+  <header class="c-page__header">
+	<img id="avatar" class="3x" src="/assets/avatar.png"/>
+  <h1><code>Hi. Im John Cordero.</code></h1>
+  
+  <p>
+    <a href="/">Home</a><span
+          class="u-separate"></span> <a href="/projects/">Projects</a><span class="u-separate"></span>
+          <a href="https://www.spillthebean.org/dev-overview/john-cordero">About</a>
+</header>
+  <div class="c-page__main">
+    <article class="c-article">
+  <header class="c-article__header">
+    <h1 class="c-article__title">Named Scopes</h1>
+    <p class="c-article__time"><time datetime="2019-05-08T00:00:00-07:00" itemprop="datePublished">May 8</time></p>
+  </header>
+  <!-- Post Tags -->
+  <ul class="c-tags">
+    
+  </ul>
+  <div class="c-article__main">
+    <h2 id="named-scopes">Named Scopes</h2>
+<p>What are they? Simply put, Named scopes are class methods inside your model that always returns an active record association.</p>
+
+<p>Let’s see a classic class method definition first:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>#app/models/user.rb
+
+def self.paid
+  where{where("paid LIKE ?", paid)
+end
+</code></pre></div></div>
+
+<p>so lets see how we can use this in a named scope:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>#app/models/user.rb
+
+scope :paid, -&gt;{where("paid LIKE ?", paid)
+end
+</code></pre></div></div>
+
+<p>so calling the scope is as simple as</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>#app/controllers/shirts_controller.rb
+@q = User.paid
+</code></pre></div></div>
+
+<p>So what is the beauty of this idea? Well, just think of the fact that they will always return an active record association. Never <code class="highlighter-rouge">nil</code>.  You can safely string and chain as many scopes as you like without worrying about the query failing. The end case of <code class="highlighter-rouge">nil</code> is always taken care of.</p>
+
+  </div>
+  <!-- Previous / Next Buttons -->
+<!--   <div class="pagenav">
+    
+    <div class="wrapper" id="left">
+      <small><b>Previous</b> May 7</small>
+      <br>
+      <a class="no-hov" href="//2019/05/scaffold-a-new-rails-5-api.html">&laquo; Scaffold a New Rails 5 API.</a>
+    </div>
+    
+    
+    <div class="wrapper" id="right">
+      <small>May 11 <b>Next</b></small>
+      <br>
+      <a class="no-hov" href="//2019/05/add-a-rails-env-to-your-vagrant-server.html">Add a Rails Env to your Vagrant Server &raquo;</a>
+    </div>
+    
+  </div> -->
+  <!-- Disqus comments view -->
+  
+</article>
+
+  </div>
+  <footer class="c-page__footer">
+  <p>&copy; John Cordero 2020</p>
+  <p><a href="https://linkedin.com/in/">Linkedin</a><span class="u-separate"></span><a href="https://github.com/johncorderox">Github</a></p>
+</footer>
+
+</div>
+
+    </main>
+    
+  </body>
+</html>
+<style>
+#avatar {
+  display: inline-block;
+  width: 95px;
+  height: 95px;
+  border-radius: 50%;
+  margin-bottom: 20px;
+}
+
+</style>

@@ -1,0 +1,45 @@
+name: John Cordero
+description: Hi. I'm John. <br> 
+meta_description: "John Cordero | Software Engineer at Infowerks and Evolution. Ruby on Rails"
+blog_written: John
+blog_description: Software Engineer
+
+
+aboutPage: true
+
+markdown: kramdown
+highlighter: rouge
+
+plugins: [jekyll-paginate, jemoji, jekyll-seo-tag]
+paginate: 15
+domain_name: 'http://johncorderox.com'
+google_analytics: 'UA-79158260-1'
+disqus: false
+disqus_shortname: 'your-disqus-shortname'
+
+# Details for the RSS feed generator
+url:            'http://johncorderox.com'
+author:         'John Cordero'
+authorTwitter:  'johncorderox'
+
+permalink:       /:year/:title/
+
+defaults:
+    -
+        scope:
+            path: "" # empty string for all files
+            type: pages
+        values:
+            layout: default
+    -
+        scope:
+            path: "" # empty string for all files
+            type: posts
+        values:
+            layout: post
+    -
+        scope:
+            path: ""
+            type: drafts
+        values:
+            layout: post

@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>John 😛 Cordero</title>
+  <meta name="description" content="Draper is a really cool gem that utilizes the decorator rails pattern. You can extract logic from views and view helpers and convert them into objects.">
+  <link href='https://fonts.googleapis.com/css?family=Roboto+Mono|Roboto:300,400,900,400italic' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" href="/css/main.css">
+  <link rel="canonical" href="/2019/05/draper-gem-101.html">
+<script src="http://127.0.0.1:35729/livereload.js"></script></head>
+
+  <body>
+    <main class="u-container">
+      <div class="c-page">
+  <header class="c-page__header">
+	<img id="avatar" class="3x" src="/assets/avatar.png"/>
+  <h1><code>Hi. Im John Cordero.</code></h1>
+  
+  <p>
+    <a href="/">Home</a><span
+          class="u-separate"></span> <a href="/projects/">Projects</a><span class="u-separate"></span>
+          <a href="https://www.spillthebean.org/dev-overview/john-cordero">About</a>
+</header>
+  <div class="c-page__main">
+    <article class="c-article">
+  <header class="c-article__header">
+    <h1 class="c-article__title">Draper Gem 101</h1>
+    <p class="c-article__time"><time datetime="2019-05-20T00:00:00-07:00" itemprop="datePublished">May 20</time></p>
+  </header>
+  <!-- Post Tags -->
+  <ul class="c-tags">
+    
+  </ul>
+  <div class="c-article__main">
+    <p><a href="https://github.com/drapergem/draper">Draper</a> is a really cool gem that utilizes the decorator rails pattern. You can extract logic from views and view helpers and convert them into objects.</p>
+
+<p>For a simple explanation, lets view this codeblock for a todo list in rails.</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;h4&gt;Todo &lt;%= @todo.content %&gt; Created on &lt;%= @todo.created_at %&gt; &lt;/h4&gt;
+</code></pre></div></div>
+
+<p>Generated:
+TODO - Make cool stuff in ruby. Created on ‘2019-07-02 15:22:41’</p>
+
+<p>This is boring, unappealing and will make your rails app UNDRY!</p>
+
+<p>So how can a decorator help your application? Let’s start by install and running the same rails commands like always:</p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>#Gemfile
+ gem 'draper'
+</code></pre></div></div>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>#terminal 
+bundle install
+</code></pre></div></div>
+
+<p>Now we are going to generate a decorator to wrap our <code class="highlighter-rouge">Todo</code> model. This will create the directory <code class="highlighter-rouge">app/decorators</code> in your application.</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>rails g decorator Todo
+</code></pre></div></div>
+
+<p>Now locate your Todo controller show method and add the following:</p>
+
+<pre><code class="language-#app/controllers/todo_controller.rb">def show
+	tem = Todo.find(params[:id])
+@todo = TodoDecorator.new(item)
+end
+</code></pre>
+
+<p>We have our setup going, but what are we trying to dry? In toy apps I’ve made before I’ve done things like formatting time, but across the app I’ve copied and pasted so many lines of code that it becomes a chore and a hassel to format them all. Our fancy decorator allows us to turn this logic into an object like so:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>	def formatted_created_at
+	todo.created_at.strftime("%m/%d/%Y - %H:%M")
+	end
+</code></pre></div></div>
+
+<p>and in our view we can compare the final decorated view line to the undecorated</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>#index.html.erb
+	
+#Decorated
+&lt;h4&gt;Published &lt;%= @article.strftime("%m/%d/%Y - %H:%M" %&gt;&lt;/h4&gt;
+#Undecorated
+&lt;h4&gt;Todo &lt;%= @todo.content %&gt; Created on &lt;%= @todo.created_at %&gt; &lt;/h4&gt;
+</code></pre></div></div>
+
+  </div>
+  <!-- Previous / Next Buttons -->
+<!--   <div class="pagenav">
+    
+    <div class="wrapper" id="left">
+      <small><b>Previous</b> May 18</small>
+      <br>
+      <a class="no-hov" href="//2019/05/evolution.html">&laquo; Evolution</a>
+    </div>
+    
+    
+    <div class="wrapper" id="right">
+      <small>Jun 3 <b>Next</b></small>
+      <br>
+      <a class="no-hov" href="//2019/06/zsh-configs-for-your-terminal.html">Zsh configs for your terminal &raquo;</a>
+    </div>
+    
+  </div> -->
+  <!-- Disqus comments view -->
+  
+</article>
+
+  </div>
+  <footer class="c-page__footer">
+  <p>&copy; John Cordero 2020</p>
+  <p><a href="https://linkedin.com/in/">Linkedin</a><span class="u-separate"></span><a href="https://github.com/johncorderox">Github</a></p>
+</footer>
+
+</div>
+
+    </main>
+    
+  </body>
+</html>
+<style>
+#avatar {
+  display: inline-block;
+  width: 95px;
+  height: 95px;
+  border-radius: 50%;
+  margin-bottom: 20px;
+}
+
+</style>
