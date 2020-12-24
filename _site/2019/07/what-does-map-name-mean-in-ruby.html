@@ -42,7 +42,7 @@
 
 <p>Here is a basic implementation of Map:</p>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>['a' , 'b', 'c'].map { |x| x.upcase }
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>['a' , 'b', 'c'].map { |x| x.upcase }
 
 =&gt;
 ['A', 'B', 'C']
@@ -50,13 +50,13 @@
 
 <p>Now let’s see an implementation with shorthand:</p>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>[1,2,3].map(&amp;:upcase)
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>[1,2,3].map(&amp;:upcase)
 
 </code></pre></div></div>
 
 <p>This returns the same result as before, but it for more experienced programmers with knowdlege of PROC and how it works.</p>
 
-<p>The beginning of &amp; calls <code class="highlighter-rouge">to_proc</code> and passes in the block to be evaluated.</p>
+<p>The beginning of &amp; calls <code class="language-plaintext highlighter-rouge">to_proc</code> and passes in the block to be evaluated.</p>
 
   </div>
   <!-- Previous / Next Buttons -->

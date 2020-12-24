@@ -38,7 +38,7 @@
 
 <p>For a simple explanation, lets view this codeblock for a todo list in rails.</p>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;h4&gt;Todo &lt;%= @todo.content %&gt; Created on &lt;%= @todo.created_at %&gt; &lt;/h4&gt;
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;h4&gt;Todo &lt;%= @todo.content %&gt; Created on &lt;%= @todo.created_at %&gt; &lt;/h4&gt;
 </code></pre></div></div>
 
 <p>Generated:
@@ -47,17 +47,17 @@ TODO - Make cool stuff in ruby. Created on ‘2019-07-02 15:22:41’</p>
 <p>This is boring, unappealing and will make your rails app UNDRY!</p>
 
 <p>So how can a decorator help your application? Let’s start by install and running the same rails commands like always:</p>
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>#Gemfile
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>#Gemfile
  gem 'draper'
 </code></pre></div></div>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>#terminal 
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>#terminal 
 bundle install
 </code></pre></div></div>
 
-<p>Now we are going to generate a decorator to wrap our <code class="highlighter-rouge">Todo</code> model. This will create the directory <code class="highlighter-rouge">app/decorators</code> in your application.</p>
+<p>Now we are going to generate a decorator to wrap our <code class="language-plaintext highlighter-rouge">Todo</code> model. This will create the directory <code class="language-plaintext highlighter-rouge">app/decorators</code> in your application.</p>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>rails g decorator Todo
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>rails g decorator Todo
 </code></pre></div></div>
 
 <p>Now locate your Todo controller show method and add the following:</p>
@@ -70,14 +70,14 @@ end
 
 <p>We have our setup going, but what are we trying to dry? In toy apps I’ve made before I’ve done things like formatting time, but across the app I’ve copied and pasted so many lines of code that it becomes a chore and a hassel to format them all. Our fancy decorator allows us to turn this logic into an object like so:</p>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>	def formatted_created_at
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>	def formatted_created_at
 	todo.created_at.strftime("%m/%d/%Y - %H:%M")
 	end
 </code></pre></div></div>
 
 <p>and in our view we can compare the final decorated view line to the undecorated</p>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>#index.html.erb
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>#index.html.erb
 	
 #Decorated
 &lt;h4&gt;Published &lt;%= @article.strftime("%m/%d/%Y - %H:%M" %&gt;&lt;/h4&gt;

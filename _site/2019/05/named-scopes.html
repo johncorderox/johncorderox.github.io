@@ -39,7 +39,7 @@
 
 <p>Let’s see a classic class method definition first:</p>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>#app/models/user.rb
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>#app/models/user.rb
 
 def self.paid
   where{where("paid LIKE ?", paid)
@@ -48,7 +48,7 @@ end
 
 <p>so lets see how we can use this in a named scope:</p>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>#app/models/user.rb
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>#app/models/user.rb
 
 scope :paid, -&gt;{where("paid LIKE ?", paid)
 end
@@ -56,11 +56,11 @@ end
 
 <p>so calling the scope is as simple as</p>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>#app/controllers/shirts_controller.rb
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>#app/controllers/shirts_controller.rb
 @q = User.paid
 </code></pre></div></div>
 
-<p>So what is the beauty of this idea? Well, just think of the fact that they will always return an active record association. Never <code class="highlighter-rouge">nil</code>.  You can safely string and chain as many scopes as you like without worrying about the query failing. The end case of <code class="highlighter-rouge">nil</code> is always taken care of.</p>
+<p>So what is the beauty of this idea? Well, just think of the fact that they will always return an active record association. Never <code class="language-plaintext highlighter-rouge">nil</code>.  You can safely string and chain as many scopes as you like without worrying about the query failing. The end case of <code class="language-plaintext highlighter-rouge">nil</code> is always taken care of.</p>
 
   </div>
   <!-- Previous / Next Buttons -->

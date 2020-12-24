@@ -38,37 +38,37 @@
 
 <p>A great server to contain all of your ruby+rails projects for better workflow development:</p>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c">#!/usr/bin/env bash</span>
-<span class="c"># upgrade and update the system</span>
-<span class="nb">echo </span>upgrading and updating the system
-<span class="nb">sudo </span>apt-get update
-<span class="nb">sudo </span>apt-get <span class="nt">-y</span> upgrade
-<span class="c"># install node.js for js runtime when using Rails</span>
-<span class="nb">echo </span>installing nodejs <span class="k">for </span>ExecJS runtime and git
-<span class="nb">sudo </span>apt-get install <span class="nt">-y</span> nodejs
-<span class="nb">sudo </span>apt-get install <span class="nt">-y</span> git
-<span class="c"># install RVM</span>
-<span class="nb">echo </span>installing RVM
-gpg <span class="nt">--keyserver</span> hkp://keys.gnupg.net <span class="nt">--recv-keys</span> 409B6B1796C275462A1703113804BB82D39DC0E3 7D2BAF1CF37B13E2069D6956105BD0E739499BDB
-<span class="se">\c</span>url <span class="nt">-sSL</span> https://get.rvm.io | bash <span class="nt">-s</span> stable
-<span class="nb">source</span> /home/vagrant/.rvm/scripts/rvm
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>#!/usr/bin/env bash
+# upgrade and update the system
+echo upgrading and updating the system
+sudo apt-get update
+sudo apt-get -y upgrade
+# install node.js for js runtime when using Rails
+echo installing nodejs for ExecJS runtime and git
+sudo apt-get install -y nodejs
+sudo apt-get install -y git
+# install RVM
+echo installing RVM
+gpg --keyserver hkp://keys.gnupg.net --recv-keys 409B6B1796C275462A1703113804BB82D39DC0E3 7D2BAF1CF37B13E2069D6956105BD0E739499BDB
+\curl -sSL https://get.rvm.io | bash -s stable
+source /home/vagrant/.rvm/scripts/rvm
 rvm requirements
-<span class="c"># install Ruby and make 2.3.1 the default</span>
-<span class="nb">echo </span>installing ruby
+# install Ruby and make 2.3.1 the default
+echo installing ruby
 rvm install 2.3.1
-rvm use 2.3.1 <span class="nt">--default</span>
-<span class="c"># install Bundler and Rails</span>
-<span class="nb">echo </span>installing bundler and rails
-gem install bundler <span class="nt">--no-ri</span> <span class="nt">--no-rdoc</span>
-gem install rails <span class="nt">-v</span> 4.2.7 <span class="nt">--no-ri</span> <span class="nt">--no-rdoc</span>
-<span class="c"># install postgres and its dependencies</span>
-<span class="nb">echo </span>installing psql and its dependencies
-<span class="nb">sudo </span>apt-get install <span class="nt">-y</span> postgresql postgresql-contrib libpq-dev
+rvm use 2.3.1 --default
+# install Bundler and Rails
+echo installing bundler and rails
+gem install bundler --no-ri --no-rdoc
+gem install rails -v 4.2.7 --no-ri --no-rdoc
+# install postgres and its dependencies
+echo installing psql and its dependencies
+sudo apt-get install -y postgresql postgresql-contrib libpq-dev
 </code></pre></div></div>
 
 <p>Make sure your Vagrantfile has some of this options so we can port forward (open traffic in specific ports)</p>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Vagrant.configure("2") do |config|
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Vagrant.configure("2") do |config|
   config.vm.box = "ubuntu/trusty64"
   config.vm.network "forwarded_port", guest: 3000, host: 3000, host_ip: "127.0.0.1"
   config.vm.provision :shell, path: "bootstrap.sh", privileged: false
@@ -81,7 +81,7 @@ end
 
 <p>Finally, run these commands so your vagrant server can run the script and configure your development server:</p>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ vagrant halt
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ vagrant halt
 ==&gt; default: Attempting graceful shutdown of VM...
 $ vagrant up --provision
 </code></pre></div></div>
