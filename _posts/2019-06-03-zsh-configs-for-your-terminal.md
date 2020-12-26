@@ -6,7 +6,7 @@ description: zsh + powerlevel9k > bash
 
 Edit your zshrc file and reload with source!
 
-```
+```ruby
 # Load Nerd Fonts with Powerlevel9k theme for Zsh
  POWERLEVEL9K_MODE='nerdfont-complete'
  source ~/powerlevel9k/powerlevel9k.zsh-theme
