@@ -9,7 +9,7 @@ What are they? Simply put, Named scopes are class methods inside your model that
 
 Let's see a classic class method definition first:
 
-```
+```ruby
 #app/models/user.rb
 
 def self.paid
@@ -19,7 +19,7 @@ end
 
 so lets see how we can use this in a named scope:
 
-```
+```ruby
 #app/models/user.rb
 
 scope :paid, ->{where("paid LIKE ?", paid)
@@ -27,7 +27,7 @@ end
 ```
 
 so calling the scope is as simple as 
-
+ruby
 ```
 #app/controllers/shirts_controller.rb
 @q = User.paid
