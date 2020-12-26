@@ -21,12 +21,14 @@ end
 class Gif < ActiveRecord::Base
 	belongs_to :user
 end
+```
 
 ```ruby
 
 What we want to do is list 10 gifs we have created with the users name and which gif they made.
 
 We could do this by adding a query to our controller
+```
 
 ```ruby
 @gifs = Gif.limit(10)
