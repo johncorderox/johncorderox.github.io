@@ -8,33 +8,33 @@ description: Learn how about includes and eager loading
 
 One thing you want to avoid as a Ruby on Rails developer is the N+1 problem. To give an example, let's say we have 2 tables in our database.
 
-```
+```ruby
 
-#Users model
+# Users model
 class User < ActiveRecord::Base
 	has_many :gifs
 end
 
 
-#Gifs model
+# Gifs model
 
 class Gif < ActiveRecord::Base
 	belongs_to :user
 end
 
-```
+```ruby
 
 What we want to do is list 10 gifs we have created with the users name and which gif they made.
 
 We could do this by adding a query to our controller
 
-```
+```ruby
 @gifs = Gif.limit(10)
 
 ```
 and loop the following into our view
 
-```
+```ruby
 <% @gifs.each do |gif| %>
 	<p> gif <%= gif.url %> </p>
 	<p> made by - <%= gif.user.name %></p>
@@ -53,11 +53,11 @@ Eager Loading is a practice used to grab and load the associated records returne
 
 Rails has a method called ```includes``` which will make sure the associated data (users to gifs) are loaded once the query runs. After refactoring our controller, this should be the final result:
 
-```
-#Without Eager Loading
+```ruby
+# Without Eager Loading
 @gifs = Gif.limit(10)
 
-#With Eager Loading
+# With Eager Loading
 @gifs = Gif.includes(:users).limit(10)
 ```
 

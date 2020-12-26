@@ -12,7 +12,7 @@ This is a short hand notation for the regular map function. What map initially d
 
 Here is a basic implementation of Map:
 
-```
+```ruby
 ['a' , 'b', 'c'].map { |x| x.upcase }
 
 =>
@@ -21,7 +21,7 @@ Here is a basic implementation of Map:
 
 Now let's see an implementation with shorthand:
 
-```
+```ruby
 [1,2,3].map(&:upcase)
 
 ```
