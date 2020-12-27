@@ -1,21 +1,20 @@
 ---
-title: Most Popular API Status Codes
+title: Most Popular API Status Codes + Code Sample
 layout: post
 description: x
 ---
 
 HTTP status codes are numbered 100-500. Each 100 intervals are split into categories!
 
-| 100s | Informational Requests |                               |
-|------|------------------------|-------------------------------|
+| 100s | Informational Requests | 100 - Continue                |
 | 200s | Success Codes          | 201 - Resource created        |
 | 300s | Redirect Codes         | 301 - Resource has been moved |
 | 400s | Client Errors          | 401 - Unauthorized            |
 | 500s | Server Errors          | 503 - Service unavailable     |
 
-
+<br><br>
 You can also do some great error handling with rails APIs in the application controller and create more readable, human-like errors.
-
+<br><br><br><br>
 ```ruby
 
 class ApplicationController < ActionController::API
