@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>John 😛 Cordero</title>
+  <title>John Cordero ☺️</title>
   <meta name="description" content="Named ScopesWhat are they? Simply put, Named scopes are class methods inside your model that always returns an active record association.">
   <link href='https://fonts.googleapis.com/css?family=Roboto+Mono|Roboto:300,400,900,400italic' rel='stylesheet' type='text/css'>
   <link rel="stylesheet" href="/css/main.css">
@@ -39,23 +39,23 @@
 
 <p>Let’s see a classic class method definition first:</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>#app/models/user.rb
+<div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">#app/models/user.rb</span>
 
-def self.paid
-  where{where("paid LIKE ?", paid)
-end
+<span class="k">def</span> <span class="nc">self</span><span class="o">.</span><span class="nf">paid</span>
+  <span class="n">where</span><span class="p">{</span><span class="n">where</span><span class="p">(</span><span class="s2">"paid LIKE ?"</span><span class="p">,</span> <span class="n">paid</span><span class="p">)</span>
+<span class="k">end</span>
 </code></pre></div></div>
 
 <p>so lets see how we can use this in a named scope:</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>#app/models/user.rb
+<div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">#app/models/user.rb</span>
 
-scope :paid, -&gt;{where("paid LIKE ?", paid)
-end
+<span class="n">scope</span> <span class="ss">:paid</span><span class="p">,</span> <span class="o">-&gt;</span><span class="p">{</span><span class="n">where</span><span class="p">(</span><span class="s2">"paid LIKE ?"</span><span class="p">,</span> <span class="n">paid</span><span class="p">)</span>
+<span class="k">end</span>
 </code></pre></div></div>
 
-<p>so calling the scope is as simple as</p>
-
+<p>so calling the scope is as simple as 
+ruby</p>
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>#app/controllers/shirts_controller.rb
 @q = User.paid
 </code></pre></div></div>

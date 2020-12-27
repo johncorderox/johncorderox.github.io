@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>John 😛 Cordero</title>
+  <title>John Cordero ☺️</title>
   <meta name="description" content="Have sensitive data? Need to purge or remove some tables from all sensitive data? Try a custom rake task!">
   <link href='https://fonts.googleapis.com/css?family=Roboto+Mono|Roboto:300,400,900,400italic' rel='stylesheet' type='text/css'>
   <link rel="stylesheet" href="/css/main.css">
@@ -40,15 +40,15 @@
 
 <p>We at <a href="http://www.myevolutiontravel.com/">@Evolution </a> utitlize a lot of different forms that save information like personal data, money, credit card forms, client information, etc. So instead of manuall writing queries to production or hacking the postgres db, try removing them safely like we do.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>#/lib/delete_records.rb
+<div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">#/lib/delete_records.rb</span>
 
-namespace :cc
-desc "Delete creditcardforms after 6 months"
-	task :remove_old =&gt; enviorment do
-	CreditCardAuthorizations.delete_all ["created_at &lt; ?", 6.months.ago]
-	 puts " ...done"
-  end
-end
+<span class="n">namespace</span> <span class="ss">:cc</span>
+<span class="n">desc</span> <span class="s2">"Delete creditcardforms after 6 months"</span>
+	<span class="n">task</span> <span class="ss">:remove_old</span> <span class="o">=&gt;</span> <span class="n">enviorment</span> <span class="k">do</span>
+	<span class="no">Model</span><span class="p">.</span><span class="nf">delete_all</span> <span class="p">[</span><span class="s2">"created_at &lt; ?"</span><span class="p">,</span> <span class="mi">6</span><span class="p">.</span><span class="nf">months</span><span class="p">.</span><span class="nf">ago</span><span class="p">]</span>
+	 <span class="nb">puts</span> <span class="s2">" ...done"</span>
+  <span class="k">end</span>
+<span class="k">end</span>
 </code></pre></div></div>
 
   </div>

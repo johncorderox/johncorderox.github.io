@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>John 😛 Cordero</title>
+  <title>John Cordero ☺️</title>
   <meta name="description" content="Eliminate N+1">
   <link href='https://fonts.googleapis.com/css?family=Roboto+Mono|Roboto:300,400,900,400italic' rel='stylesheet' type='text/css'>
   <link rel="stylesheet" href="/css/main.css">
@@ -38,34 +38,35 @@
 
 <p>One thing you want to avoid as a Ruby on Rails developer is the N+1 problem. To give an example, let’s say we have 2 tables in our database.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
-#Users model
-class User &lt; ActiveRecord::Base
-	has_many :gifs
-end
+<div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
+<span class="c1"># Users model</span>
+<span class="k">class</span> <span class="nc">User</span> <span class="o">&lt;</span> <span class="no">ActiveRecord</span><span class="o">::</span><span class="no">Base</span>
+	<span class="n">has_many</span> <span class="ss">:gifs</span>
+<span class="k">end</span>
 
 
-#Gifs model
+<span class="c1"># Gifs model</span>
 
-class Gif &lt; ActiveRecord::Base
-	belongs_to :user
-end
-
+<span class="k">class</span> <span class="nc">Gif</span> <span class="o">&lt;</span> <span class="no">ActiveRecord</span><span class="o">::</span><span class="no">Base</span>
+	<span class="n">belongs_to</span> <span class="ss">:user</span>
+<span class="k">end</span>
 </code></pre></div></div>
 
-<p>What we want to do is list 10 gifs we have created with the users name and which gif they made.</p>
+<div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
+<span class="no">What</span> <span class="n">we</span> <span class="n">want</span> <span class="n">to</span> <span class="k">do</span> <span class="n">is</span> <span class="n">list</span> <span class="mi">10</span> <span class="n">gifs</span> <span class="n">we</span> <span class="n">have</span> <span class="n">created</span> <span class="n">with</span> <span class="n">the</span> <span class="n">users</span> <span class="nb">name</span> <span class="n">and</span> <span class="n">which</span> <span class="n">gif</span> <span class="n">they</span> <span class="n">made</span><span class="o">.</span>
 
-<p>We could do this by adding a query to our controller</p>
+<span class="no">We</span> <span class="n">could</span> <span class="k">do</span> <span class="n">this</span> <span class="n">by</span> <span class="n">adding</span> <span class="n">a</span> <span class="n">query</span> <span class="n">to</span> <span class="n">our</span> <span class="n">controller</span>
+</code></pre></div></div>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>@gifs = Gif.limit(10)
+<div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="vi">@gifs</span> <span class="o">=</span> <span class="no">Gif</span><span class="p">.</span><span class="nf">limit</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span>
 
 </code></pre></div></div>
 <p>and loop the following into our view</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;% @gifs.each do |gif| %&gt;
-	&lt;p&gt; gif &lt;%= gif.url %&gt; &lt;/p&gt;
-	&lt;p&gt; made by - &lt;%= gif.user.name %&gt;&lt;/p&gt;
-&lt;% end %&gt;
+<div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="o">&lt;</span><span class="sx">% @gifs.each </span><span class="k">do</span> <span class="o">|</span><span class="n">gif</span><span class="o">|</span> <span class="sx">%&gt;
+	&lt;p&gt;</span> <span class="n">gif</span> <span class="o">&lt;</span><span class="sx">%= gif.url %&gt; &lt;/p&gt;
+	&lt;p&gt; made by - &lt;%=</span> <span class="n">gif</span><span class="p">.</span><span class="nf">user</span><span class="p">.</span><span class="nf">name</span> <span class="sx">%&gt;&lt;/p&gt;</span>
+<span class="o">&lt;</span><span class="sx">% end </span><span class="o">%&gt;</span>
 
 </code></pre></div></div>
 
@@ -79,11 +80,11 @@ end
 
 <p>Rails has a method called <code class="language-plaintext highlighter-rouge">includes</code> which will make sure the associated data (users to gifs) are loaded once the query runs. After refactoring our controller, this should be the final result:</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>#Without Eager Loading
-@gifs = Gif.limit(10)
+<div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># Without Eager Loading</span>
+<span class="vi">@gifs</span> <span class="o">=</span> <span class="no">Gif</span><span class="p">.</span><span class="nf">limit</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span>
 
-#With Eager Loading
-@gifs = Gif.includes(:users).limit(10)
+<span class="c1"># With Eager Loading</span>
+<span class="vi">@gifs</span> <span class="o">=</span> <span class="no">Gif</span><span class="p">.</span><span class="nf">includes</span><span class="p">(</span><span class="ss">:users</span><span class="p">).</span><span class="nf">limit</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span>
 </code></pre></div></div>
 
 <h1 id="console-output">Console Output</h1>
