@@ -1,5 +1,5 @@
 ---
-title: Most Popular API Status Codes + Code Sample
+title: What are the most popular HTTP Status Codes?
 layout: post
 description: x
 ---
