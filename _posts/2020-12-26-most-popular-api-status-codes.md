@@ -6,7 +6,7 @@ description: x
 
 HTTP status codes are numbered 100-500. Each 100 intervals are split into categories!
 
-| 100s | Informational Requests | 100 - Continue                |
+| 100s | Informational 		    | 100 - Continue                |
 | 200s | Success Codes          | 201 - Resource created        |
 | 300s | Redirect Codes         | 301 - Resource has been moved |
 | 400s | Client Errors          | 401 - Unauthorized            |
