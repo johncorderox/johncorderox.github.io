@@ -23,12 +23,11 @@ class Gif < ActiveRecord::Base
 end
 ```
 
-```ruby
 
 What we want to do is list 10 gifs we have created with the users name and which gif they made.
 
 We could do this by adding a query to our controller
-```
+
 
 ```ruby
 @gifs = Gif.limit(10)
@@ -95,4 +94,4 @@ Gif Load (0.4ms) SELECT 'users'.* FROM 'users' WHERE 'users'.'id' IN (
 
 
 Just check out that eager loading!!!!!! Such a breath of relief. <br>
-<img src="https://media.giphy.com/media/1ofR3QioNy264/giphy.gif" alt="gif">
+
