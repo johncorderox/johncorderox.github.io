@@ -32,4 +32,4 @@ Backend: Rails API
 
 
 <img src="../assets/evo.jpg"
-     alt="erd" style="height: 300px; width: auto;" />
+     alt="erd" style="height: 700px; width: auto;" />
