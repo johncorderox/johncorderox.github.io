@@ -9,7 +9,7 @@
   <link href='https://fonts.googleapis.com/css?family=Roboto+Mono|Roboto:300,400,900,400italic' rel='stylesheet' type='text/css'>
   <link rel="stylesheet" href="/css/main.css">
   <link rel="canonical" href="/2020/12/most-popular-api-status-codes.html">
-<script src="http://127.0.0.1:35729/livereload.js"></script></head>
+</head>
 
   <body>
     <main class="u-container">
@@ -26,7 +26,7 @@
   <div class="c-page__main">
     <article class="c-article">
   <header class="c-article__header">
-    <h1 class="c-article__title">Most Popular API Status Codes</h1>
+    <h1 class="c-article__title">What are the most popular HTTP Status Codes?</h1>
     <p class="c-article__time"><time datetime="2020-12-26T00:00:00-08:00" itemprop="datePublished">Dec 26</time></p>
   </header>
   <!-- Post Tags -->
@@ -37,14 +37,12 @@
     <p>HTTP status codes are numbered 100-500. Each 100 intervals are split into categories!</p>
 
 <table>
-  <thead>
-    <tr>
-      <th>100s</th>
-      <th>Informational Requests</th>
-      <th> </th>
-    </tr>
-  </thead>
   <tbody>
+    <tr>
+      <td>100s</td>
+      <td>Informational</td>
+      <td>100 - Continue</td>
+    </tr>
     <tr>
       <td>200s</td>
       <td>Success Codes</td>
@@ -68,6 +66,23 @@
   </tbody>
 </table>
 
+<p><br /><br />
+You can also do some great error handling with rails APIs in the application controller and create more readable, human-like errors.
+<br /><br /><br /><br /></p>
+<div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
+<span class="k">class</span> <span class="nc">ApplicationController</span> <span class="o">&lt;</span> <span class="no">ActionController</span><span class="o">::</span><span class="no">API</span>
+	<span class="n">rescue_from</span> <span class="no">ActiveRecord</span><span class="o">::</span><span class="no">RecordNotFound</span><span class="p">,</span> <span class="ss">with: :some_cool_method_here</span>
+
+	<span class="k">def</span> <span class="nf">some_cool_method_here</span>
+		<span class="nb">hash</span> <span class="o">=</span> <span class="p">{</span>
+			<span class="s1">'status'</span><span class="p">:</span> <span class="mi">404</span><span class="p">,</span>
+			<span class="s1">'message'</span><span class="p">:</span> <span class="s2">"The record you attempted to query was not found! Contact the admin! Etc!"</span>
+		<span class="p">}</span>
+		<span class="n">render</span> <span class="ss">json: </span><span class="nb">hash</span><span class="p">,</span> <span class="ss">status: </span><span class="n">not_found</span>
+	<span class="k">end</span>
+<span class="k">end</span>
+</code></pre></div></div>
+
   </div>
   <!-- Previous / Next Buttons -->
 <!--   <div class="pagenav">
@@ -86,7 +101,7 @@
 
   </div>
   <footer class="c-page__footer">
-  <p>&copy; John Cordero 2020</p>
+  <p>&copy; John Cordero 2021</p>
   <p><a href="https://linkedin.com/in/">Linkedin</a><span class="u-separate"></span><a href="https://github.com/johncorderox">Github</a></p>
 </footer>
 

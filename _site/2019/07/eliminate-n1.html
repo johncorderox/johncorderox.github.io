@@ -9,7 +9,7 @@
   <link href='https://fonts.googleapis.com/css?family=Roboto+Mono|Roboto:300,400,900,400italic' rel='stylesheet' type='text/css'>
   <link rel="stylesheet" href="/css/main.css">
   <link rel="canonical" href="/2019/07/eliminate-n1.html">
-<script src="http://127.0.0.1:35729/livereload.js"></script></head>
+</head>
 
   <body>
     <main class="u-container">
@@ -52,11 +52,9 @@
 <span class="k">end</span>
 </code></pre></div></div>
 
-<div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
-<span class="no">What</span> <span class="n">we</span> <span class="n">want</span> <span class="n">to</span> <span class="k">do</span> <span class="n">is</span> <span class="n">list</span> <span class="mi">10</span> <span class="n">gifs</span> <span class="n">we</span> <span class="n">have</span> <span class="n">created</span> <span class="n">with</span> <span class="n">the</span> <span class="n">users</span> <span class="nb">name</span> <span class="n">and</span> <span class="n">which</span> <span class="n">gif</span> <span class="n">they</span> <span class="n">made</span><span class="o">.</span>
+<p>What we want to do is list 10 gifs we have created with the users name and which gif they made.</p>
 
-<span class="no">We</span> <span class="n">could</span> <span class="k">do</span> <span class="n">this</span> <span class="n">by</span> <span class="n">adding</span> <span class="n">a</span> <span class="n">query</span> <span class="n">to</span> <span class="n">our</span> <span class="n">controller</span>
-</code></pre></div></div>
+<p>We could do this by adding a query to our controller</p>
 
 <div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="vi">@gifs</span> <span class="o">=</span> <span class="no">Gif</span><span class="p">.</span><span class="nf">limit</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span>
 
@@ -113,8 +111,8 @@ Gif Load (0.4ms) SELECT 'users'.* FROM 'users' WHERE 'users'.'id' IN (
 
 </code></pre></div></div>
 
-<p>Just check out that eager loading!!!!!! Such a breath of relief. <br />
-<img src="https://media.giphy.com/media/1ofR3QioNy264/giphy.gif" alt="gif" /></p>
+<p>Just check out that eager loading!!!!!! Such a breath of relief. <br /></p>
+
 
   </div>
   <!-- Previous / Next Buttons -->
@@ -140,7 +138,7 @@ Gif Load (0.4ms) SELECT 'users'.* FROM 'users' WHERE 'users'.'id' IN (
 
   </div>
   <footer class="c-page__footer">
-  <p>&copy; John Cordero 2020</p>
+  <p>&copy; John Cordero 2021</p>
   <p><a href="https://linkedin.com/in/">Linkedin</a><span class="u-separate"></span><a href="https://github.com/johncorderox">Github</a></p>
 </footer>
 
