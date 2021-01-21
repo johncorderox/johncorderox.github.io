@@ -11,11 +11,6 @@ permalink: /contact/
 
 Want to game? Ask for my Discord 🎮 💌
 
-- Fortnite
-- Splatoon2
-- Animal Crossing
-- Smash Brothers (3ds + Switch) 
-- Ragnarok Online 
-- Terraria
-- Bravely Default 
-- FFX + FFX-2
+Fortnite Splatoon2 Animal Crossing Smash Brothers (3ds + Switch) <br>
+Ragnarok Online <br>
+Terraria<br>
