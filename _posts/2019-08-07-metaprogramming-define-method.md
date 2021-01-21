@@ -1,7 +1,6 @@
 ---
 title: Metaprogramming - define_method
 layout: post
-description: Make methods on the fly!
 ---
 
 define_method is a wonderful metaprogramming technique used to create methods on the fly and ultimately dry up your code.

@@ -1,7 +1,7 @@
 ---
 title: What are the most popular HTTP Status Codes?
 layout: post
-description: x
+description: What does 404 mean? What about 201?
 ---
 
 HTTP status codes are numbered 100-500. Each 100 intervals are split into categories!
