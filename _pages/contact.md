@@ -4,9 +4,20 @@ title: Contact
 permalink: /contact/
 ---
 
-Show off your projects here!
+Contact Me!
 - [Github](https://github.com/johncorderox)
 - [Github Gist](https://gist.github.com/johncorderox)
 - [LinkedIn](https://www.linkedin.com/in/johncorderox/)
 - [Instagram](https://www.instagram.com/johncorderox/)
 - [Email - johncorderox@gmail.com]()
+
+Want to game? Ask for my Discord :) 
+
+- Fortnite
+- Splatoon2
+- Animal Crossing
+- Smash Brothers (3ds + Switch) 
+- Ragnarok Online 
+- Terraria
+- Bravely Default 
+- FFX + FFX-2
