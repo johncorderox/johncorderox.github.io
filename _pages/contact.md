@@ -11,6 +11,6 @@ permalink: /contact/
 
 Want to game? Ask for my Discord 🎮 💌
 
-Fortnite Splatoon2 Animal Crossing Smash Brothers (3ds + Switch) <br>
+Fortnite - Splatoon2 - Animal Crossing - Smash Brothers (3ds + Switch) <br>
 Ragnarok Online <br>
 Terraria<br>
