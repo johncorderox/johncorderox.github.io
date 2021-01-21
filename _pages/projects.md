@@ -6,8 +6,8 @@ title: Infowerks Data Services
 # ViewMaster &copy;
  This record retention software meets HIPAA and HITRUST regulations with encrypted and secure data. With ViewMaster, you can satisfy all the requirements for record retention and reporting from entities such as the Board of Pharmacy, CMS, DEA, and more. 
 
- Our Stack: Ruby, Rails, Rails API, RSpec, Capybara, Postgres, Redis, Sidekiq 🔍 ✨
-
+ <b>Our</b> Stack: Ruby, Rails, Rails API, RSpec, Capybara, Postgres, Redis, Sidekiq 🔍 ✨
+<br>
 
 <img src="../assets/erd.png"
      alt="erd" />
@@ -22,8 +22,9 @@ gem "redis"
 gem "mini_magick"
 {% endhighlight %}
 
+<br><br>
 
-# Evolution 
+<h1 style="font-size: 3.2rem;">Evolution</h1>
 Evo is a rails application that allows travel agents to create, customize and edit their own personal website. Each agent can customize each module to their own liking, and even have clients book and schedule trips with built-in air/cruise/hotel APIs.
 
 Frontend: HTML CSS3 React JS+Axios Bootstrap 4
