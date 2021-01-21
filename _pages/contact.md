@@ -3,15 +3,13 @@ layout: content
 title: Contact
 permalink: /contact/
 ---
-
-Contact Me!
 - [Github](https://github.com/johncorderox)
 - [Github Gist](https://gist.github.com/johncorderox)
 - [LinkedIn](https://www.linkedin.com/in/johncorderox/)
 - [Instagram](https://www.instagram.com/johncorderox/)
 - [Email - johncorderox@gmail.com]()
 
-Want to game? Ask for my Discord :) 
+Want to game? Ask for my Discord 🎮 💌
 
 - Fortnite
 - Splatoon2
