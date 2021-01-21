@@ -30,6 +30,7 @@ Evo is a rails application that allows travel agents to create, customize and ed
 Frontend: HTML CSS3 React JS+Axios Bootstrap 4 <br>
 Backend: Rails API  
 
-
+<center>
 <img src="../assets/evo.jpg"
      alt="erd" style="height: 700px; width: auto;" />
+ </center>
