@@ -11,8 +11,6 @@ title: Infowerks Data Services
 
 <img src="../assets/erd.png" alt="erd" />
 
- <img src="../assets/iwbanner.png" alt="people" />
-
 {% highlight ruby %}
 gem "haml"
 gem "dalli"
