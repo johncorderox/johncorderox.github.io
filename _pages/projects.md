@@ -10,7 +10,7 @@ title: Infowerks Data Services
 <br>
 
 <img src="../assets/erd.png" alt="erd" />
-<iframe width="470" height="345" src="https://youtu.be/TVgl5NYqqj4?t=19">
+<iframe width="470" height="345" src="https://youtu.be/TVgl5NYqqj4?t">
 </iframe>
 
 {% highlight ruby %}
