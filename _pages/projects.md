@@ -9,8 +9,9 @@ title: Infowerks Data Services
  <b>Our Stack:</b> Ruby, Rails, Rails API, RSpec, Capybara, Postgres, Redis, Sidekiq 🔍 ✨
 <br>
 
-<img src="../assets/erd.png"
-     alt="erd" />
+<img src="../assets/erd.png" alt="erd" />
+
+ <img src="../assets/iwbanner.png" alt="people" />
 
 {% highlight ruby %}
 gem "haml"
