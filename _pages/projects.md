@@ -10,7 +10,9 @@ title: Infowerks Data Services
 <br>
 
 <img src="../assets/erd.png" alt="erd" />
+<center>
 <iframe width="560" height="315" src="https://www.youtube.com/embed/TVgl5NYqqj4" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</center>
 
 {% highlight ruby %}
 gem "haml"
