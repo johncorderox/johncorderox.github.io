@@ -29,6 +29,7 @@ gem "mini_magick"
 
 <br>
 <img src="../assets/crd.png" alt="erd" />
+<br>
 
 <h1 style="font-size: 3.2rem;">Evolution</h1>
 Evo is a rails application that allows travel agents to create, customize and edit their own personal website. Each agent can customize each module to their own liking, and even have clients book and schedule trips with built-in air/cruise/hotel APIs.
