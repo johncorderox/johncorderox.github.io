@@ -42,3 +42,9 @@ Backend: Rails API
 <img src="../assets/evo.jpg"
      alt="erd" style="height: 700px; width: auto;" />
  </center>
+{% highlight ruby %}
+gem 'jwt'
+gem 'grape'
+gem 'rack-cors'
+gem 'react-rails'
+{% endhighlight %}
