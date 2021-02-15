@@ -18,7 +18,8 @@ title: Infowerks Data Services
 <iframe width="560" height="315" src="https://www.youtube.com/embed/TVgl5NYqqj4" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </center>
 <br>
-{% highlight ruby %}
+<img src="../assets/crd.png" alt="erd" />
+<br>{% highlight ruby %}
 gem "haml"
 gem "dalli"
 gem "sendgrid-ruby", "~> 6.1.0"
@@ -27,9 +28,6 @@ gem "azure", "0.7.10"
 gem "redis"
 gem "mini_magick"
 {% endhighlight %}
-
-<br>
-<img src="../assets/crd.png" alt="erd" />
 <br><br>
 
 <h1 style="font-size: 3.2rem;">Evolution</h1>
