@@ -47,3 +47,8 @@ We also released a public rails API for a hub of our own travel specials that wo
 <img src="../assets/diagram.jpeg"
      alt="erd" style="height: 600px; width: auto;" />
 </center>
+<br><br>
+
+<h1 style="font-size: 3.2rem;">Etc ✨</h1>
+Here are some other things I've built with teams and Web Development Agencies.
+<br>
