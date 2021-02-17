@@ -39,4 +39,10 @@ Backend: Rails API
 <center>
 <img src="../assets/evo.jpg"
      alt="erd" style="height: 700px; width: auto;" />
- </center>
+     </center>
+     We also released a public rails API for a hub of our own travel specials that work with React JS and Axios. Each component is resuable and made with the react-rails gem to be monolithic.
+
+<center>
+<img src="../assets/diagram.jpeg"
+     alt="erd" style="height: 700px; width: auto;" />
+</center>
