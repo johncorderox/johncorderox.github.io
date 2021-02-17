@@ -57,14 +57,24 @@ Here are some other things I've built with teams and Web Development Agencies:
 <img src="../assets/archer.png"
      alt="erd" style="height: 65px; width: 65px; border-radius: 10px;" />
      </a>
+   <a href="https://www.jonathanlouis.net/" target="_blank">  
 <img src="../assets/logo.jpg"
      alt="erd" style="height: 65px; width: 65px; border-radius: 10px;" />
+      </a>
+     <a href="https://github.com/EvolutionHQ/evo-specials" target="_blank">
      <img src="../assets/specials.gif"
      alt="erd" style="height: 65px; width: 65px; border-radius: 10px;" />
+      </a>
+     <a href="https://avitamedical.com/" target="_blank">
      <img src="../assets/virus.gif"
      alt="erd" style="height: 65px; width: 65px; border-radius: 10px;" />
+      </a>
+     <a href="https://github.com/medicinal-ruby" target="_blank">
      <img src="../assets/pill.png"
      alt="erd" style="height: 65px; width: 65px; border-radius: 10px;" />
+      </a>
+     <a href="https://afrezza.com/" target="_blank">
      <img src="../assets/afrezza.png"
      alt="erd" style="height: 65px; width: 65px; border-radius: 10px;" />
+      </a>
 
