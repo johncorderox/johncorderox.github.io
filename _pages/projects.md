@@ -61,5 +61,6 @@ Here are some other things I've built with teams and Web Development Agencies:
      alt="erd" style="height: 65px; width: 65px; border-radius: 10px;" />
      <img src="../assets/pill.png"
      alt="erd" style="height: 65px; width: 65px; border-radius: 10px;" />
-
+     <img src="../assets/afrezza.png"
+     alt="erd" style="height: 65px; width: 65px; border-radius: 10px;" />
 
