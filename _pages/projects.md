@@ -54,16 +54,14 @@ Here are some other things I've built with teams and Web Development Agencies:
 <br>
 <div class="photos">
   <a href="" class="p0 photo" rel="noopener">
-    <img alt="evo" src="{{ '/assets/images/evo.png' | relative_url }}">
+    <img alt="evo" src="{{ '../assets/logo.jpg' | relative_url }}">
   </a>
   <a href="" class="p1 photo" rel="noopener">
-    <img alt="cafe" src="{{ '/assets/images/cafe.png' | relative_url }}">
+    <img alt="cafe" src="{{ '../assets/specials.gif' | relative_url }}">
   </a>
   <a href="https://avitamedical.com" class="p2 photo"rel="noopener">
-    <img alt="Avita" src="{{ '/assets/images/virus.gif' | relative_url }}">
+    <img alt="Avita" src="{{ '../assets/virus.gif' | relative_url }}">
   </a>
-  <a href="https://github.com/johncorderox/evo-specials" class="p3 photo"rel="noopener">
-    <img alt="specials" src="{{ '/assets/images/specials.gif' | relative_url }}">
   </a>
 </div><br> <br>
 <style>
