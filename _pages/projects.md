@@ -19,7 +19,7 @@ title: Infowerks Data Services
 </center>
 <br>
 <img src="../assets/crd.png" alt="erd" />
-<br>
+<br><br>
 {% highlight ruby %}
 gem "haml"
 gem "dalli"
