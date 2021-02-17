@@ -52,3 +52,35 @@ We also released a public rails API for a hub of our own travel specials that wo
 <h1 style="font-size: 3.2rem;">Etc ✨</h1>
 Here are some other things I've built with teams and Web Development Agencies:
 <br>
+<div class="photos">
+  <a href="" class="p0 photo" rel="noopener">
+    <img alt="evo" src="{{ '/assets/images/evo.png' | relative_url }}">
+  </a>
+  <a href="" class="p1 photo" rel="noopener">
+    <img alt="cafe" src="{{ '/assets/images/cafe.png' | relative_url }}">
+  </a>
+  <a href="https://avitamedical.com" class="p2 photo"rel="noopener">
+    <img alt="Avita" src="{{ '/assets/images/virus.gif' | relative_url }}">
+  </a>
+  <a href="https://github.com/johncorderox/evo-specials" class="p3 photo"rel="noopener">
+    <img alt="specials" src="{{ '/assets/images/specials.gif' | relative_url }}">
+  </a>
+</div><br> <br>
+<style>
+	.photos {
+  position: relative;
+  margin-bottom: 15px;
+  margin-top: 45px;
+}
+.photo {
+  display: inline-block;
+  margin-right: 15px;
+  margin-bottom: 15px;
+  float: left;
+}
+.photo img {
+  width: 65px;
+  height: 65px;
+  border-radius: 10px;
+}
+	</style>
