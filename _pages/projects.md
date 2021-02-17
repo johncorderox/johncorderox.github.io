@@ -53,8 +53,10 @@ We also released a public rails API for a hub of our own travel specials that wo
 Here are some other things I've built with teams and Web Development Agencies:
 <br>
 <br>
+<a href="https://www.archertravel.com/" target="_blank">
 <img src="../assets/archer.png"
      alt="erd" style="height: 65px; width: 65px; border-radius: 10px;" />
+     </a>
 <img src="../assets/logo.jpg"
      alt="erd" style="height: 65px; width: 65px; border-radius: 10px;" />
      <img src="../assets/specials.gif"
