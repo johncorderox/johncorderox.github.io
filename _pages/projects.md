@@ -77,4 +77,7 @@ Here are some other things I've built with teams and Web Development Agencies:
      <img src="../assets/afrezza.png"
      alt="erd" style="height: 65px; width: 65px; border-radius: 10px;" />
       </a>
-
+     <a href="https://github.com/johncorderox/Rails-API-React-Tutorial" target="_blank">
+     <img src="../assets/api.jpg"
+     alt="erd" style="height: 65px; width: 65px; border-radius: 10px;" />
+      </a>
