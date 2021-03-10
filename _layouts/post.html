@@ -1,42 +1,12 @@
 ---
 layout: page
 ---
-<article class="c-article">
-  <header class="c-article__header">
-    <h1 class="c-article__title">{{ page.title }}</h1>
-    <p class="c-article__time"><time datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">{{ page.date | date: "%b %-d" }}</time></p>
-  </header>
-  <!-- Post Tags -->
-  <ul class="c-tags">
-    {% for tag in page.tags %}
-    <li class="c-tag">{{ tag }}</li>
-    {% endfor %}
-  </ul>
-  <div class="c-article__main">
-    {{ content }}
-  </div>
-  <!-- Previous / Next Buttons -->
-<!--   <div class="pagenav">
-    {% if page.previous.url %}
-    <div class="wrapper" id="left">
-      <small><b>Previous</b> {{page.previous.date | date: "%b %-d"}}</small>
-      <br>
-      <a class="no-hov" href="{{ page.previous.url | prepend: site.baseurl }}">&laquo; {{page.previous.title}}</a>
-    </div>
-    {% endif %}
-    {% if page.next.url %}
-    <div class="wrapper" id="right">
-      <small>{{page.next.date | date: "%b %-d"}} <b>Next</b></small>
-      <br>
-      <a class="no-hov" href="{{ page.next.url | prepend: site.baseurl }}">{{page.next.title}} &raquo;</a>
-    </div>
-    {% endif %}
-  </div> -->
-  <!-- Disqus comments view -->
-  {% if page.comments != false and site.disqus_id %}
-  <div class="post-disqus">
-    <section id="disqus_thread"></section>
-    {% include disqus.html %}
-  </div>
-  {% endif %}
-</article>
+<b>Our Stack:</b> Ruby, Rails, Rails API, RSpec, Capybara, Postgres, Redis, Sidekiq 🔍 ✨
+<br>
+
+<img src="../assets/erd.png" alt="erd" />
+<br>
+<br>
+<center>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/TVgl5NYqqj4" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</center>
