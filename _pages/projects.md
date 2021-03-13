@@ -31,25 +31,8 @@ gem "mini_magick"
 {% endhighlight %}
 <br><br>
 
-<h1 style="font-size: 3.2rem;">Evolution</h1>
-Evo is a rails application that allows travel agents to create, customize and edit their own personal website. Each agent can customize each module to their own liking, and even have clients book and schedule trips with built-in air/cruise/hotel APIs.
 
-Frontend: HTML CSS3 React JS+Axios Bootstrap 4 <br>
-Backend: Rails API  
-
-<center>
-<img src="../assets/evo.jpg"
-     alt="erd" style="height: 700px; width: auto;" />
- </center>
-We also released a public rails API for a hub of our own travel specials that work with React JS and Axios. Each component is resuable and made with the react-rails gem to be monolithic.
-
-<center>
-<img src="../assets/diagram.jpeg"
-     alt="erd" style="height: 600px; width: auto;" />
-</center>
-<br><br>
-
-<h1 style="font-size: 3.2rem;">Etc ✨</h1>
+<h1 style="font-size: 2.8rem;">Etc ✨</h1>
 Here are some other things I've built with teams and Web Development Agencies:
 <br>
 <br>
