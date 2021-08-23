@@ -31,32 +31,3 @@ gem "mini_magick"
 {% endhighlight %}
 <br><br>
 
-
-<h1 style="font-size: 2.8rem;">Etc ✨</h1>
-Here are some other things I've built with teams and Web Development Agencies:
-<br>
-<br>
-<a href="https://www.archertravel.com/" target="_blank">
-<img src="../assets/archer.png"
-     alt="erd" style="height: 55px; width: 55px; border-radius: 10px;" />
-     </a>
-   <a href="https://www.jonathanlouis.net/" target="_blank">  
-<img src="../assets/logo.jpg"
-     alt="erd" style="height: 55px; width: 55px; border-radius: 10px;" />
-      </a>
-     <a href="https://github.com/EvolutionHQ/evo-specials" target="_blank">
-     <img src="../assets/specials.gif"
-     alt="erd" style="height: 55px; width: 55px; border-radius: 10px;" />
-      </a>
-     <a href="https://avitamedical.com/" target="_blank">
-     <img src="../assets/virus.gif"
-     alt="erd" style="height: 55px; width: 55px; border-radius: 10px;" />
-      </a>
-     <a href="https://github.com/medicinal-ruby" target="_blank">
-     <img src="../assets/pill.png"
-     alt="erd" style="height: 55px; width: 55px; border-radius: 10px;" />
-      </a>
-     <a href="https://afrezza.com/" target="_blank">
-     <img src="../assets/afrezza.png"
-     alt="erd" style="height: 55px; width: 55px; border-radius: 10px;" />
-      </a>
